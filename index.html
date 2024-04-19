@@ -4,24 +4,35 @@
   <title>Simon Wang</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="javascript/util.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
 
-<div class="jumbotron text-center">
-  <h1 style="font-family: monospace; font-weight: 520;">Simon Wang</h1>
-  <p style="margin-left: 20%; margin-right: 20%">Welcome! I'm Simon and I am currently a student in the Combined BS/MS program in the department of Computer Science
-     at the University of Maryland, College Park!</p> 
-  
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 style="font-family: monospace;"><b>Simon Wang</b></h1>
+        <p>Welcome! I'm Simon and I'm currently a student in the Combined 
+          BS/MS program in the Computer Science department at the University of Maryland, College Park!</p>
+      </div>
+
+      <div class="col">
+        
+      </div>
+    </div>
+    
+  </div>
+   
 </div>
 
-<div class="container-fluid">
+<div class="container container-fluid">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col">
       <h3>Projects</h3>
       <p>Check out some of my personal projects below. I am in the process of adding more to my GitHub, 
         and I also have some exciting projects in progress that will be posted soon so keep an eye out for them!</p>
@@ -32,29 +43,44 @@
       </a>
       
     </div>
-    <div class="col-sm-4">
+
+    <div class="col">
       <h3>Experience</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <p>Below are my resume and LinkedIn profile. Please reach out to me via email at <a href= "mailto: scwang00@umd.edu">scwang00@umd.edu</a> 
+        or on LinkedIn if you have any questions or would like to connect. I would be happy to talk!</p>
+      <a href = "./resume.pdf" target="_blank">
+        <button id="CVButton" class="button-1">
+          CV
+        </button>
+      </a>
+      <a href = "https://www.linkedin.com/in/simon-wang-519902193/" target="_blank">
+        <button id="LinkedInButton" class="button-1">
+          LinkedIn
+        </button>
+      </a>
     </div>
-    <div class="col-sm-4">
+
+    <div class="col">
       <h3>Research</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <p>My research interests generally include <b>extended reality</b>, <b>generative AI</b>, and <b>human-computer interaction</b>. 
+        In particular, I am interested in using these techniques in tandem with <b>computer graphics</b> and <b>computer vision</b> methods for applications such
+        as <b>education</b>, <b>accessibility</b>, and <b>art</b>.</p>
     </div>
+
+    <div class="col">
+      <h3>Coursework</h3>        
+      <p>Click the link below to see some of my favorite and most relevant courses I have taken so far! It includes both courses I have taken
+        recently at the graduate level as well as courses I have taken as an undergraduate (also at UMD!).
+      </p>
+      <a href = "./courses.html" target="_blank">
+        <button id="coursesButton" class="button-1">
+          Courses
+        </button>
+      </a>
+    </div>
+
   </div>
 </div>
-
-
-<!-- <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Features</a>
-      <a class="nav-item nav-link" href="#">Pricing</a>
-      <a class="nav-item nav-link disabled" href="#">Disabled</a>
-    </div>
-</nav> -->
   
 </body>
 </html>
