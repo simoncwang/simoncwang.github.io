@@ -5,10 +5,15 @@ p {
     color: rgb(92, 33, 33);
 }
 
+h1 {
+  font-weight: bold;
+}
+
+/* 
 h3 {
     font-family: monospace;
     font-weight: bold;
-}
+} */
 
 .button-56 {
   align-items: center;

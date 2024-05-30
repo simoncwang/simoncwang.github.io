@@ -12,6 +12,7 @@
 </head>
 <body>
 
+  <!-- introduction section -->
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <div class="row">
@@ -68,9 +69,10 @@
    
 </div>
 
+<!-- general information section -->
 <div class="container container-fluid">
   <div class="row">
-    <div class="col">
+    <!-- <div class="col">
       <h3>Projects</h3>
       <p>
         <hr>
@@ -84,10 +86,10 @@
       </button>
       </a>
       
-    </div>
+    </div> -->
 
     <div class="col">
-      <h3>Experience</h3>
+      <h1>Experience</h1>
       <p>
         <hr>
       </p>
@@ -103,10 +105,15 @@
           LinkedIn
         </button>
       </a>
+      <a href = "https://github.com/simoncwang" target="_blank">
+        <button id="projectButton" class="button-1">
+          GitHub
+        </button>
+      </a>
     </div>
 
     <div class="col">
-      <h3>Research</h3>  
+      <h1>Research</h1>  
       <p>
         <hr>
       </p>      
@@ -116,11 +123,11 @@
     </div>
 
     <div class="col">
-      <h3>Coursework</h3> 
+      <h1>Coursework</h1> 
       <p>
         <hr>
       </p>       
-      <p>Click the link below to see some of my favorite and most relevant courses I have taken so far! It includes both courses I have taken
+      <p>See below to see some of my favorite and most relevant courses I have taken so far! It includes both courses I have taken
         recently at the graduate level as well as courses I have taken as an undergraduate (also at UMD!).
       </p>
       <a href = "./courses.html" target="_blank">
@@ -132,6 +139,108 @@
 
   </div>
 </div>
+
+<!-- projects section -->
+<div style="background-color: #ffffff; margin-top:2%">
+  <div class="container container-fluid" >
+    <hr>
+    <h1 style="text-align: center;">Projects</h1>
+    <br>
+    <p style="text-align:center">Check out some of my recent projects below. I have included both course projects and personal ones, I am currently in the process of adding more to my <a href = "https://github.com/simoncwang" target="_blank">GitHub</a>.
+    </p>
+    <hr>
   
+    <div class="row">
+      <div class="col">
+        <h3 style="text-align: center">Virtual Classroom</h3>
+        
+        <img src="images/vectordemo1.png" class="rounded mx-auto d-block" alt="vector" style="width:100%">
+        
+        <br>
+        <p>
+          This is a virtual reality (VR) project created in the Unity game engine throughout the Spring 2024 semester for the course CMSC838C: Advances in XR.
+          I led a group of 5 classmates to design a virtual classroom environment, and we conducted a user study to investigate the benefits of XR education
+          over traditional remote learning mediums such as video.
+        </p>
+
+        <a href = "./courses.html" target="_blank">
+          <button id="coursesButton" class="button-1">
+            Read more!
+          </button>
+        </a>
+
+        <hr>
+      </div>
+  
+      <div class="col">
+        <h3 style="text-align: center">Improving Control and Consistency of Diffusion-Generated Video</h3>
+
+        <img src="images/jeep1.png" class="rounded mx-auto d-block" alt="jeep" style="width:100%">
+
+        <br>
+        <p>
+          Semester-long course project created for CMSC720: Foundations of Deep Learning. Investigated state of the art diffusion-based video generation
+          methods, and experimented with various approaches to improving their quality in terms of consistency and controllability. Wrote and submitted
+          a NEURIPS format paper for a mock-conference within our class. 
+        </p>
+
+        <a href = "./courses.html" target="_blank">
+          <button id="coursesButton" class="button-1">
+            Read more!
+          </button>
+        </a>
+
+        <hr>
+      </div>
+      
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h3 style="text-align: center">Augmented Reality for Enhancing Elderly Interaction with Touch Screens (Idea)</h3>
+        
+        <img src="images/emdpaper.png" class="rounded mx-auto d-block" alt="emd" style="width:100%">
+        
+        <br>
+        <p>
+          Hypothetical research project for CMSC839A: Embodied Media Design.
+        </p>
+
+        <a href = "./courses.html" target="_blank">
+          <button id="coursesButton" class="button-1">
+            Read more!
+          </button>
+        </a>
+
+      </div>
+
+      <div class="col">
+        <h3 style="text-align: center">In progress!</h3>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+<!-- footer section -->
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary">&copy; Simon Wang, 2024</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+    </ul>
+  </footer>
+</div>
+
 </body>
 </html>
