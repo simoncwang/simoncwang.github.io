@@ -12,7 +12,22 @@
 </head>
 <body>
 
-  <!-- introduction section -->
+<!-- navbar section -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #dae8e0;">
+  <a class="navbar-brand" href="#">Simon Wang</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="./index.html">Home</a>
+      <a class="nav-item nav-link" href="./projects/defaultproject.html">Projects</a>
+      <a class="nav-item nav-link" href="./courses.html">Coursework</a>
+    </div>
+  </div>
+</nav>
+
+<!-- introduction section -->
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <div class="row">
@@ -144,13 +159,34 @@
 <div style="background-color: #ffffff; margin-top:2%">
   <div class="container container-fluid" >
     <hr>
-    <h1 style="text-align: center;">Projects</h1>
+    <h1 style="text-align: center;">Project highlights</h1>
     <br>
-    <p style="text-align:center">Check out some of my recent projects below. I have included both course projects and personal ones, I am currently in the process of adding more to my <a href = "https://github.com/simoncwang" target="_blank">GitHub</a>.
+    <p style="text-align:center">Check out some of my recent project highlights below. Checkout my full <a href = "./projects.html" target="_blank">Projects</a> page and my <a href = "https://github.com/simoncwang" target="_blank">GitHub</a> for complete details and code!.
     </p>
     <hr>
   
     <div class="row">
+      <div class="col">
+        <h3 style="text-align: center">Improving Control and Consistency of Diffusion-Generated Video</h3>
+
+        <img src="images/jeep1.png" class="rounded mx-auto d-block" alt="jeep" style="width:100%">
+
+        <br>
+        <p>
+          Semester-long course project created for CMSC720: Foundations of Deep Learning. Investigated state of the art diffusion-based video generation
+          methods, and experimented with various approaches to improving their quality in terms of consistency and controllability. Wrote and submitted
+          a NEURIPS format paper for a mock-conference within our class. 
+        </p>
+
+        <a href = "./courses.html" target="_blank">
+          <button id="coursesButton" class="button-1">
+            Read more!
+          </button>
+        </a>
+
+        <hr>
+      </div>
+
       <div class="col">
         <h3 style="text-align: center">Virtual Classroom</h3>
         
@@ -172,26 +208,7 @@
         <hr>
       </div>
   
-      <div class="col">
-        <h3 style="text-align: center">Improving Control and Consistency of Diffusion-Generated Video</h3>
-
-        <img src="images/jeep1.png" class="rounded mx-auto d-block" alt="jeep" style="width:100%">
-
-        <br>
-        <p>
-          Semester-long course project created for CMSC720: Foundations of Deep Learning. Investigated state of the art diffusion-based video generation
-          methods, and experimented with various approaches to improving their quality in terms of consistency and controllability. Wrote and submitted
-          a NEURIPS format paper for a mock-conference within our class. 
-        </p>
-
-        <a href = "./courses.html" target="_blank">
-          <button id="coursesButton" class="button-1">
-            Read more!
-          </button>
-        </a>
-
-        <hr>
-      </div>
+      
       
     </div>
 
