@@ -14,34 +14,35 @@
 
 <!-- navbar section -->
 <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #dae8e0;">
-  <a class="navbar-brand" href="#">Simon Wang</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="./index.html">Home</a>
-      <a class="nav-item nav-link" href="./projects/defaultproject.html">Projects</a>
-      <a class="nav-item nav-link" href="./courses.html">Coursework</a>
+  <div class="container">
+    <a class="navbar-brand" href="./index.html">Simon Wang</a>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="./index.html">Home</a>
+        <a class="nav-item nav-link" href="./projects/defaultproject.html">Projects</a>
+        <a class="nav-item nav-link" href="./courses.html">Coursework</a>
+      </div>
     </div>
   </div>
+  
 </nav>
 
 <!-- introduction section -->
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <div class="row">
+
+      <!-- introduction + info -->
       <div class="col">
-        <h1><b>Simon Wang</b></h1>
-        <p>
-          <hr>
-        </p>
+        <h1 class="display-4"><b>Simon Wang</b></h1>
+        <hr>
         <p>
           Welcome! My name is Simon and I am currently a student in the Combined BS/MS program in the Computer Science department at the University of Maryland, College Park (UMD)!
         </p>
-        <p>
-          <hr>
-        </p>
+        <hr>
         <p>
           <b>Contact Info:</b>
         </p>
@@ -61,8 +62,9 @@
         </div>
       </div>
 
+      <!-- my picture -->
       <div class="col">
-        <img src="images/lake.jpeg" class="rounded mx-auto d-block" alt="image 1" style="width:60%">
+        <img src="images/lake.jpeg" class="rounded mx-auto d-block" alt="image 1" style="width:100%">
         <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -78,6 +80,39 @@
         </div> -->
         
       </div>
+
+      <!-- news/updates section -->
+      <div class="col">
+        <div class="card shadow rounded">
+          <div class="card-body">
+            <h4>Recent News & Updates!</h4>
+            <hr>
+            
+            <p>
+              <b><u>06/29/2024</u></b>
+              <br>
+              Attending <a href="https://2024.hci.international/">HCII 2024</a> in Washington, DC!
+              <br>
+
+              <b><u>05/17/2024</u></b>
+              <br>
+              Presented <a href="./projects/vrclass.html">XR education course project</a>
+              
+              <br>
+              <b><u>05/02/2024</u></b>
+              <br>
+              Submitted <a href="./projects/videogen.html">deep learning course research paper</a>
+
+              <br>
+              <b><u>01/24/2024</u></b>
+              <br>
+              Started my BS/MS education at UMD!
+            </p>
+            
+          </div>
+        </div>
+      </div>
+      
     </div>
     
   </div>
@@ -105,9 +140,7 @@
 
     <div class="col">
       <h1>Experience</h1>
-      <p>
-        <hr>
-      </p>
+      <hr>
       <p>Below are my resume and LinkedIn profile. Please reach out to me via email at <a href= "mailto: scwang00@umd.edu">scwang00@umd.edu</a> 
         or on LinkedIn if you have any questions or would like to connect. I would be happy to talk!</p>
       <a href = "./resume.pdf" target="_blank">
@@ -129,9 +162,7 @@
 
     <div class="col">
       <h1>Research</h1>  
-      <p>
-        <hr>
-      </p>      
+      <hr>     
       <p>My research interests generally include <b>extended reality (XR)</b>, <b>generative AI</b>, and <b>human-computer interaction (HCI)</b>. 
         In particular, I am interested in using these techniques in tandem with <b>computer graphics</b> and <b>computer vision</b> methods for applications such
         as <b>education</b>, <b>accessibility</b>, and <b>art</b>.</p>
@@ -139,9 +170,7 @@
 
     <div class="col">
       <h1>Coursework</h1> 
-      <p>
-        <hr>
-      </p>       
+      <hr>     
       <p>See below to see some of my favorite and most relevant courses I have taken so far! It includes both courses I have taken
         recently at the graduate level as well as courses I have taken as an undergraduate (also at UMD!).
       </p>
@@ -161,7 +190,7 @@
     <hr>
     <h1 style="text-align: center;">Project highlights</h1>
     <br>
-    <p style="text-align:center">Check out some of my recent project highlights below. Checkout my full <a href = "./projects.html" target="_blank">Projects</a> page and my <a href = "https://github.com/simoncwang" target="_blank">GitHub</a> for complete details and code!.
+    <p style="text-align:center">Check out some of my recent project highlights below. Checkout my full <a href = "./projects/defaultproject.html" target="_blank">Projects</a> page and my <a href = "https://github.com/simoncwang" target="_blank">GitHub</a> for complete details and code!.
     </p>
     <hr>
   
@@ -178,8 +207,8 @@
           a NEURIPS format paper for a mock-conference within our class. 
         </p>
 
-        <a href = "./courses.html" target="_blank">
-          <button id="coursesButton" class="button-1">
+        <a href = "./projects/videogen.html">
+          <button id="button" class="button-1">
             Read more!
           </button>
         </a>
@@ -199,8 +228,8 @@
           over traditional remote learning mediums such as video.
         </p>
 
-        <a href = "./courses.html" target="_blank">
-          <button id="coursesButton" class="button-1">
+        <a href = "./projects/vrclass.html">
+          <button id="button" class="button-1">
             Read more!
           </button>
         </a>
@@ -223,8 +252,8 @@
           Hypothetical research project for CMSC839A: Embodied Media Design.
         </p>
 
-        <a href = "./courses.html" target="_blank">
-          <button id="coursesButton" class="button-1">
+        <a href = "./projects/emd.html">
+          <button id="button" class="button-1">
             Read more!
           </button>
         </a>
