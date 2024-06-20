@@ -1,7 +1,7 @@
 
-
+/* general text and content */
 p {
-  font-family: FreeMono;
+  /* font-family: FreeMono; */
   color: rgb(92, 33, 33);
 }
 
@@ -9,109 +9,7 @@ h1 {
   font-weight: bold;
 }
 
-/* 
-h3 {
-    font-family: monospace;
-    font-weight: bold;
-} */
-
-.button-56 {
-  align-items: center;
-  background-color: #fee6e3;
-  border: 2px solid #111;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #111;
-  cursor: pointer;
-  display: flex;
-  font-family: Inter,sans-serif;
-  font-size: 16px;
-  height: 48px;
-  justify-content: center;
-  line-height: 24px;
-  max-width: 100%;
-  padding: 0 25px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-56:after {
-  background-color: #111;
-  border-radius: 8px;
-  content: "";
-  display: block;
-  height: 48px;
-  left: 0;
-  width: 100%;
-  position: absolute;
-  top: -2px;
-  transform: translate(8px, 8px);
-  transition: transform .2s ease-out;
-  z-index: -1;
-}
-
-.button-56:hover:after {
-  transform: translate(0, 0);
-}
-
-.button-56:active {
-  background-color: #ffdeda;
-  outline: 0;
-}
-
-.button-56:hover {
-  outline: 0;
-}
-
-@media (min-width: 768px) {
-  .button-56 {
-    padding: 0 40px;
-  }
-}
-
-/* CSS */
-.button-67 {
-  align-items: center;
-  background: #f5f5fa;
-  border: 0;
-  border-radius: 8px;
-  box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
-  box-sizing: border-box;
-  color: #2a1f62;
-  cursor: pointer;
-  display: flex;
-  font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
-  font-size: 1rem;
-  justify-content: center;
-  line-height: 1.5rem;
-  padding: 15px;
-  position: relative;
-  text-align: left;
-  transition: .2s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: pre;
-  width: max-content;
-  word-break: normal;
-  word-spacing: normal;
-}
-
-.button-67:hover {
-  background: #f8f8ff;
-  box-shadow: -15px -15px 30px 0 #fff, 15px 15px 30px 0 #1d0dca17;
-}
-
-@media (min-width: 768px) {
-  .button-67 {
-    padding: 24px;
-  }
-}
-
+/* primary button */
 .button-1 {
   background-color: #20a243;
   border-radius: 8px;
@@ -142,4 +40,84 @@ h3 {
 .button-1:hover,
 .button-1:focus {
   background-color: #F082AC;
+}
+
+/* navbar styles */
+.navbar {
+  background-color: #cde4df;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+/* project page side nav styles */
+
+.sidenav {
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #e3efed;
+  overflow-x: hidden;
+  transition: 0.2s;
+  padding-top: 5%;
+}
+
+
+.sidenav .nav-item{
+  padding-top:7%;
+  font-size: 18px;
+  color: #320f7c;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #a1c0ff;
+}
+
+.sidenav .collapse {
+  padding-bottom:0%;
+  padding-left: 80%;
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.expand {
+  position: absolute;
+  padding-left: 1%;
+  padding-top: 1%;
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.sidenav .active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+div.content {
+  padding-left: 1%;
+  margin-left: 15%;
+}
+
+/* project page links */
+.links {
+  margin: auto;
+  width: 70%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }

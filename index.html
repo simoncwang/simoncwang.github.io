@@ -8,24 +8,28 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <link rel = "stylesheet" href = "style.css">
+  <link rel = "stylesheet" href = "./style.css">
+  <script src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <!-- navbar section -->
-<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #dae8e0;">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
   <div class="container">
-    <a class="navbar-brand" href="./index.html">Simon Wang</a>
+    <a class="navbar-brand" href="./index.html">
+      <i class="fa-solid fa-cow d-inline-block"></i>
+      Simon Wang
+    </a>
     <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button> -->
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
       <div class="navbar-nav">
         <a class="nav-item nav-link active" href="./index.html">Home</a>
         <a class="nav-item nav-link" href="./projects/defaultproject.html">Projects</a>
         <a class="nav-item nav-link" href="./courses.html">Coursework</a>
       </div>
-    </div>
+
   </div>
   
 </nav>
@@ -85,7 +89,10 @@
       <div class="col">
         <div class="card shadow rounded">
           <div class="card-body">
-            <h4>Recent News & Updates!</h4>
+            <center>
+              <h4>Recent News & Updates!</h4>
+            </center>
+            
             <hr>
             
             <p>
@@ -143,7 +150,7 @@
       <hr>
       <p>Below are my resume and LinkedIn profile. Please reach out to me via email at <a href= "mailto: scwang00@umd.edu">scwang00@umd.edu</a> 
         or on LinkedIn if you have any questions or would like to connect. I would be happy to talk!</p>
-      <a href = "./resume.pdf" target="_blank">
+      <a href = "./documents/resume.pdf" target="_blank">
         <button id="CVButton" class="button-1">
           CV
         </button>
