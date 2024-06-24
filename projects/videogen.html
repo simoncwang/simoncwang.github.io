@@ -12,12 +12,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel = "stylesheet" href = "../style.css">
     <script src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
+    <script src="../javascript/util.js"></script>
     <title>Projects</title>
   </head>
 
   <body>
     <!-- navbar section -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top"">
+    <nav id="topnav" class="navbar navbar-expand-lg navbar-light sticky-top"">
       <div class="container">
         <a class="navbar-brand" href="../index.html">
           <i class="fa-solid fa-cow d-inline-block"></i>
@@ -30,6 +31,7 @@
             <a class="nav-item nav-link" href="../index.html">Home</a>
             <a class="nav-item nav-link active" href="./defaultproject.html">Projects</a>
             <a class="nav-item nav-link" href="../courses.html">Coursework</a>
+            <a class="nav-item nav-link" href="../aboutme.html">About Me</a>
           </div>
       </div>
       
@@ -53,8 +55,8 @@
         
     </div>
     
-    <div class="expand">
-        <a href="javascript:void(0)" onclick="openNav()"> &#9776;</a>
+    <div id="expandBtn" class="expand">
+      <a href="javascript:void(0)" onclick="openNav()"> &#9776;</a>
     </div>
 
     <!-- content section -->
@@ -82,27 +84,51 @@
         <img src="../images/jeep1.png" class="rounded mx-auto d-block" alt="jeep" style="width:90%">
 
         <hr>
+
         <p>
-          Semester-long course project for CMSC720 - Foundations of Deep Learning.
+          <h3>About the project</h3>
+          This is a semester-long project for the course CMSC720 - Foundations of Deep Learning. Starting from the beginning of the Spring 2024 semester in January, my partner and I went through the process of:
+          <p>
+            <ul>
+              <li>Doing literature review of ML concepts</li>
+              <li>Investigating novel approaches for potential research</li>
+              <li>Proposing a research project</li>
+              <li>Implementing experiments using our school's GPU cluster</li>
+              <li>Writing up a NEURIPS format paper</li>
+              <li>Going through a formal double-blind peer-review process within our class</li>
+              <li>Submitting a final paper that was "accepted" by our professor</li>
+            </ul>
+          </p>
         </p>
+        
+
+        <p>
+          <h3>Abstract</h3>
+          With the rise of Generative AI, recent improvements in diffusion techniques have been developed to generate art contextually accurate to user input. However, video output from Stable Diffusion models still seem to have sudden differences between neighboring frames and can be easily differentiated from videos taken in real life at times. Subjects and background environments in generated videos are prone to suddenly shifting appearance, making the video more identifiable as a result of AI generation. In particular, we found that even state-of-the art video generation and editing models struggled when occlusion was present. We propose a project to find a solution to improve the smoothness and consistency of video generation network output by using various approaches such as ControlNet and neural layered atlases. Additionally, we intend to combine newer concepts like Uni-ControlNet with existing text to video models in order to enable even better control of video results.
+        </p>
+
+        
+
+
       </div>
+
     </div>
   
 
     
-    <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "15%";
-      document.getElementById("myContent").style.marginLeft = "15%";
-    }
-    
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("myContent").style.marginLeft = "0%";
-    }
-    </script>
-
-    
+<!-- footer section -->
+<div class="footer">
+  <p>
+    &copy; Simon Wang, 2024.
+  </p>
+  
+  <p>
+    Created with Bootstrap. &nbsp;
+    <a href="https://getbootstrap.com/" target="_blank">
+      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="">
+    </a>
+  </p>
+</div>
 
 </body>
 </html>

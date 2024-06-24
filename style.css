@@ -1,5 +1,9 @@
 
 /* general text and content */
+.jumbotron {
+  padding-bottom:2%;
+}
+
 p {
   /* font-family: FreeMono; */
   color: rgb(92, 33, 33);
@@ -7,6 +11,20 @@ p {
 
 h1 {
   font-weight: bold;
+}
+
+html,body { height:100%; }
+
+/* button arrangement */
+.buttons {
+  margin:auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:left;
+}
+
+.buttons a {
+  margin-right:1%;
 }
 
 /* primary button */
@@ -44,6 +62,7 @@ h1 {
 
 /* navbar styles */
 .navbar {
+  z-index:1;
   background-color: #cde4df;
 }
 
@@ -55,15 +74,14 @@ h1 {
 
 .sidenav {
   height: 100%;
-  width: 15%;
+  width: 200px;
   position: fixed;
-  z-index: 1;
-  top: 0;
+  z-index: 2;
   left: 0;
   background-color: #e3efed;
   overflow-x: hidden;
   transition: 0.2s;
-  padding-top: 5%;
+  padding-top: 1%;
 }
 
 
@@ -88,10 +106,13 @@ h1 {
   align-items: center;
 }
 
+#expandBtn {
+  display:none;
+}
+
 .expand {
-  position: absolute;
+  position:fixed;
   padding-left: 1%;
-  padding-top: 1%;
   font-size: 30px;
   display: flex;
   flex-direction: row;
@@ -120,3 +141,19 @@ div.content {
   flex-flow: row wrap;
   justify-content: space-around;
 }
+
+/* footer */
+.footer {
+  margin-top:2%;
+  width:100%;
+  background-color: rgb(198, 209, 210);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.footer p {
+  padding-top:1%;
+  vertical-align: middle;
+}
+

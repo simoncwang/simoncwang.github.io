@@ -12,12 +12,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel = "stylesheet" href = "../style.css">
     <script src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
+    <script src="../javascript/util.js"></script>
     <title>Projects</title>
   </head>
 
   <body>
     <!-- navbar section -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top"">
+    <nav id="topnav" class="navbar navbar-expand-lg navbar-light sticky-top"">
       <div class="container">
         <a class="navbar-brand" href="../index.html">
           <i class="fa-solid fa-cow d-inline-block"></i>
@@ -30,6 +31,7 @@
             <a class="nav-item nav-link" href="../index.html">Home</a>
             <a class="nav-item nav-link active" href="./defaultproject.html">Projects</a>
             <a class="nav-item nav-link" href="../courses.html">Coursework</a>
+            <a class="nav-item nav-link" href="../aboutme.html">About Me</a>
           </div>
       </div>
       
@@ -53,8 +55,8 @@
         
     </div>
     
-    <div class="expand">
-        <a href="javascript:void(0)" onclick="openNav()"> &#9776;</a>
+    <div id="expandBtn" class="expand">
+      <a href="javascript:void(0)" onclick="openNav()"> &#9776;</a>
     </div>
 
     <!-- content section -->
@@ -85,19 +87,19 @@
   
 
     
-    <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "15%";
-      document.getElementById("myContent").style.marginLeft = "15%";
-    }
-    
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("myContent").style.marginLeft = "0%";
-    }
-    </script>
-
-    
+<!-- footer section -->
+<div class="footer">
+  <p>
+    &copy; Simon Wang, 2024.
+  </p>
+  
+  <p>
+    Created with Bootstrap. &nbsp;
+    <a href="https://getbootstrap.com/" target="_blank">
+      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="">
+    </a>
+  </p>
+</div>
 
 </body>
 </html>
