@@ -1,6 +1,7 @@
 
 /* general text and content */
 .jumbotron {
+  padding-top:7%;
   padding-bottom:2%;
 }
 
@@ -13,7 +14,6 @@ h1 {
   font-weight: bold;
 }
 
-html,body { height:100%; }
 
 /* button arrangement */
 .buttons {
@@ -62,6 +62,7 @@ html,body { height:100%; }
 
 /* navbar styles */
 .navbar {
+  position:sticky;
   z-index:1;
   background-color: #cde4df;
 }
@@ -116,7 +117,7 @@ html,body { height:100%; }
   font-size: 30px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items:center;
 }
 
 .inline {
