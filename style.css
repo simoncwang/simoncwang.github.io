@@ -17,6 +17,7 @@ h1 {
 
 /* button arrangement */
 .buttons {
+  padding-bottom:2%;
   margin:auto;
   display: flex;
   flex-flow: row wrap;
