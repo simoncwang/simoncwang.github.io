@@ -7,7 +7,7 @@
 
 p {
   /* font-family: FreeMono; */
-  color: rgb(92, 33, 33);
+  /* color: rgb(33, 86, 92); */
 }
 
 h1 {
@@ -90,7 +90,7 @@ h1 {
 .sidenav .nav-item{
   padding-top:7%;
   font-size: 18px;
-  color: #320f7c;
+  color: #032f2a;
   display: block;
   transition: 0.3s;
 }
