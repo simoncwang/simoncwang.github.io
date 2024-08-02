@@ -72,7 +72,7 @@
             <i class="fa-brands fa-github-alt"></i> <a href="https://github.com/simoncwang/AIArtAdvisor" target="_blank">GitHub</a>
           </div>
           <div>
-            <i class="fa-solid fa-video"></i> <a>Demo (in progress)</a>
+            <i class="fa-solid fa-laptop-code"></i> <a href="https://huggingface.co/spaces/simoncwang/AIArtAdvisor" target="_blank">Demo</a>
           </div>
           <div>
             <i class="fa-solid fa-book"></i> <a>Resources</a>
@@ -124,13 +124,35 @@
           
           
         </p>
+
+        <p>
+          <h3>Features</h3>
+
+          <h4>Basic Input</h4>
+          Image upload, API key, specific question, language
+
+          <h4>Tone/difficulty Selection</h4>
+          Choose desired skill level -> system will speak to you in a tone that is easier to understand. <br>
+          For example if you are a beginner it will use simpler words and easy analogies.
+
+        </p>
         
         <p>
           <h3>Results</h3>
+          <h4>Try it yourself!</h4>
+          Upload your own artwork and try out the tool with the demo below!
+
+          <script
+            type="module"
+            src="https://gradio.s3-us-west-2.amazonaws.com/4.40.0/gradio.js"
+          ></script>
+
+          <gradio-app src="https://simoncwang-aiartadvisor.hf.space"></gradio-app>
+
+          <h4>Example use case</h4>
           The interface of the Gradio app along with an example use case is shown below using the famous <em>Mona Lisa</em> by Leonardo da Vinci.
 
           <img src="../images/artexample.png" style="width:100%">
-
 
         </p>
 

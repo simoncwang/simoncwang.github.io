@@ -51,34 +51,42 @@
         </p>
         <hr>
         <h5><b>Contact Info:</b></h5>
-        <div class="row">
-          <div class="col">
-            <p>
-              School email: <a href= "mailto: scwang00@umd.edu">scwang00@umd.edu</a> <br>
-              Personal email: <a href= "mailto: wang.c.simon@gmail.com">wang.c.simon@gmail.com</a> <br>
-              UMD CS department: <a href="https://www.cs.umd.edu/">https://www.cs.umd.edu/</a>
-            </p>
+        <p>
+          School email: <a href= "mailto: scwang00@umd.edu">scwang00@umd.edu</a> <br>
+          Personal email: <a href= "mailto: wang.c.simon@gmail.com">wang.c.simon@gmail.com</a> <br>
+          UMD CS department: <a href="https://www.cs.umd.edu/">https://www.cs.umd.edu/</a>
+        </p>
+
+        <!-- <div class="contact_links">
+          <div class="link">
+            <i class="fa-brands fa-linkedin"></i> <a href = "https://www.linkedin.com/in/simon-wang-519902193/" target="_blank">LinkedIn</a>
           </div>
-        </div>
+          <div class="link">
+            <i class="fa-solid fa-book"></i> <a href = "./documents/resume.pdf" target="_blank">Resume</a>
+          </div>
+          
+        </div> -->
+<!-- 
+        <div class="buttons">
+          <a href = "./documents/resume.pdf" target="_blank">
+            <button id="resumeButton" class="button-1">
+              Resume
+            </button>
+          </a>
+    
+          <a href = "https://www.linkedin.com/in/simon-wang-519902193/" target="_blank">
+            <button id="linkedinButton" class="button-1">
+              LinkedIn
+            </button>
+          </a>
+    
+        </div> -->
+
       </div>
 
       <!-- my picture -->
       <div class="col">
-        <img src="images/lake.jpeg" class="rounded mx-auto d-block" alt="image 1" style="width:100%">
-        <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="images/lake.jpeg" class="rounded mx-auto d-block" alt="image 1" style="width:50%;">
-            </div>
-            <div class="carousel-item">
-              <img src="images/spaceneedle.jpeg" class="rounded mx-auto d-block" alt="image 2" style="width:50%;">
-            </div>
-            <div class="carousel-item">
-              <img src="images/olympicpark.jpeg" class="rounded mx-auto d-block" alt="image 3" style="width:50%;">
-            </div>
-          </div>
-        </div> -->
-        
+        <img src="images/lake.jpeg" class="rounded mx-auto d-block" alt="image 1" style="width:100%">       
       </div>
 
       <!-- news/updates section -->
@@ -120,12 +128,6 @@
 
     <hr>
 
-    <div class="row">
-      <div class="col">
-        
-      </div>
-    </div>
-
     <!-- research interests -->
     <h5><b>Research & Experience:</b></h5>
     
@@ -136,9 +138,10 @@
     </p>
 
     <p>
-      Check out the links below for more details about my experience, projects, and coursework at UMD.
+      Check out the links below for more details about my experience.
     </p>
 
+ 
     <div class="buttons">
       <a href = "./documents/resume.pdf" target="_blank">
         <button id="resumeButton" class="button-1">
@@ -146,19 +149,14 @@
         </button>
       </a>
 
-      <a href = "./projects/defaultproject.html">
-        <button id="projectButton" class="button-1">
-          Projects
-        </button>
-      </a>
-
-      <a href = "./courses.html">
-        <button id="coursesButton" class="button-1">
-          Coursework
+      <a href = "https://www.linkedin.com/in/simon-wang-519902193/" target="_blank">
+        <button id="linkedinButton" class="button-1">
+          LinkedIn
         </button>
       </a>
 
     </div>
+
     
   </div>
    
@@ -224,24 +222,24 @@
   
     <div class="row">
       <div class="col">
-        <h3 style="text-align: center">Improving Control and Consistency of Diffusion-Generated Video</h3>
+        <h3 style="text-align: center">AI Art Advisor</h3>
 
-        <img src="images/jeep1.png" class="rounded mx-auto d-block" alt="jeep" style="width:100%">
+        <img src="images/artexample.png" class="rounded mx-auto d-block" alt="art" style="width:100%">
 
         <br>
         <p>
-          Semester-long course project created for CMSC720: Foundations of Deep Learning. Investigated state of the art diffusion-based video generation
-          methods, and experimented with various approaches to improving their quality in terms of consistency and controllability. Wrote and submitted
-          a NEURIPS format paper for a mock-conference within our class. 
+          To illustrate a potential application of AI models to benefit artists, I created a prototype "AI art advisor" using the latest vison-language model <a href="https://openai.com/index/hello-gpt-4o/" target="_blank">GPT-4o ("omni")</a> from OpenAI. This new GPT model now has vision capabilities, so, I was inspired to ask the question: <b>how well can it understand art?</b>
         </p>
 
-        <a href = "./projects/videogen.html">
+        <p>
+          I created a simple user interface where the user can upload any image (png or jpg format) of their art, along with their API key and any specific requests. In the backend, these inputs are parsed into several API calls to GPT-4o. In the API call, the system is told its role as an art advisor that gives constructive feedback (both negative and positive). Finally, the response is returned and formatted into clean markdown format before being printed out in the Gradio app interface. 
+        </p>
+
+        <a href = "./projects/defaultproject.html">
           <button id="button" class="button-1">
             Read more!
           </button>
         </a>
-
-        <hr>
       </div>
 
       <div class="col">
@@ -262,14 +260,35 @@
           </button>
         </a>
 
-        <hr>
       </div>
-  
-      
       
     </div>
 
+    <hr>
+
     <div class="row">
+
+      <div class="col">
+        <h3 style="text-align: center">Improving Control and Consistency of Diffusion-Generated Video</h3>
+
+        <img src="images/jeep1.png" class="rounded mx-auto d-block" alt="jeep" style="width:100%">
+
+        <br>
+        <p>
+          Semester-long course project created for CMSC720: Foundations of Deep Learning. Investigated state of the art diffusion-based video generation
+          methods, and experimented with various approaches to improving their quality in terms of consistency and controllability. Wrote and submitted
+          a NEURIPS format paper for a mock-conference within our class. 
+        </p>
+
+        <a href = "./projects/videogen.html">
+          <button id="button" class="button-1">
+            Read more!
+          </button>
+        </a>
+
+      </div>
+
+      
       <div class="col">
         <h3 style="text-align: center">Augmented Reality for Enhancing Elderly Interaction with Touch Screens (Idea)</h3>
         
@@ -286,10 +305,6 @@
           </button>
         </a>
 
-      </div>
-
-      <div class="col">
-        <h3 style="text-align: center">In progress!</h3>
       </div>
     </div>
     

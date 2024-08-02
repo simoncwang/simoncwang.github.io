@@ -14,12 +14,20 @@ h1 {
   font-weight: bold;
 }
 
+/* contact link arrangement */
+.contact_links {
+  margin:auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:space-evenly;
+}
 
 /* button arrangement */
 .buttons {
   padding-bottom:2%;
   margin:auto;
   display: flex;
+
   flex-flow: row wrap;
   justify-content:left;
 }
