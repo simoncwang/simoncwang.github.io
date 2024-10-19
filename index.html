@@ -29,7 +29,7 @@
         <a class="nav-item nav-link active" href="./index.html">Home</a>
         <a class="nav-item nav-link" href="./projects/defaultproject.html">Projects</a>
         <a class="nav-item nav-link" href="./courses.html">Coursework</a>
-        <a class="nav-item nav-link" href="./aboutme.html">About Me</a>
+        <a class="nav-item nav-link" href="./blog.html">Blog</a>
       </div>
 
   </div>
@@ -85,13 +85,13 @@
       </div>
 
       <!-- my picture -->
-      <div class="col">
+      <div class="col" id="myPic">
         <img src="images/lake.jpeg" class="rounded mx-auto d-block" alt="image 1" style="width:100%">       
       </div>
 
       <!-- news/updates section -->
       <div class="col">
-        <div class="card shadow rounded">
+        <div class="card shadow rounded" id = "news">
           <div class="card-body">
             <center>
               <h4>Recent News & Updates!</h4>
@@ -100,6 +100,11 @@
             <hr>
             
             <p>
+              <b><u>08/26/2024</u></b>
+              <br>
+              Starting Fall semester at UMD
+              <br>
+
               <b><u>06/29/2024</u></b>
               <br>
               Attending <a href="https://2024.hci.international/" target="_blank">HCII 2024</a> in Washington, DC!
@@ -123,6 +128,13 @@
           </div>
         </div>
       </div>
+
+      <!-- script to set height of news section equal to height of photo -->
+      <script>
+        picHeight = document.getElementById('myPic').style.height
+        // setting height of news to the pic height
+        document.getElementById('news').style.height = picHeight
+      </script>
       
     </div>
 

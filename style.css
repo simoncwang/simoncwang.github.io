@@ -14,6 +14,11 @@ h1 {
   font-weight: bold;
 }
 
+/* news sectino */
+.card {
+  overflow: auto;
+}
+
 /* contact link arrangement */
 .contact_links {
   margin:auto;
@@ -97,7 +102,7 @@ h1 {
 
 .sidenav .nav-item{
   padding-top:7%;
-  font-size: 18px;
+  font-size: 15px;
   color: #032f2a;
   display: block;
   transition: 0.3s;
@@ -167,3 +172,56 @@ div.content {
   vertical-align: middle;
 }
 
+/* sidebar section headers */
+.section-content {
+  display: none; /* Hide content by default */
+  text-align: left;
+  
+}
+
+.section-header {
+  background-color: #e3efed;
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.show-section {
+  display: block;
+}
+
+.section-header:hover {
+  background-color: #ddd;
+}
+
+.active {
+  text-decoration: underline;
+  /* background-color: #74d19b; */
+}
+
+
+.date {
+  font-size: small;
+  color: gray;
+}
+
+.blog-home {
+  margin-top: 5%;
+  padding:1%;
+}
+
+
+.callout {
+  background-color: #cff6c7;
+  display: flex;
+  width: auto;
+  padding:1%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

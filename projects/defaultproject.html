@@ -31,22 +31,47 @@
             <a class="nav-item nav-link" href="../index.html">Home</a>
             <a class="nav-item nav-link active" href="./defaultproject.html">Projects</a>
             <a class="nav-item nav-link" href="../courses.html">Coursework</a>
-            <a class="nav-item nav-link" href="../aboutme.html">About Me</a>
+            <a class="nav-item nav-link" href="../blog.html">Blog</a>
           </div>
       </div>
       
     </nav>
 
     <!-- sidebar section -->
-
     <div id="mySidenav" class="sidenav">
+      <div class="collapse">
+          <a href="javascript:void(0)" onclick="closeNav()"> &times;</a>
+      </div>
+  
+      <div class="container-fluid" style="text-align:center">
+          <!-- Sidebar Title -->
+          <hr>
+
+          <button class="section-header" onclick="toggleSection('projectSection')">School Projects</button>
+          <div id="projectSection" class="section-content">
+              <a class="nav-item nav-link" href="./videogen.html">Consistent Video Generation</a>
+              <a class="nav-item nav-link" href="./vrclass.html">XR Education</a>
+              <a class="nav-item nav-link" href="./emd.html">Accessibility of Touch Screens for Elderly</a>
+          </div>
+  
+          <button class="section-header" onclick="toggleSection('anotherSection')">Personal Projects</button>
+          <div id="anotherSection" class="section-content show-section">
+              <a class="nav-item nav-link active" href="./defaultproject.html">AI Art Advisor</a>
+              <a class="nav-item nav-link" href="#otherProject1">Other Project 1</a>
+              <a class="nav-item nav-link" href="#otherProject2">Other Project 2</a>
+          </div>
+          
+      </div>
+    </div>
+
+    <!-- <div id="mySidenav" class="sidenav">
       <div class="collapse">
         <a href="javascript:void(0)" onclick="closeNav()"> &times;</a>
       </div>
       
 
       <div class="container-fluid" style="text-align:center">
-        <!-- <p id="side-title">Project Directory</p> -->
+
         <hr>
         <a class="nav-item nav-link active" href="./defaultproject.html">AI Art Advisor</a>
         <a class="nav-item nav-link" href="./videogen.html">Consistent Video Generation</a>
@@ -54,7 +79,7 @@
         <a class="nav-item nav-link" href="./emd.html">Accessibility of Touch Screens for Elderly</a>
       </div>
       
-    </div>
+    </div> -->
     
     <div id="expandBtn" class="expand">
       <a href="javascript:void(0)" onclick="openNav()"> &#9776;</a>
@@ -128,10 +153,12 @@
         <p>
           <h3>Features</h3>
 
-          <h4>Basic Input</h4>
+          <h5>Basic Input</h5>
           Image upload, API key, specific question, language
 
-          <h4>Tone/difficulty Selection</h4>
+          <br><br>
+
+          <h5>Tone/difficulty Selection</h5>
           Choose desired skill level -> system will speak to you in a tone that is easier to understand. <br>
           For example if you are a beginner it will use simpler words and easy analogies.
 
@@ -139,7 +166,7 @@
         
         <p>
           <h3>Results</h3>
-          <h4>Try it yourself!</h4>
+          <h5>Try it yourself!</h5>
           Upload your own artwork and try out the tool with the demo below!
 
           <script
@@ -149,7 +176,7 @@
 
           <gradio-app src="https://simoncwang-aiartadvisor.hf.space"></gradio-app>
 
-          <h4>Example use case</h4>
+          <h5>Example use case</h5>
           The interface of the Gradio app along with an example use case is shown below using the famous <em>Mona Lisa</em> by Leonardo da Vinci.
 
           <img src="../images/artexample.png" style="width:100%">
