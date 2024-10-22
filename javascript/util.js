@@ -36,4 +36,21 @@ function switchContent(currentID, nextID) {
     if (next) {
         next.style.display = "block";
     }
+
+    // if we are switching back to the thumbnails page, make the back to blog button invisible and make all posts invisible
+    btn = document.getElementById("blog-home-btn");
+    if (nextID == "thumbnails") {
+        divs = document.querySelectorAll(`div.${"blog-content"}`);
+        btn = document.querySelectorAll(`div.${"blog-content.blog-home-btn"}`);
+    
+        // Loop through each div and set display to none
+        divs.forEach(div => {
+            div.style.display = 'none';
+        });
+        btn.style.display = "none";
+    } else {
+        btn.style.display = "block";
+    }
+    
+    
 }

@@ -32,34 +32,54 @@
       </div>
 
   </div>
-  
 </nav>
 
-<div class="blog-home fixed-top">
-  <a href="javascript:void(0)" onclick="switchContent('','thumbnails')"> back to all posts</a>
-</div>
-
 <!-- content section -->
-<div id="thumbnails" style="background-color: #ffffff; margin-top:2%">
-  <div class="container container-fluid" >
+<div id="thumbnails" style="margin-top:2%;">
+
+  <div class="container container-fluid">
     <h1 style="text-align: center;">Cool things :)</h1>
-    <br>
-    <h5 style="text-align:center; font-weight:lighter;">
+    <!-- <br> -->
+    <h5 style="padding-top:1%; text-align:center; font-weight:lighter">
       If you're interested in hearing about the things I find awesome (& maybe learning a bit about them) you're in the right place! If not...look a cute frog! <i class="fa-solid fa-frog"></i>
     </h5>
 
-    <div class="rounded callout">
-      NOTE: The content here is based on my opinions informed by resources I will try my best to link! It is not official research or a reflection of my University or anyone I work with unless otherwise stated!
-    </div>
+    <!-- <br> -->
+
+    <!-- <hr>
+    <center>
+      <div class="rounded callout" style="font-weight:lighter;">
+        NOTE: The content here is based on my opinions informed by resources I will try my best to link! It is not official research or a reflection of my University or anyone I work with unless otherwise stated!
+      </div>
+    </center> -->
     
     <hr>
   
     <div class="row">
       <div class="col">
+        <h3>Coding a personal website (I know, meta right)</h3>
+        <p class="date">October 22, 2024</p>
+
+        <img src="images/websitecoding.webp" class="rounded mx-auto d-block" alt="art" style="width:100%">
+        <center class="image-caption">AI generated using DALL-E</center>
+
+        <br>
+        <p>
+          Coding and publishing my own website using GitHub pages! Yes, it's this one that you're on right now :)
+        </p>
+
+        <button onclick="switchContent('thumbnails','website')" id="button" class="button-1">
+          Read more!
+        </button>
+
+      </div>
+
+      <div class="col">
         <h3>What makes AI an agent?</h3>
         <p class="date">October 18, 2024</p>
 
         <img src="images/robotagent.webp" class="rounded mx-auto d-block" alt="art" style="width:100%">
+        <center class="image-caption">AI generated using DALL-E</center>
 
         <br>
         <p>
@@ -70,24 +90,6 @@
         <button onclick="switchContent('thumbnails','agents')" id="button" class="button-1">
           Read more!
         </button>
-
-      </div>
-
-      <div class="col">
-        <h3 style="text-align: center">Post title</h3>
-
-        <img src="images/placeholder.svg" class="rounded mx-auto d-block" alt="art" style="width:100%">
-
-        <br>
-        <p>
-          Description
-        </p>
-
-        <a href = "./projects/defaultproject.html">
-          <button id="button" class="button-1">
-            Read more!
-          </button>
-        </a>
 
       </div>
       
@@ -136,6 +138,41 @@
     </div>
     
   </div>
+</div>
+
+<div class="blog-content" id="agents">
+  <div class="blog-home" id="blog-home-btn">
+    <a href="javascript:void(0)" onclick="switchContent('','thumbnails')"> <i style="font-size:40px;"class="fa-solid fa-circle-left"></i></a>
+  </div>
+  <!-- <hr> -->
+  <h1 style="text-align: center;">What makes AI an agent?</h1>
+  <center>
+    <p class="date">October 18, 2024</p>
+  </center>
+
+  <hr>
+  <p>
+    In recent years, AI has evolved from being a tool that follows pre-programmed rules to becoming more agentic, meaning that it can take actions independently to achieve specific goals. But what exactly makes an AI agentic? Let’s explore the key components.
+
+    Autonomy: At its core, an agentic AI can operate with minimal human intervention. Instead of waiting for a command, it can make decisions based on its environment, goals, and inputs. For example, a self-driving car continuously makes choices about speed, direction, and safety, all autonomously.
+  
+    Goal-Directed Behavior: Agentic AI systems are designed to pursue specific objectives. This could be something as simple as optimizing a search result, or as complex as managing a smart home system. Their actions are aligned with achieving these defined goals efficiently.
+  
+    Adaptability: An agentic AI isn’t rigid. It learns and adapts based on new information and changes in its environment. Through reinforcement learning and other techniques, it can update its strategies to better reach its objectives, much like how humans learn from experience.
+  
+    Decision-Making Abilities: Critical to being agentic is the ability to make informed decisions. This involves evaluating possible actions, predicting outcomes, and selecting the most effective course of action. For example, a virtual assistant can assess user preferences, predict needs, and proactively suggest solutions.
+  
+    Interaction with the Environment: To be agentic, an AI must interact with its environment in meaningful ways. This could be through sensors, data inputs, or even engaging with other AI systems. It processes real-time information and responds accordingly, much like a human agent.
+  
+    In summary, an agentic AI combines autonomy, goal-oriented behavior, adaptability, decision-making, and environmental interaction. This shift towards more self-sufficient AI systems is paving the way for innovations across industries, from healthcare to autonomous systems.
+  </p>
+  
+</div>
+
+<div class="blog-content" id="website">
+  <hr>
+  <h1 style="text-align: center;">Coding a personal website (I know, meta right)</h1>
+
 </div>
 
   <!-- footer section -->
