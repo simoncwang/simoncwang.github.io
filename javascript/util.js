@@ -38,17 +38,28 @@ function switchContent(currentID, nextID) {
     }
 
     // if we are switching back to the thumbnails page, make the back to blog button invisible and make all posts invisible
-    btn = document.getElementById("blog-home-btn");
+    homebtns = document.getElementsByClassName("blog-home");
+
+    
+
+    // if returning to thumbnails make all content invisible and make all buttons invisible
     if (nextID == "thumbnails") {
         divs = document.querySelectorAll(`div.${"blog-content"}`);
-        btn = document.querySelectorAll(`div.${"blog-content.blog-home-btn"}`);
     
         // Loop through each div and set display to none
         divs.forEach(div => {
             div.style.display = 'none';
         });
-        btn.style.display = "none";
+        
+        homebtns.forEach(div => {
+            div.style.display = 'none';
+        });
+        
     } else {
+        // get button with the correct ID
+        // when switching to a content page, the ID will be appended to the button ID
+        btn_id = "blog-home-" + nextID;
+        btn = document.getElementById(btn_id)
         btn.style.display = "block";
     }
     
