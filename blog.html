@@ -54,13 +54,31 @@
     </center> -->
     
     <hr>
-  
-    <div class="row">
-      <div class="col">
+
+    <div class="blog-grid">
+      <div class="blog-item rounded">
+        <h3>AI can use computers now? Claude breaks the 4th wall!</h3>
+        <p class="date">November 1, 2024</p>
+
+        <img src="images/computeruse.webp" class="blog-thumbnail rounded mx-auto d-block">
+        <center class="image-caption">AI generated using DALL-E</center>
+
+        <br>
+        <p>
+          Last week, Anthropic announced their new upgraded Claude 3.5 Sonnet model, now able to actually use your computer! But what does this mean? What are the implications? Am I going to lose my job if AI can just do all of my coding and typing (and Googling ofc) for me?
+        </p>
+
+        <button onclick="switchContent('thumbnails','claude')" id="button" class="button-1">
+          Read more!
+        </button>
+
+      </div>
+
+      <div>
         <h3>Coding a personal website (I know, meta right)</h3>
         <p class="date">October 22, 2024</p>
 
-        <img src="images/websitecoding.webp" class="rounded mx-auto d-block" alt="art" style="width:100%">
+        <img src="images/websitecoding.webp" class="blog-thumbnail rounded mx-auto d-block">
         <center class="image-caption">AI generated using DALL-E</center>
 
         <br>
@@ -74,11 +92,11 @@
 
       </div>
 
-      <div class="col">
+      <div>
         <h3>What makes AI an agent?</h3>
         <p class="date">October 18, 2024</p>
 
-        <img src="images/robotagent.webp" class="rounded mx-auto d-block" alt="art" style="width:100%">
+        <img src="images/robotagent.webp" class="blog-thumbnail rounded mx-auto d-block">
         <center class="image-caption">AI generated using DALL-E</center>
 
         <br>
@@ -92,92 +110,108 @@
         </button>
 
       </div>
+
       
+
     </div>
 
+  </div>
+</div>
+
+<div class="container">
+  <div class="blog-content" id="agents">
+    <div class="blog-home" id="blog-home-agents">
+      <a href="javascript:void(0)" onclick="switchContent('','thumbnails')"> <i style="font-size:40px;"class="fa-solid fa-circle-left"></i></a>
+    </div>
+    <!-- <hr> -->
+    <h1 style="text-align: center;">What makes AI an agent?</h1>
+    <center>
+      <p class="date">October 18, 2024</p>
+    </center>
+  
     <hr>
-
-    <div class="row">
-
-      <div class="col">
-        <h3 style="text-align: center">Post title</h3>
-
-        <img src="images/placeholder.svg" class="rounded mx-auto d-block" alt="art" style="width:100%">
-
-        <br>
-        <p>
-          Description
-        </p>
-
-        <a href = "./projects/defaultproject.html">
-          <button id="button" class="button-1">
-            Read more!
-          </button>
-        </a>
-
-      </div>
-
-      
-      <div class="col">
-        <h3 style="text-align: center">Post title</h3>
-
-        <img src="images/placeholder.svg" class="rounded mx-auto d-block" alt="art" style="width:100%">
-
-        <br>
-        <p>
-          Description
-        </p>
-
-        <a href = "./projects/defaultproject.html">
-          <button id="button" class="button-1">
-            Read more!
-          </button>
-        </a>
-
-      </div>
-    </div>
+    <p>
+      In recent years, AI has evolved from being a tool that follows pre-programmed rules to becoming more agentic, meaning that it can take actions independently to achieve specific goals. But what exactly makes an AI agentic? Let’s explore the key components.
+  
+      Autonomy: At its core, an agentic AI can operate with minimal human intervention. Instead of waiting for a command, it can make decisions based on its environment, goals, and inputs. For example, a self-driving car continuously makes choices about speed, direction, and safety, all autonomously.
+    
+      Goal-Directed Behavior: Agentic AI systems are designed to pursue specific objectives. This could be something as simple as optimizing a search result, or as complex as managing a smart home system. Their actions are aligned with achieving these defined goals efficiently.
+    
+      Adaptability: An agentic AI isn’t rigid. It learns and adapts based on new information and changes in its environment. Through reinforcement learning and other techniques, it can update its strategies to better reach its objectives, much like how humans learn from experience.
+    
+      Decision-Making Abilities: Critical to being agentic is the ability to make informed decisions. This involves evaluating possible actions, predicting outcomes, and selecting the most effective course of action. For example, a virtual assistant can assess user preferences, predict needs, and proactively suggest solutions.
+    
+      Interaction with the Environment: To be agentic, an AI must interact with its environment in meaningful ways. This could be through sensors, data inputs, or even engaging with other AI systems. It processes real-time information and responds accordingly, much like a human agent.
+    
+      In summary, an agentic AI combines autonomy, goal-oriented behavior, adaptability, decision-making, and environmental interaction. This shift towards more self-sufficient AI systems is paving the way for innovations across industries, from healthcare to autonomous systems.
+    </p>
     
   </div>
-</div>
-
-<div class="blog-content" id="agents">
-  <div class="blog-home" id="blog-home-agents">
-    <a href="javascript:void(0)" onclick="switchContent('','thumbnails')"> <i style="font-size:40px;"class="fa-solid fa-circle-left"></i></a>
+  
+  <div class="blog-content" id="website">
+    <div class="blog-home" id="blog-home-website">
+      <a href="javascript:void(0)" onclick="switchContent('','thumbnails')"> <i style="font-size:40px;"class="fa-solid fa-circle-left"></i></a>
+    </div>
+    <h1 style="text-align: center;">Coding a personal website (I know, meta right)</h1>
+    <center>
+      <p class="date">October 22, 2024</p>
+    </center>
+  
   </div>
-  <!-- <hr> -->
-  <h1 style="text-align: center;">What makes AI an agent?</h1>
-  <center>
-    <p class="date">October 18, 2024</p>
-  </center>
 
-  <hr>
-  <p>
-    In recent years, AI has evolved from being a tool that follows pre-programmed rules to becoming more agentic, meaning that it can take actions independently to achieve specific goals. But what exactly makes an AI agentic? Let’s explore the key components.
+  <div class="blog-content" id="claude">
+    <div class="blog-home" id="blog-home-claude">
+      <a href="javascript:void(0)" onclick="switchContent('','thumbnails')"> <i style="font-size:40px;"class="fa-solid fa-circle-left"></i></a>
+    </div>
+    <h1 style="text-align: center;">AI can use computers now? Claude breaks the 4th wall!</h1>
+    <center>
+      <p class="date">November 1, 2024</p>
+    </center>
+    
+    <p>
+      Last week, on October 22nd, Anthropic unveiled updates to their Claude 3.5 Sonnet model in a <a href="https://www.anthropic.com/news/3-5-models-and-computer-use" target="_blank">blog post</a>, revealing alongside general improvements the shocking new feature: <b>computer use.</b>
+    </p>
 
-    Autonomy: At its core, an agentic AI can operate with minimal human intervention. Instead of waiting for a command, it can make decisions based on its environment, goals, and inputs. For example, a self-driving car continuously makes choices about speed, direction, and safety, all autonomously.
-  
-    Goal-Directed Behavior: Agentic AI systems are designed to pursue specific objectives. This could be something as simple as optimizing a search result, or as complex as managing a smart home system. Their actions are aligned with achieving these defined goals efficiently.
-  
-    Adaptability: An agentic AI isn’t rigid. It learns and adapts based on new information and changes in its environment. Through reinforcement learning and other techniques, it can update its strategies to better reach its objectives, much like how humans learn from experience.
-  
-    Decision-Making Abilities: Critical to being agentic is the ability to make informed decisions. This involves evaluating possible actions, predicting outcomes, and selecting the most effective course of action. For example, a virtual assistant can assess user preferences, predict needs, and proactively suggest solutions.
-  
-    Interaction with the Environment: To be agentic, an AI must interact with its environment in meaningful ways. This could be through sensors, data inputs, or even engaging with other AI systems. It processes real-time information and responds accordingly, much like a human agent.
-  
-    In summary, an agentic AI combines autonomy, goal-oriented behavior, adaptability, decision-making, and environmental interaction. This shift towards more self-sufficient AI systems is paving the way for innovations across industries, from healthcare to autonomous systems.
-  </p>
-  
-</div>
+    <h3>How does it work?</h3>
+    <p>
+      So, how does a large language model go about actually using a computer? Well, the answer might be simpler than you might expect. Today's trend of AI development has increasingly steered towards developing "agentic" AI (which I gave my thoughts on in an earlier post!). These models are trained to utilize tools the user provides, such as calculators or even surfing the internet. So, theoretically we can just show the AI model our screen then give it control of the mouse and keyboard as a "tool"! Easy, right?
+    </p>
 
-<div class="blog-content" id="website">
-  <div class="blog-home" id="blog-home-website">
-    <a href="javascript:void(0)" onclick="switchContent('','thumbnails')"> <i style="font-size:40px;"class="fa-solid fa-circle-left"></i></a>
+    <p>
+      Actually, yes...
+    </p>
+
+    <p>
+      In essence, to control the computer, Claude is provided screenshots of what is visible to the user, then is able to calculate how many pixels to move the cursor (horizontally and vertically) in order to reach a certain goal. Combined with its ability to reason and plan, the model can now actually execute its own plans!
+    </p>
+
+    <p>
+      For example, if I prompted Claude to "Develop a simple web app that is a to do list which I can check off items, then launch it on a local server. Test the app for functionality, and use the internet to research how to do anything you don't understand," it might go through the following steps:
+      <ol>
+        <li>Navigate the cursor to the VSCode logo and open the editor</li>
+        <li>Start typing code in the editor</li>
+        <li>Launch a simple Python server in the terminal</li>
+        <li>Open a browser to check results</li>
+        <li>Realize the checklist doesn't properly show checked items</li>
+        <li>Open a tab and find code for a checkbox on Stack Overflow</li>
+        <li>Fix the code in the editor</li>
+        <li>Test the now working app by moving the cursor and clicking/unclicking the items</li>
+      </ol>
+      Before, LLMs could only provide you with responses, leaving you to plug in the code or look up the recommendation and implement it on your own (with the exception of actually using APIs and chaining together various tools, which is restricted to the more savvy users amongst us). However, this new feature bridges that gap, allowing the model not only to execute code, but manipulate your computer and <b>actually use the tools we give it!</b>
+    </p>
+
+
+
+    <h3>Why is this cool?</h3>
+    <p>
+      Now, you might be thinking, wouldn't it be faster just to perform all of those tasks on my own? Why would I want to wait for the model to slowly move my cursor around, when I could have just coded up the app and deployed it faster with my experience? Well, I would agree with you for the most part. However, many users that don't have coding background might not have as easy a time as you or I presumably! This direction of research truly shows promise in making the world of technology more accessible in my opinion.
+    </p>
+
+    <p>
+      Say you are new to AI and coding in general, but have heard of all this AI hype and want to give some great app ideas you have a shot! Maybe a mom who wants an app to keep track of her family recipes, but isn't quite comfortable sharing them with an app someone else made? With this type of AI agent at her side, she could explain her idea to the model
+    </p>
+
   </div>
-  <h1 style="text-align: center;">Coding a personal website (I know, meta right)</h1>
-  <center>
-    <p class="date">October 22, 2024</p>
-  </center>
-
 </div>
 
   <!-- footer section -->

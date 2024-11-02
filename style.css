@@ -235,6 +235,23 @@ div.content {
 
 .blog-content {
   display:none;
-  margin-left: 200px;
-  margin-right: 200px;
 }
+
+.blog-grid {
+  display: grid;
+  justify-content:center;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+}
+
+.blog-thumbnail {
+  width: 100%;
+}
+
+/* .blog-content p {
+  text-indent: 50px;
+} */
+
+/* .blog-item {
+  border:#032f2a;
+} */
