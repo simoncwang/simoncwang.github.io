@@ -242,6 +242,8 @@ div.content {
   justify-content:center;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  margin-left:5%;
+  margin-right:5%;
 }
 
 .blog-thumbnail {
