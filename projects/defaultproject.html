@@ -56,30 +56,14 @@
   
           <button class="section-header" onclick="toggleSection('anotherSection')">Personal Projects</button>
           <div id="anotherSection" class="section-content show-section">
-              <a class="nav-item nav-link active" href="./defaultproject.html">AI Art Advisor</a>
-              <a class="nav-item nav-link" href="#otherProject1">Other Project 1</a>
-              <a class="nav-item nav-link" href="#otherProject2">Other Project 2</a>
+            <a class="nav-item nav-link active" href="./defaultproject.html">RAG Quiz</a>
+            <a class="nav-item nav-link" href="./artadvisor.html">AI Art Advisor</a>
+            <a class="nav-item nav-link" href="#otherProject1">Other Project 1</a>
+            <a class="nav-item nav-link" href="#otherProject2">Other Project 2</a>
           </div>
           
       </div>
     </div>
-
-    <!-- <div id="mySidenav" class="sidenav">
-      <div class="collapse">
-        <a href="javascript:void(0)" onclick="closeNav()"> &times;</a>
-      </div>
-      
-
-      <div class="container-fluid" style="text-align:center">
-
-        <hr>
-        <a class="nav-item nav-link active" href="./defaultproject.html">AI Art Advisor</a>
-        <a class="nav-item nav-link" href="./videogen.html">Consistent Video Generation</a>
-        <a class="nav-item nav-link" href="./vrclass.html">XR Education</a>
-        <a class="nav-item nav-link" href="./emd.html">Accessibility of Touch Screens for Elderly</a>
-      </div>
-      
-    </div> -->
     
     <div id="expandBtn" class="expand">
       <a href="javascript:void(0)" onclick="openNav()"> &#9776;</a>
@@ -89,16 +73,16 @@
     <div class="container"> 
       <div id = "myContent" class="content">
         <br>
-        <h1 style="text-align: center;">AI Art Advisor</h1>
-        <h5 style="text-align: center; font-weight:lighter;">A smart, constructive, easy-to-use personal art critic!</h5>
+        <h1 style="text-align: center;">Personal RAG Quiz System</h1>
+        <h5 style="text-align: center; font-weight:lighter;">Using retrieval augmented generation to help you learn what you want to learn!</h5>
         
         <div class="links">
           <div>
-            <i class="fa-brands fa-github-alt"></i> <a href="https://github.com/simoncwang/AIArtAdvisor" target="_blank">GitHub</a>
+            <i class="fa-brands fa-github-alt"></i> <a href="https://github.com/simoncwang/RAGQuiz" target="_blank">GitHub</a>
           </div>
-          <div>
+          <!-- <div>
             <i class="fa-solid fa-laptop-code"></i> <a href="https://huggingface.co/spaces/simoncwang/AIArtAdvisor" target="_blank">Demo</a>
-          </div>
+          </div> -->
           <div>
             <i class="fa-solid fa-book"></i> <a>Resources</a>
           </div>
@@ -106,90 +90,79 @@
         </div>
         
         <br>
-        <img src="../images/paintbrush.jpg" class="rounded mx-auto d-block" alt="art" style="width:65%">
+        <img src="../images/learning.webp" class="blog-thumbnail rounded mx-auto d-block" style="width:50%">
+        <center class="image-caption">AI generated using DALL-E</center>
 
         <hr>
-        
+
+        <h3>Introduction</h3>
         <p>
-          <h3>Introduction</h3>
-          In the past couple of years, generative AI models have become incredibly powerful and capable of creating very high-quality images from just a short text prompt. Many state of the art diffusion-based image generation models are publicly available (such as DALL-E, Midjourney, Stable Diffusion, etc.).
+          You've most likely used LLM platforms like ChatGPT or Claude to answer your burning questions about various topics, but how do you know where the model is getting its answers from? How can you be sure the sources are reliable, or relevant to your specific situation?
+        </p>
 
-          <br><br>
-
-          For many artists and creatives, this has created high levels of (justified) anxiety and general fear surrounding AI technology. Will AI art replace artists? What is the role of these generative models in the creative world, or does it even exist?
-
-          <br><br>
-
-          While AI generated art is certainly a threat to "genuine" artists, I believe that with the right application we can use <em>assist</em> artists rather than <em>replace</em> them!
+        <p>
+          <b>Retrieval augmented generation (RAG)</b> is the answer! RAG essentially allows the model to use documents or resources you provide directly as a source to answer your questions! Want to understand the main ideas behind a long paper you're reading? Just upload the pdf and have the AI read through it for you! Want to find the specific instruction you're looking for in a dense text manual for a complicated tool? RAG can pinpoint it for you and even tell you the exact page it's on!
         </p>
           
+        <h3>What is this tool?</h3>
+        <p>
+          As a simple demonstration of just how capable RAG is, and how simple it can be to apply, I created a RAG-powered custom quiz app!
+        </p>
 
         <p>
-          <h3>Approach</h3>
-          To illustrate a potential application of these models to benefit artists, I created a prototype "AI art advisor" using the latest vison-language model <a href="https://openai.com/index/hello-gpt-4o/" target="_blank">GPT-4o ("omni")</a> from OpenAI. This new GPT model now has vision capabilities, so, I was inspired to ask the question: <b>how well can it understand art?</b>
+          This gradio demo is powered by <b>OpenAI's gpt-4o</b> model behind the scenes, and allows you to upload any number of documents you wish. It uses the OpenAI API assistants feature with file search capability (<a href="https://platform.openai.com/docs/assistants/tools/file-search" target="_blank">Official API Docs</a>). On the right hand side, when you click generate, the system will generate a quiz question to help test your knowledge about a random document selected from your custom library!
+        </p>
+
+        <p>
+          In the URL section, I have also implemented the capability to perform RAG on any website with text content! Simply paste in the URL of a website, and the system will use web scraping with the <b>Selenium Python library</b> to get any relevant text from the page to use for retrieval!
+        </p>
+
+        <p>
+          <b>NOTE:</b> this demo is still a work in progress, so currently the generation output is just the entire quiz question, correct answer, and answer choices. Soon, I intend to implement functionality to actually take the quiz. The UI will only show the question along with several checkboxes for the answer choices and a submit button. Then the quiz will tell you whether you got the question correct or not, along with an explanation retrieved directly from the relevant document (along with citation).
         </p>
         
+        <h4>Implementation note: structured outputs</h4>
         <p>
-          <h3>Implementation</h3>
-          This project was created using the OpenAI API and mostly based off of the <a href="https://platform.openai.com/docs/guides/vision">official docs</a> for the vision API. Then integrated the functionality with a simple <a href="https://www.gradio.app/">Gradio</a> web app. 
-
-          <br><br>
-
-          There is a simple user interface where the user can upload any image (png or jpg format) of their art, along with their API key and any specific requests. In the backend, these inputs are parsed into several API calls to GPT-4o. In the API call, the system is told its role as an art advisor that gives constructive feedback (both negative and positive). Finally, the response is returned and formatted into clean markdown format before being printed out in the Gradio app interface. 
-
-          <br><br>
-
-          Below is a simple flow diagram to describe this implementation:
-
-          <br><br>
-
-          <center>
-            <img src="../images/ArtAdvisorFlow.png" style="width:70%">
-          </center>
-          
-          
+          Currently, I am just enforcing a structured output through prompting by providing the model with an example JSON template and asking it to generate output in this format. While this is not a robust method I have found through personal experience that for more capable LLMs it is almost always sufficient to reliably get expected structure the majority of the time.
         </p>
 
         <p>
-          <h3>Features</h3>
-
-          <h5>Basic Input</h5>
-          Image upload, API key, specific question, language
-
-          <br><br>
-
-          <h5>Tone/difficulty Selection</h5>
-          Choose desired skill level -> system will speak to you in a tone that is easier to understand. <br>
-          For example if you are a beginner it will use simpler words and easy analogies.
-
+          <b>JSON Prompt Used: </b>
+          <br>
+          <code>
+            """
+            Please provide your question and correct answer using the following JSON format:
+            {
+                "question": "<Question>"
+                "choiceA": ["<answer choice as single letter>", "answer choice description"]
+                "choiceB": ["<answer choice as single letter>", "answer choice description"]
+                "choiceC": ["<answer choice as single letter>", "answer choice description"]
+                "choiceD": ["<answer choice as single letter>", "answer choice description"]
+                "correct answer": "<Single Letter>"
+            }
+            """
+          </code>
+          <br>
+          <b>Example output (from Vision Transformer paper): </b>
+          <br>
+          <code>
+            {
+              "question": "Which optimization algorithm was found unconventional but motivated a switch during the ResNet experiments for fine-tuning?",
+              "choiceA": ["A", "SGD"],
+              "choiceB": ["B", "Adam"],
+              "choiceC": ["C", "RMSProp"],
+              "choiceD": ["D", "AdaGrad"],
+              "correct answer": "B"
+            }
+          </code>
         </p>
         
+        <h3>The Demo</h3>
         <p>
-          <h3>Results</h3>
-          <h5>Try it yourself!</h5>
-          Upload your own artwork and try out the tool with the demo below!
-
-          <script
-            type="module"
-            src="https://gradio.s3-us-west-2.amazonaws.com/4.40.0/gradio.js"
-          ></script>
-
-          <gradio-app src="https://simoncwang-aiartadvisor.hf.space"></gradio-app>
-
-          <h5>Example use case</h5>
-          The interface of the Gradio app along with an example use case is shown below using the famous <em>Mona Lisa</em> by Leonardo da Vinci.
-
-          <img src="../images/artexample.png" style="width:100%">
-
+          Below is a screenshot of the main UI of the app, showing the features described earlier. Feel free to go to my <a href="https://github.com/simoncwang/RAGQuiz" target="_blank">GitHub</a> to download and test out the app for yourself! Note, you will have to provide your own OpenAI API key!
         </p>
 
-        <p>
-          <h3>Conclusions</h3>
-        </p>
-
-        <p>
-          <h3>Future work</h3>
-        </p>
+        <img src="../images/quizapp.png" style="width:100%">
 
       </div>
     </div>
