@@ -74,7 +74,7 @@ h1 {
 /* navbar styles */
 .navbar {
   position:sticky;
-  z-index:1;
+  z-index:1000;
   background-color: #cde4df;
 }
 
@@ -250,10 +250,106 @@ div.content {
   width: 100%;
 }
 
-/* .blog-content p {
-  text-indent: 50px;
-} */
 
-/* .blog-item {
-  border:#032f2a;
-} */
+/* .fade {
+  position: relative;
+  /* mask-image: linear-gradient(to bottom, 
+        transparent 0%, 
+        rgba(0,0,0,0.1) 10%, 
+        rgba(0,0,0,0.5) 20%, 
+        rgba(0,0,0,1) 30%, 
+        rgba(0,0,0,1) 70%, 
+        rgba(0,0,0,0.5) 80%, 
+        rgba(0,0,0,0.1) 90%, 
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(to bottom, 
+        transparent 0%, 
+        rgba(0,0,0,0.1) 10%, 
+        rgba(0,0,0,0.5) 20%, 
+        rgba(0,0,0,1) 30%, 
+        rgba(0,0,0,1) 70%, 
+        rgba(0,0,0,0.5) 80%, 
+        rgba(0,0,0,0.1) 90%, 
+        transparent 100%
+    ); */
+/* } */ */
+/* Base fade class */
+.fade {
+  position: relative;
+  /* mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 30%,
+    rgba(0, 0, 0, 0.9) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out; */
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  z-index: 9999;
+  border-radius: 50%;
+  background-color: rgba(83, 245, 199, 0.7);
+  pointer-events: none;
+  animation: particle-animation 2s forwards ease-out;
+}
+
+@keyframes particle-animation {
+  0% {
+      transform: scale(1) translate(0, 0);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(0) translate(var(--dx), var(--dy));
+      opacity: 0;
+  }
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 9999;
+  border: 2px solid rgba(129, 197, 243, 0.7);
+  background-color: transparent;
+  pointer-events: none;
+  animation: ripple-animation 2s ease-out forwards;
+}
+
+@keyframes ripple-animation {
+  0% {
+      transform: scale(0);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(3); /* Adjust the scale to control how far the ripple spreads */
+      opacity: 0;
+  }
+}
+
+#toggle-container {
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  z-index: 9999;
+  color: rgb(93, 78, 255);
+  font-size: 16px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items:flex-start;
+}
