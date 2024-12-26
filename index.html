@@ -10,21 +10,26 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <link rel = "stylesheet" href = "./style.css">
   <script src="../javascript/util.js"></script>
+  <script src="../javascript/theme_change.js"></script>
   <script src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-<div id="toggle-container">
+<!-- <div id="toggle-container">
   <label for="toggle-ripple">ripple animation: </label>
   <input type="checkbox" id="toggle-ripple" unchecked>
 
   <label for="toggle-particle">particle animation: </label>
   <input type="checkbox" id="toggle-particle" unchecked>
-</div>
+</div> -->
 
 
 <!-- navbar section -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <button id="theme-toggle">
+    <i id = "theme-icon" class="fa-regular fa-lightbulb"></i>
+  </button>
 
   <div class="container">
     
@@ -32,22 +37,19 @@
       <i class="fa-solid fa-cow d-inline-block"></i>
       Simon Wang
     </a>
-    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
 
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="./index.html">Home</a>
-        <a class="nav-item nav-link" href="./projects/defaultproject.html">Projects</a>
-        <a class="nav-item nav-link" href="./courses.html">Coursework</a>
-        <a class="nav-item nav-link" href="./blog.html">Blog</a>
-      </div>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="./index.html">Home</a>
+      <a class="nav-item nav-link" href="./projects/defaultproject.html">Projects</a>
+      <a class="nav-item nav-link" href="./courses.html">Coursework</a>
+      <a class="nav-item nav-link" href="./blog.html">Blog</a>
+    </div>
 
   </div>
   
 </nav>
   <!-- introduction section -->
-<div class="jumbotron jumbotron-fluid">
+<div id = "intro" class="jumbotron jumbotron-fluid" data-theme-target>
 
   <div class="container">
 
@@ -75,7 +77,7 @@
 
       <!-- news/updates section -->
       <div class="col">
-        <div class="card shadow rounded" id = "news">
+        <div class="card shadow rounded" id = "news" data-theme-target>
           <div class="card-body">
             <center>
               <h4>Recent News & Updates!</h4>
@@ -138,79 +140,26 @@
       </p>
 
   
-      <div class="buttons">
-        <a href = "./documents/resume.pdf" target="_blank">
-          <button id="resumeButton" class="button-1">
+      <div class="buttons" >
+        <a href = "./documents/resume.pdf" target="_blank" >
+          <button id="resumeButton" class="button-1" data-theme-target>
             Resume
           </button>
         </a>
 
-        <a href = "https://www.linkedin.com/in/simon-wang-519902193/" target="_blank">
-          <button id="linkedinButton" class="button-1">
+        <a href = "https://www.linkedin.com/in/simon-wang-519902193/" target="_blank" >
+          <button id="linkedinButton" class="button-1" data-theme-target>
             LinkedIn
           </button>
         </a>
 
       </div>
-
-    
-
-    
   </div>
    
 </div>
 
-<!-- general information section -->
-<!-- <div class="container container-fluid">
-  <div class="row">
-    <div class="col">
-      <h1>Experience</h1>
-      <hr>
-      <p>Below are my resume and LinkedIn profile. Please reach out to me via email at <a href= "mailto: scwang00@umd.edu">scwang00@umd.edu</a> 
-        or on LinkedIn if you have any questions or would like to connect. I would be happy to talk!</p>
-      <a href = "./documents/resume.pdf" target="_blank">
-        <button id="CVButton" class="button-1">
-          CV
-        </button>
-      </a>
-      <a href = "https://www.linkedin.com/in/simon-wang-519902193/" target="_blank">
-        <button id="LinkedInButton" class="button-1">
-          LinkedIn
-        </button>
-      </a>
-      <a href = "https://github.com/simoncwang" target="_blank">
-        <button id="projectButton" class="button-1">
-          GitHub
-        </button>
-      </a>
-    </div>
-
-    <div class="col">
-      <h1>Research</h1>  
-      <hr>     
-      <p>My research interests generally include <b>extended reality (XR)</b>, <b>generative AI</b>, and <b>human-computer interaction (HCI)</b>. 
-        In particular, I am interested in using these techniques in tandem with <b>computer graphics</b> and <b>computer vision</b> methods for applications such
-        as <b>education</b>, <b>accessibility</b>, and <b>art</b>.</p>
-    </div>
-
-    <div class="col">
-      <h1>Coursework</h1> 
-      <hr>     
-      <p>See below to see some of my favorite and most relevant courses I have taken so far! It includes both courses I have taken
-        recently at the graduate level as well as courses I have taken as an undergraduate (also at UMD!).
-      </p>
-      <a href = "./courses.html" target="_blank">
-        <button id="coursesButton" class="button-1">
-          Courses
-        </button>
-      </a>
-    </div>
-
-  </div>
-</div> -->
-
 <!-- projects section -->
-<div style="background-color: #ffffff; margin-top:2%">
+<div id="project-highlights" data-theme-target>
   <div class="container container-fluid" >
     <h1 style="text-align: center;">Project highlights</h1>
     <br>
@@ -234,7 +183,7 @@
         </p>
 
         <a href = "./projects/defaultproject.html">
-          <button id="button" class="button-1">
+          <button id="button" class="button-1" data-theme-target>
             Read more!
           </button>
         </a>
@@ -253,7 +202,7 @@
         </p>
 
         <a href = "./projects/vrclass.html">
-          <button id="button" class="button-1">
+          <button id="button" class="button-1" data-theme-target>
             Read more!
           </button>
         </a>
@@ -279,7 +228,7 @@
         </p>
 
         <a href = "./projects/videogen.html">
-          <button id="button" class="button-1">
+          <button id="button" class="button-1" data-theme-target>
             Read more!
           </button>
         </a>
@@ -298,7 +247,7 @@
         </p>
 
         <a href = "./projects/emd.html">
-          <button id="button" class="button-1">
+          <button id="button" class="button-1" data-theme-target>
             Read more!
           </button>
         </a>

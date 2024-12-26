@@ -10,35 +10,37 @@
   <link rel = "stylesheet" href = "./style.css">
   <script src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
   <script src="./javascript/util.js"></script>
+  <script src="../javascript/theme_change.js"></script>
 </head>
 <body>
 
 <!-- navbar section -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <button id="theme-toggle">
+    <i id = "theme-icon" class="fa-regular fa-lightbulb"></i>
+  </button>
+  
   <div class="container">
     <a class="navbar-brand" href="./index.html">
         <i class="fa-solid fa-cow d-inline-block"></i>
         Simon Wang
     </a>
-    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
 
-      <div class="navbar-nav">
-        <a class="nav-item nav-link" href="./index.html">Home</a>
-        <a class="nav-item nav-link" href="./projects/defaultproject.html">Projects</a>
-        <a class="nav-item nav-link" href="./courses.html">Coursework</a>
-        <a class="nav-item nav-link active" href="./blog.html">Blog</a>
-      </div>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="./index.html">Home</a>
+      <a class="nav-item nav-link" href="./projects/defaultproject.html">Projects</a>
+      <a class="nav-item nav-link" href="./courses.html">Coursework</a>
+      <a class="nav-item nav-link active" href="./blog.html">Blog</a>
+    </div>
 
   </div>
 </nav>
 
 <!-- content section -->
-<div id="thumbnails" style="margin-top:2%;">
+<div id="thumbnails" style="padding-top:2%;" data-theme-target>
 
   <div class="container container-fluid">
-    <h1 style="text-align: center;">Cool things :)</h1>
+    <h1 id = "blog-title" style="text-align: center;" data-theme-target>Cool things :)</h1>
     <!-- <br> -->
     <h5 style="padding-top:1%; text-align:center; font-weight:lighter">
       If you're interested in hearing about the things I find awesome (& maybe learning a bit about them) you're in the right place! If not...look a cute frog! <i class="fa-solid fa-frog"></i>

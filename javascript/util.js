@@ -1,3 +1,5 @@
+
+  
 // Apply animation logic when dom loaded
 document.addEventListener('DOMContentLoaded', function() {
     const toggleRipple = document.getElementById('toggle-ripple');
