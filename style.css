@@ -133,6 +133,7 @@ h1 {
   color: #032f2a;
   display: block;
   transition: 0.3s;
+  border-radius: 5%/15%; 
 }
 
 .sidenav a:hover {
@@ -165,11 +166,6 @@ h1 {
   display: inline-block;
 }
 
-
-/* div.content {
-  padding-left: 1%;
-  margin-left: 200px;
-} */
 
 .project-page {
   display:flex;
@@ -211,7 +207,7 @@ h1 {
 }
 
 .section-header {
-  background:none;
+  background: none;
   cursor: pointer;
   padding: 10px;
   text-align: left;
@@ -265,7 +261,7 @@ h1 {
 }
 
 .image-caption {
-  font-size: small;
+  font-size:medium;
   font-style: italic;
   color: gray;
 }
@@ -291,53 +287,12 @@ h1 {
   color:#032f2a;
 }
 
+.course-content {
+  padding-bottom: 3%;
+}
 
-/* .fade {
-  position: relative;
-  /* mask-image: linear-gradient(to bottom, 
-        transparent 0%, 
-        rgba(0,0,0,0.1) 10%, 
-        rgba(0,0,0,0.5) 20%, 
-        rgba(0,0,0,1) 30%, 
-        rgba(0,0,0,1) 70%, 
-        rgba(0,0,0,0.5) 80%, 
-        rgba(0,0,0,0.1) 90%, 
-        transparent 100%
-    );
-    -webkit-mask-image: linear-gradient(to bottom, 
-        transparent 0%, 
-        rgba(0,0,0,0.1) 10%, 
-        rgba(0,0,0,0.5) 20%, 
-        rgba(0,0,0,1) 30%, 
-        rgba(0,0,0,1) 70%, 
-        rgba(0,0,0,0.5) 80%, 
-        rgba(0,0,0,0.1) 90%, 
-        transparent 100%
-    ); */
-/* } */ */
-/* Base fade class */
-.fade {
-  position: relative;
-  /* mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.8) 30%,
-    rgba(0, 0, 0, 0.9) 50%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 30%,
-    rgba(0, 0, 0, 1) 70%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-size: 100% 100%;
-  -webkit-mask-size: 100% 100%;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out; */
+.list-group-item {
+  background: none;
 }
 
 .particle {

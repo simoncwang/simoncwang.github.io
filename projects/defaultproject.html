@@ -99,72 +99,46 @@
 
           <h3>Introduction</h3>
           <p>
-            You've most likely used LLM platforms like ChatGPT or Claude to answer your burning questions about various topics, but how do you know where the model is getting its answers from? How can you be sure the sources are reliable, or relevant to your specific situation?
+            Placeholder text.
           </p>
 
+
+          <h3>What is a "MLLM"?</h3>
           <p>
-            <b>Retrieval augmented generation (RAG)</b> is the answer! RAG essentially allows the model to use documents or resources you provide directly as a source to answer your questions! Want to understand the main ideas behind a long paper you're reading? Just upload the pdf and have the AI read through it for you! Want to find the specific instruction you're looking for in a dense text manual for a complicated tool? RAG can pinpoint it for you and even tell you the exact page it's on!
-          </p>
-            
-          <h3>What is this tool?</h3>
-          <p>
-            As a simple demonstration of just how capable RAG is, and how simple it can be to apply, I created a RAG-powered custom quiz app!
+            Placeholder text.
           </p>
 
+
+          <h3>How is benchmarking currently done?</h3>
           <p>
-            This gradio demo is powered by <b>OpenAI's gpt-4o</b> model behind the scenes, and allows you to upload any number of documents you wish. It uses the OpenAI API assistants feature with file search capability (<a href="https://platform.openai.com/docs/assistants/tools/file-search" target="_blank">Official API Docs</a>). On the right hand side, when you click generate, the system will generate a quiz question to help test your knowledge about a random document selected from your custom library!
+            Placeholder text.
           </p>
 
+
+          <h3>The problem...</h3>
           <p>
-            In the URL section, I have also implemented the capability to perform RAG on any website with text content! Simply paste in the URL of a website, and the system will use web scraping with the <b>Selenium Python library</b> to get any relevant text from the page to use for retrieval!
+            Placeholder text.
           </p>
 
+          <h3>My approach</h3>
           <p>
-            <b>NOTE:</b> this demo is still a work in progress, so currently the generation output is just the entire quiz question, correct answer, and answer choices. Soon, I intend to implement functionality to actually take the quiz. The UI will only show the question along with several checkboxes for the answer choices and a submit button. Then the quiz will tell you whether you got the question correct or not, along with an explanation retrieved directly from the relevant document (along with citation).
-          </p>
-          
-          <h4>Implementation note: structured outputs</h4>
-          <p>
-            Currently, I am just enforcing a structured output through prompting by providing the model with an example JSON template and asking it to generate output in this format. While this is not a robust method I have found through personal experience that for more capable LLMs it is almost always sufficient to reliably get expected structure the majority of the time.
+            Placeholder text.
           </p>
 
+          <h3>MMO, a multimodal multi-agent organization system</h3>
           <p>
-            <b>JSON Prompt Used: </b>
-            <br>
-            <code>
-              """
-              Please provide your question and correct answer using the following JSON format:
-              {
-                  "question": "<Question>"
-                  "choiceA": ["<answer choice as single letter>", "answer choice description"]
-                  "choiceB": ["<answer choice as single letter>", "answer choice description"]
-                  "choiceC": ["<answer choice as single letter>", "answer choice description"]
-                  "choiceD": ["<answer choice as single letter>", "answer choice description"]
-                  "correct answer": "<Single Letter>"
-              }
-              """
-            </code>
-            <br>
-            <b>Example output (from Vision Transformer paper): </b>
-            <br>
-            <code>
-              {
-                "question": "Which optimization algorithm was found unconventional but motivated a switch during the ResNet experiments for fine-tuning?",
-                "choiceA": ["A", "SGD"],
-                "choiceB": ["B", "Adam"],
-                "choiceC": ["C", "RMSProp"],
-                "choiceD": ["D", "AdaGrad"],
-                "correct answer": "B"
-              }
-            </code>
-          </p>
-          
-          <h3>The Demo</h3>
-          <p>
-            Below is a screenshot of the main UI of the app, showing the features described earlier. Feel free to go to my <a href="https://github.com/simoncwang/RAGQuiz" target="_blank">GitHub</a> to download and test out the app for yourself! Note, you will have to provide your own OpenAI API key!
+            Placeholder text.
           </p>
 
-          <img src="../images/quizapp.png" style="width:100%">
+          <h3>Towards better benchmarks!</h3>
+          <p>
+            Placeholder text.
+          </p>
+
+          <h3>Future work</h3>
+          <p>
+            Placeholder text.
+          </p>
 
         </div>
       </div>

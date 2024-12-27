@@ -70,6 +70,17 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Apply the theme
     function applyTheme(theme) {
+        // applying theme to sidenav section headers
+        sectionHeaders = document.querySelectorAll('.section-header');
+        sectionHeaders.forEach((el => {
+            if (theme === 'dark') {
+                el.style.color = "#13d9ac"
+            } else {
+                el.style.color = "black"
+            }
+        }));
+
+        // applying theme to top nav and footer elements
         navElements.forEach((el => {
             const links = el.querySelectorAll('a');
             if (theme === 'dark') {
@@ -87,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }));
         
+        // applying theme for any data-theme-target elements
         targetElements.forEach((el) => {
         if (theme === 'dark') {
             // Darken the background color
