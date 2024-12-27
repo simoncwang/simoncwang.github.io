@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     });
 
-    const toggleButton = document.getElementById('theme-toggle');
     const targetElements = document.querySelectorAll('[data-theme-target]');
     const defaultTheme = 'light'; // Default theme if not set
     const originalColors = {}; // Store original colors for restoration
@@ -63,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTheme(currentTheme);
   
     // Toggle button click event
-    toggleButton.addEventListener('click', () => {
+    themeToggle.addEventListener('click', () => {
       currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
       applyTheme(currentTheme);
       localStorage.setItem('theme', currentTheme);
@@ -96,13 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Lighten the text color
             const lighterTextColor = lightenColor(originalTextColors[el.id], 80);
-            el.style.color = lighterTextColor;
+            // el.style.color = lighterTextColor;
+            el.style.color = "#dceed4";
 
             // Adjust the link colors for dark mode
             const links = el.querySelectorAll('a');
             links.forEach((link) => {
-            const lighterLinkColor = lightenColor(originalLinkColors[link.href], 50);
-            link.style.color = lighterLinkColor;
+                const lighterLinkColor = lightenColor(originalLinkColors[link.href], 50);
+                link.style.color = lighterLinkColor;
             });
         } else {
             // Restore original background, text, and link colors

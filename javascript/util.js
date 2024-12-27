@@ -183,6 +183,4 @@ function switchContent(currentID, nextID) {
         btn = document.getElementById(btn_id)
         btn.style.display = "block";
     }
-    
-    
 }
