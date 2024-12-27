@@ -13,12 +13,16 @@
     <link rel = "stylesheet" href = "../style.css">
     <script src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
     <script src="../javascript/util.js"></script>
+    <script src="../javascript/theme_change.js"></script>
     <title>Projects</title>
   </head>
 
   <body>
     <!-- navbar section -->
     <nav id="topnav" class="navbar navbar-expand-lg navbar-light fixed-top">
+      <button id="theme-toggle">
+        <i id = "theme-icon" class="fa-regular fa-lightbulb"></i>
+      </button>
       <div class="container">
         <a class="navbar-brand" href="../index.html">
           <i class="fa-solid fa-cow d-inline-block"></i>
@@ -37,19 +41,17 @@
       
     </nav>
 
-    <div id="mySidenav" class="sidenav">
-      <div class="collapse">
-          <a href="javascript:void(0)" onclick="closeNav()"> &times;</a>
-      </div>
-  
-      <div class="container-fluid" style="text-align:center">
-          <!-- Sidebar Title -->
-          <hr>
-
-          <div class="container-fluid" style="text-align:center">
+    <div class="project-page" data-theme-target>
+      <!-- sidebar section -->
+      <div id="mySidenav" class="sidenav" data-theme-target >
+        <div class="collapse">
+            <a href="javascript:void(0)" onclick="closeNav()"> &times;</a>
+        </div>
+    
+        <div class="container-fluid" style="text-align:center">
             <!-- Sidebar Title -->
             <hr>
-  
+
             <button class="section-header" onclick="toggleSection('projectSection')">School Projects</button>
             <div id="projectSection" class="section-content show-section">
                 <a class="nav-item nav-link" href="./defaultproject.html">MMO - MLLM Benchmarking</a>
@@ -65,50 +67,49 @@
             </div>
             
         </div>
-          
       </div>
-    </div>
     
-    <div id="expandBtn" class="expand">
-      <a href="javascript:void(0)" onclick="openNav()"> &#9776;</a>
-    </div>
+      <div id="expandBtn" class="expand">
+        <a href="javascript:void(0)" onclick="openNav()"> &#9776;</a>
+      </div>
 
-    <!-- content section -->
-    <div class="container"> 
-      <div id = "myContent" class="content">
-        <br>
-        <h1 style="text-align: center;">Augmented Reality for Enhancing Elderly Interaction with Touch Screens</h1>
-        <h5 style="text-align: center; font-weight:lighter;">A hypothetical research project for CMSC839A - Embodied Media Design</h5>
+      <!-- content section -->
+      <div class="container"> 
+        <div id = "myContent" class="content">
+          <br>
+          <h1 style="text-align: center;">Augmented Reality for Enhancing Elderly Interaction with Touch Screens</h1>
+          <h5 style="text-align: center; font-weight:lighter;">A hypothetical research project for CMSC839A - Embodied Media Design</h5>
 
-        <div class="links">
+          <div class="links">
 
-          <div>
-            <i class="fa-solid fa-book"></i> <a href="../documents/EMD_Final_Paper.pdf" target="_blank">Paper</a>
+            <div>
+              <i class="fa-solid fa-book"></i> <a href="../documents/EMD_Final_Paper.pdf" target="_blank">Paper</a>
+            </div>
+            
           </div>
-          
+
+          <br>
+
+          <img src="../images/emdpaper.png" class="rounded mx-auto d-block" alt="emd" style="width:60%">
+
+          <hr>
+          <p>
+            <h3>About the project</h3>
+            Hypothetical research project for CMSC839A - Embodied media design.
+          </p>
+
+          <p>
+            <h3>Abstract</h3>
+            Nowadays, as smart touch screen devices become more and more ubiquitous in our everyday lives, many elderly users are being left behind. These users often struggle to use or learn these interactions due to decline in dexterity, reaction time, and cognitive abilities. For example, a user might want to press a small pause or exit button for a video playing on a phone, but miss it because their finger is not accurate enough to press the tiny area of the screen. Or, say there is a pop up or a story on social media that has a limited time to interact (it disappears after a few seconds), but the user can’t react fast enough in order to use the interaction. As human computer interaction designers, it is paramount to consider the accessibility of new devices. Rather than focusing purely on creating more powerful devices with more functionalities, we must remember to ensure our technology is accessible to all users and not exclude a certain group like the elderly.
+          </p>
+
+          <p>
+            <h3>Past solutions</h3>
+          </p>
+
+
+
         </div>
-
-        <br>
-
-        <img src="../images/emdpaper.png" class="rounded mx-auto d-block" alt="emd" style="width:60%">
-
-        <hr>
-        <p>
-          <h3>About the project</h3>
-          Hypothetical research project for CMSC839A - Embodied media design.
-        </p>
-
-        <p>
-          <h3>Abstract</h3>
-          Nowadays, as smart touch screen devices become more and more ubiquitous in our everyday lives, many elderly users are being left behind. These users often struggle to use or learn these interactions due to decline in dexterity, reaction time, and cognitive abilities. For example, a user might want to press a small pause or exit button for a video playing on a phone, but miss it because their finger is not accurate enough to press the tiny area of the screen. Or, say there is a pop up or a story on social media that has a limited time to interact (it disappears after a few seconds), but the user can’t react fast enough in order to use the interaction. As human computer interaction designers, it is paramount to consider the accessibility of new devices. Rather than focusing purely on creating more powerful devices with more functionalities, we must remember to ensure our technology is accessible to all users and not exclude a certain group like the elderly.
-        </p>
-
-        <p>
-          <h3>Past solutions</h3>
-        </p>
-
-
-
       </div>
     </div>
   

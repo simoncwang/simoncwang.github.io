@@ -13,12 +13,16 @@
     <link rel = "stylesheet" href = "../style.css">
     <script src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
     <script src="../javascript/util.js"></script>
+    <script src="../javascript/theme_change.js"></script>
     <title>Projects</title>
   </head>
 
   <body>
     <!-- navbar section -->
     <nav id="topnav" class="navbar fixed-top navbar-expand-lg navbar-light">
+      <button id="theme-toggle">
+        <i id = "theme-icon" class="fa-regular fa-lightbulb"></i>
+      </button>
       <div class="container">
         <a class="navbar-brand" href="../index.html">
           <i class="fa-solid fa-cow d-inline-block"></i>
@@ -39,17 +43,18 @@
 
     <!-- sidebar section -->
     
-    <!-- sidebar section -->
-    <div id="mySidenav" class="sidenav">
-      <div class="collapse">
-          <a href="javascript:void(0)" onclick="closeNav()"> &times;</a>
-      </div>
-  
-      <div class="container-fluid" style="text-align:center">
-          <!-- Sidebar Title -->
-          <hr>
+    <div class="project-page" data-theme-target>
+      <!-- sidebar section -->
+      <div id="mySidenav" class="sidenav" data-theme-target >
+        <div class="collapse">
+            <a href="javascript:void(0)" onclick="closeNav()"> &times;</a>
+        </div>
+    
+        <div class="container-fluid" style="text-align:center">
+            <!-- Sidebar Title -->
+            <hr>
 
-          <button class="section-header" onclick="toggleSection('projectSection')">School Projects</button>
+            <button class="section-header" onclick="toggleSection('projectSection')">School Projects</button>
             <div id="projectSection" class="section-content show-section">
                 <a class="nav-item nav-link" href="./defaultproject.html">MMO - MLLM Benchmarking</a>
                 <a class="nav-item nav-link active" href="./videogen.html">Consistent Video Generation</a>
@@ -62,82 +67,83 @@
               <a class="nav-item nav-link" href="./personalrag.html">RAG Quiz</a>
               <a class="nav-item nav-link" href="./artadvisor.html">AI Art Advisor</a>
             </div>
-          
+            
+        </div>
       </div>
-    </div>
 
-    <div id="expandBtn" class="expand">
-      <a href="javascript:void(0)" onclick="openNav()"> &#9776;</a>
-    </div>
-    
+      <div id="expandBtn" class="expand">
+        <a href="javascript:void(0)" onclick="openNav()"> &#9776;</a>
+      </div>
+      
 
-    <!-- content section -->
-    <div class="container"> 
-      <div id = "myContent" class="content">
-        <br>
-        <h1 style="text-align: center;">Improving Control and Consistency of Diffusion-Generated Video</h1>
-        <h5 style="text-align: center; font-weight:lighter;">An investigation of state of the art methods and new approaches</h5>
+      <!-- content section -->
+      <div class="container"> 
+        <div id = "myContent" class="content">
+          <br>
+          <h1 style="text-align: center;">Improving Control and Consistency of Diffusion-Generated Video</h1>
+          <h5 style="text-align: center; font-weight:lighter;">An investigation of state of the art methods and new approaches</h5>
 
-        <div class="links">
-          <div>
-            <i class="fa-brands fa-github-alt"></i> <a>GitHub (in progress)</a>
+          <div class="links">
+            <div>
+              <i class="fa-brands fa-github-alt"></i> <a>GitHub (in progress)</a>
+            </div>
+            <div>
+              <i class="fa-solid fa-video"></i> <a>Demo</a>
+            </div>
+            <div>
+              <i class="fa-solid fa-book"></i> <a href="../documents/CMSC720_Rebuttal.pdf" target="_blank">Paper (w/ class-review rebuttal)</a>
+            </div>
+            
           </div>
-          <div>
-            <i class="fa-solid fa-video"></i> <a>Demo</a>
-          </div>
-          <div>
-            <i class="fa-solid fa-book"></i> <a href="../documents/CMSC720_Rebuttal.pdf" target="_blank">Paper (w/ class-review rebuttal)</a>
-          </div>
+
+          <br>
+
+          <img src="../images/jeep1.png" class="rounded mx-auto d-block" alt="jeep" style="width:90%">
+
+          <hr>
+
+          <p>
+            <h3>About the project</h3>
+            This is a semester-long project for the course CMSC720 - Foundations of Deep Learning. Starting from the beginning of the Spring 2024 semester in January, my partner (Andy Qu) and I went through the process of:
+            <p>
+              <ul>
+                <li>Doing literature review of ML concepts</li>
+                <li>Investigating novel approaches for potential research</li>
+                <li>Proposing a research project</li>
+                <li>Implementing experiments using our school's GPU cluster</li>
+                <li>Writing up a NEURIPS format paper</li>
+                <li>Going through a formal double-blind peer-review process within our class</li>
+                <li>Submitting a final paper that was "accepted" by our professor</li>
+              </ul>
+            </p>
+          </p>
           
+
+          <p>
+            <h3>Abstract</h3>
+            With the rise of Generative AI, recent improvements in diffusion techniques have been developed to generate art contextually accurate to user input. However, video output from Stable Diffusion models still seem to have sudden differences between neighboring frames and can be easily differentiated from videos taken in real life at times. Subjects and background environments in generated videos are prone to suddenly shifting appearance, making the video more identifiable as a result of AI generation. In particular, we found that even state-of-the art video generation and editing models struggled when occlusion was present. We propose a project to find a solution to improve the smoothness and consistency of video generation network output by using various approaches such as ControlNet and neural layered atlases. Additionally, we intend to combine newer concepts like Uni-ControlNet with existing text to video models in order to enable even better control of video results.
+          </p>
+
+          <p>
+            <h3>Related Works</h3>
+          </p>
+
+          <p>
+            <h3>Our Approach</h3>
+          </p>
+
+          <p>
+            <h3>Experiments and Implementation</h3>
+          </p>
+
+          <p>
+            <h3>Findings</h3>
+          </p>
+
+
         </div>
 
-        <br>
-
-        <img src="../images/jeep1.png" class="rounded mx-auto d-block" alt="jeep" style="width:90%">
-
-        <hr>
-
-        <p>
-          <h3>About the project</h3>
-          This is a semester-long project for the course CMSC720 - Foundations of Deep Learning. Starting from the beginning of the Spring 2024 semester in January, my partner (Andy Qu) and I went through the process of:
-          <p>
-            <ul>
-              <li>Doing literature review of ML concepts</li>
-              <li>Investigating novel approaches for potential research</li>
-              <li>Proposing a research project</li>
-              <li>Implementing experiments using our school's GPU cluster</li>
-              <li>Writing up a NEURIPS format paper</li>
-              <li>Going through a formal double-blind peer-review process within our class</li>
-              <li>Submitting a final paper that was "accepted" by our professor</li>
-            </ul>
-          </p>
-        </p>
-        
-
-        <p>
-          <h3>Abstract</h3>
-          With the rise of Generative AI, recent improvements in diffusion techniques have been developed to generate art contextually accurate to user input. However, video output from Stable Diffusion models still seem to have sudden differences between neighboring frames and can be easily differentiated from videos taken in real life at times. Subjects and background environments in generated videos are prone to suddenly shifting appearance, making the video more identifiable as a result of AI generation. In particular, we found that even state-of-the art video generation and editing models struggled when occlusion was present. We propose a project to find a solution to improve the smoothness and consistency of video generation network output by using various approaches such as ControlNet and neural layered atlases. Additionally, we intend to combine newer concepts like Uni-ControlNet with existing text to video models in order to enable even better control of video results.
-        </p>
-
-        <p>
-          <h3>Related Works</h3>
-        </p>
-
-        <p>
-          <h3>Our Approach</h3>
-        </p>
-
-        <p>
-          <h3>Experiments and Implementation</h3>
-        </p>
-
-        <p>
-          <h3>Findings</h3>
-        </p>
-
-
       </div>
-
     </div>
   
 

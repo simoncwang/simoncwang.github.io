@@ -13,12 +13,16 @@
     <link rel = "stylesheet" href = "../style.css">
     <script src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
     <script src="../javascript/util.js"></script>
+    <script src="../javascript/theme_change.js"></script>
     <title>Projects</title>
   </head>
 
   <body>
     <!-- navbar section -->
     <nav id="topnav" class="navbar navbar-expand-lg navbar-light fixed-top">
+      <button id="theme-toggle">
+        <i id = "theme-icon" class="fa-regular fa-lightbulb"></i>
+      </button>
       <div class="container">
         <a class="navbar-brand" href="../index.html">
           <i class="fa-solid fa-cow d-inline-block"></i>
@@ -37,17 +41,18 @@
       
     </nav>
 
-    <!-- sidebar section -->
-    <div id="mySidenav" class="sidenav">
-      <div class="collapse">
-          <a href="javascript:void(0)" onclick="closeNav()"> &times;</a>
-      </div>
-  
-      <div class="container-fluid" style="text-align:center">
-          <!-- Sidebar Title -->
-          <hr>
+    <div class="project-page" data-theme-target>
+      <!-- sidebar section -->
+      <div id="mySidenav" class="sidenav" data-theme-target >
+        <div class="collapse">
+            <a href="javascript:void(0)" onclick="closeNav()"> &times;</a>
+        </div>
+    
+        <div class="container-fluid" style="text-align:center">
+            <!-- Sidebar Title -->
+            <hr>
 
-          <button class="section-header" onclick="toggleSection('projectSection')">School Projects</button>
+            <button class="section-header" onclick="toggleSection('projectSection')">School Projects</button>
             <div id="projectSection" class="section-content show-section">
                 <a class="nav-item nav-link" href="./defaultproject.html">MMO - MLLM Benchmarking</a>
                 <a class="nav-item nav-link" href="./videogen.html">Consistent Video Generation</a>
@@ -60,76 +65,77 @@
               <a class="nav-item nav-link" href="./personalrag.html">RAG Quiz</a>
               <a class="nav-item nav-link" href="./artadvisor.html">AI Art Advisor</a>
             </div>
-          
-      </div>
-    </div>
-    
-    <div id="expandBtn" class="expand">
-      <a href="javascript:void(0)" onclick="openNav()"> &#9776;</a>
-    </div>
-
-    <!-- content section -->
-    <div class="container"> 
-      <div id = "myContent" class="content">
-        <br>
-        <h1 style="text-align: center;">Virtual Classroom</h1>
-        <h5 style="text-align: center; font-weight:lighter;">Education extended through extended reality</h5>
-
-        <div class="links">
-          <div>
-            <i class="fa-brands fa-github-alt"></i> <a href="https://github.com/simoncwang/virtualclassroom" target="_blank">GitHub</a>
-          </div>
-          <div>
-            <i class="fa-solid fa-video"></i> <a>Webpage (in progress)</a>
-          </div>
-          <div>
-            <i class="fa-solid fa-book"></i> <a href="../documents/vrclassreport.pdf" target="_blank">Technical Report</a>
-          </div>
-          
+            
         </div>
+      </div>
+    
+      <div id="expandBtn" class="expand">
+        <a href="javascript:void(0)" onclick="openNav()"> &#9776;</a>
+      </div>
 
-        <br>
+      <!-- content section -->
+      <div class="container"> 
+        <div id = "myContent" class="content">
+          <br>
+          <h1 style="text-align: center;">Virtual Classroom</h1>
+          <h5 style="text-align: center; font-weight:lighter;">Education extended through extended reality</h5>
 
-        <img src="../images/vectordemo1.png" class="rounded mx-auto d-block" alt="vector" style="width:60%">
+          <div class="links">
+            <div>
+              <i class="fa-brands fa-github-alt"></i> <a href="https://github.com/simoncwang/virtualclassroom" target="_blank">GitHub</a>
+            </div>
+            <div>
+              <i class="fa-solid fa-video"></i> <a>Webpage (in progress)</a>
+            </div>
+            <div>
+              <i class="fa-solid fa-book"></i> <a href="../documents/vrclassreport.pdf" target="_blank">Technical Report</a>
+            </div>
+            
+          </div>
 
-        <hr>
-        <p>
-          <h3>About this project</h3>
-          Throughout the Spring 2024 semester for the course CMSC838C - Advances in XR, I led a group of five through a semester long project to demonstrate a novel application of extended reality.
-        </p>
+          <br>
 
-        <p>
-          <h3>Abstract</h3>
-          The recent Covid-19 pandemic has highlighted the inadequacies of existing remote learning options, which have the potential to greatly enhance accessibility. Situations such as the aforementioned pandemic, inclement weather, personal health, disabilities, and other circumstances stand to benefit greatly from quality remote learning. However, traditional options like video calls and recordings have limited levels of interaction, immersion, and opportunities for “hands-on” learning that a physical classroom would provide. These aspects are especially important when teaching critical fields of study such as engineering, physics, and chemistry that have spatially complex concepts.
+          <img src="../images/vectordemo1.png" class="rounded mx-auto d-block" alt="vector" style="width:60%">
 
-        </p>
+          <hr>
+          <p>
+            <h3>About this project</h3>
+            Throughout the Spring 2024 semester for the course CMSC838C - Advances in XR, I led a group of five through a semester long project to demonstrate a novel application of extended reality.
+          </p>
 
-        <p>
-          <h3>Approach</h3>
-          In this project, we explore the usage of virtual reality (VR from here on) as an interactive and immersive remote learning experience. As a proof of concept, we adapt a prerecorded video lesson on linear algebra for VR and record 32 UMD students’ changes in quiz scores before and after each type of lesson as well as self-reported enjoyment and perceived level of learning.
-        </p>
+          <p>
+            <h3>Abstract</h3>
+            The recent Covid-19 pandemic has highlighted the inadequacies of existing remote learning options, which have the potential to greatly enhance accessibility. Situations such as the aforementioned pandemic, inclement weather, personal health, disabilities, and other circumstances stand to benefit greatly from quality remote learning. However, traditional options like video calls and recordings have limited levels of interaction, immersion, and opportunities for “hands-on” learning that a physical classroom would provide. These aspects are especially important when teaching critical fields of study such as engineering, physics, and chemistry that have spatially complex concepts.
 
-        <p>
-          <h3>Implementation</h3>
-        </p>
+          </p>
 
-        <p>
-          <h3>Experiment Design</h3>
-        </p>
+          <p>
+            <h3>Approach</h3>
+            In this project, we explore the usage of virtual reality (VR from here on) as an interactive and immersive remote learning experience. As a proof of concept, we adapt a prerecorded video lesson on linear algebra for VR and record 32 UMD students’ changes in quiz scores before and after each type of lesson as well as self-reported enjoyment and perceived level of learning.
+          </p>
 
-        <p>
-          <h3>Results</h3>
-          We observe a 20% greater increase in quiz scores for subjects that did the VR lesson, suggesting higher information retention in VR. Additionally, we observe that 47% of subjects enjoyed the VR lesson more, 25% enjoyed the traditional video lesson more, and 28% enjoyed both around the same. Our results support the capabilities of VR to create learning environments with greater immersion, enjoyment, and knowledge retention, highlighting its potential in remote learning settings.
-        </p>
+          <p>
+            <h3>Implementation</h3>
+          </p>
 
-        <p>
-          <h3>Conclusion</h3>
-        </p>
+          <p>
+            <h3>Experiment Design</h3>
+          </p>
 
-        <p>
-          <h3>Future Work</h3>
-        </p>
+          <p>
+            <h3>Results</h3>
+            We observe a 20% greater increase in quiz scores for subjects that did the VR lesson, suggesting higher information retention in VR. Additionally, we observe that 47% of subjects enjoyed the VR lesson more, 25% enjoyed the traditional video lesson more, and 28% enjoyed both around the same. Our results support the capabilities of VR to create learning environments with greater immersion, enjoyment, and knowledge retention, highlighting its potential in remote learning settings.
+          </p>
 
+          <p>
+            <h3>Conclusion</h3>
+          </p>
+
+          <p>
+            <h3>Future Work</h3>
+          </p>
+
+        </div>
       </div>
     </div>
   

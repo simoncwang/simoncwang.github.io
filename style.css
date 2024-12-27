@@ -103,6 +103,7 @@ h1 {
   z-index:1000;
   background-color: #cde4df;
   transition: background-color 0.3s;
+  box-shadow: 0px 5px 10px rgb(117, 192, 227);
 }
 
 .navbar-brand {
@@ -113,14 +114,16 @@ h1 {
 
 .sidenav {
   height: 100%;
-  width: 200px;
-  position: fixed;
+  width: 15%;
+  /* position: fixed; */
   z-index: 2;
   left: 0;
   background-color: #e3efed;
   overflow-x: hidden;
   transition: 0.2s;
   padding-top: 1%;
+  padding-bottom: 1%;
+  box-shadow: 5px 5px 10px rgb(117, 192, 227);
 }
 
 
@@ -167,10 +170,10 @@ h1 {
   padding-left: 1%;
   margin-left: 200px;
 } */
-/* 
-#my-content {
-  padding:
-} */
+
+.project-page {
+  display:flex;
+}
 
 .content {
   width:100%;
@@ -208,13 +211,13 @@ h1 {
 }
 
 .section-header {
-  background-color: #e3efed;
+  background:none;
   cursor: pointer;
   padding: 10px;
   text-align: left;
   border: none;
   outline: none;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   width: 100%;
 }
