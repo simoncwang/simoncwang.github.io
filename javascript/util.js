@@ -1,7 +1,7 @@
 
 // remove the sidenav when a page is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(removeSideNav,2000);
+    setTimeout(removeSideNav,1000);
     function removeSideNav() {
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("expandBtn").style.display = "block";
