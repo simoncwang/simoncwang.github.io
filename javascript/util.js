@@ -2,7 +2,7 @@
 
 function openNav() {
     document.getElementById("mySidenav").style.top=document.getElementById("topnav").offsetHeight;
-    document.getElementById("mySidenav").style.width = "15%";
+    document.getElementById("mySidenav").style.width = "400px";
     document.getElementById("expandBtn").style.display = "none";
 }
   
