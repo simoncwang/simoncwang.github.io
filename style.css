@@ -133,7 +133,7 @@ h1 {
   color: #032f2a;
   display: block;
   transition: 0.3s;
-  border-radius: 5%/15%; 
+  /* border-radius: 5%/15%;  */
 }
 
 .sidenav a:hover {
