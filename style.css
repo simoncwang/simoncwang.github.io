@@ -97,6 +97,16 @@ h1 {
   background-color: #F082AC;
 }
 
+.card-body {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.news-item {
+  border-style:dashed;
+  padding:2%;
+}
+
 /* navbar styles */
 .navbar {
   position:sticky;
