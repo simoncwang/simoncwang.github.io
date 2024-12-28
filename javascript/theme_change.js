@@ -61,6 +61,16 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Apply the theme
     function applyTheme(theme) {
+        // for course page switch list border colors
+        listItems = document.querySelectorAll('.list-group-item');
+        listItems.forEach((el => {
+            if (theme === 'dark') {
+                el.style.borderColor = "#c0b69e"
+            } else {
+                el.style.borderColor = "#6e6e6e"
+            }
+        }));
+
         // applying theme to sidenav section headers
         sectionHeaders = document.querySelectorAll('.section-header');
         sectionHeaders.forEach((el => {
