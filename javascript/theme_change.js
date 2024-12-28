@@ -74,9 +74,19 @@ document.addEventListener('DOMContentLoaded', () => {
         sectionHeaders = document.querySelectorAll('.section-header');
         sectionHeaders.forEach((el => {
             if (theme === 'dark') {
-                el.style.color = "#13d9ac"
+                el.style.color = "#9edecf"
             } else {
                 el.style.color = "black"
+            }
+        }));
+
+        // different color for active sidenav element
+        activeSideNav = document.querySelectorAll('.sidenav .nav-item.nav-link.active');
+        activeSideNav.forEach((el => {
+            if (theme === 'dark') {
+                el.style.backgroundColor = "black";
+            } else {
+                el.style.backgroundColor = "#b0d0ea";
             }
         }));
 
