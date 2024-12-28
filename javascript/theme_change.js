@@ -6,21 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
 
-    // Function to toggle dark mode and switch icons
-    themeToggle.addEventListener('click', function() {
-    if (themeIcon.classList.contains('dark-mode')) {
-        themeIcon.classList.remove('dark-mode');
-        themeIcon.classList.remove('fa-solid');
-        themeIcon.classList.add('fa-regular'); 
-    } else {
-        themeIcon.classList.add('dark-mode');
-        themeIcon.classList.add('fa-solid'); 
-        themeIcon.classList.remove('fa-regular');
-    }
-    });
-
     const targetElements = document.querySelectorAll('[data-theme-target]');
-    const defaultTheme = 'dark'; // Default theme if not set
+    const defaultTheme = 'light'; // Default theme if not set
     const originalColors = {}; // Store original colors for restoration
     const originalTextColors = {}; // Store original text colors for restoration
     const originalLinkColors = {}; // Store original link colors within target elements
@@ -47,27 +34,52 @@ document.addEventListener('DOMContentLoaded', () => {
         originalLinkColors[link.href] = getComputedStyle(link).color;
       });
     });
+
+    // storing original color of the body
+    originalColors["body"] = getComputedStyle(document.body).backgroundColor;
   
     // Load and apply the saved theme
     let currentTheme = localStorage.getItem('theme') || defaultTheme;
+    updateIcon(currentTheme);
     applyTheme(currentTheme);
   
-    // Toggle button click event
+    // Toggle button click event, update theme
     themeToggle.addEventListener('click', () => {
       currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      updateIcon(currentTheme);
+
       applyTheme(currentTheme);
       localStorage.setItem('theme', currentTheme);
     });
+
+    // function to update lightbulb icon
+    function updateIcon(theme) {
+        if (theme === 'dark') {
+            themeIcon.classList.remove('fa-regular');
+            themeIcon.classList.add('fa-solid'); 
+        } else {
+            themeIcon.classList.remove('fa-solid');
+            themeIcon.classList.add('fa-regular'); 
+        }
+    }
   
     // Apply the theme
     function applyTheme(theme) {
+        // change background color of the body to theme
+        if (theme === 'dark') {
+            document.body.style.backgroundColor = "black";
+        } else {
+            document.body.style.backgroundColor = originalColors["body"];
+        }
+
+
         // for course page switch list border colors
         listItems = document.querySelectorAll('.list-group-item');
         listItems.forEach((el => {
             if (theme === 'dark') {
-                el.style.borderColor = "#c0b69e"
+                el.style.borderColor = "#c0b69e";
             } else {
-                el.style.borderColor = "#6e6e6e"
+                el.style.borderColor = "#6e6e6e";
             }
         }));
 
@@ -75,9 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
         sectionHeaders = document.querySelectorAll('.section-header');
         sectionHeaders.forEach((el => {
             if (theme === 'dark') {
-                el.style.color = "#9edecf"
+                el.style.color = "#9edecf";
             } else {
-                el.style.color = "black"
+                el.style.color = "black";
             }
         }));
 
