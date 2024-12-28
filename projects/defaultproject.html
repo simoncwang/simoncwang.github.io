@@ -92,37 +92,90 @@
           </div>
           
           <br>
-          <!-- <img src="../images/learning.webp" class="blog-thumbnail rounded mx-auto d-block" style="width:50%">
-          <center class="image-caption">AI generated using DALL-E</center> -->
+          <img src="../images/mllm.webp" class="blog-thumbnail rounded mx-auto d-block" style="width:50%">
+          <center class="image-caption">AI generated using DALL-E</center>
 
           <hr>
 
           <h3>Introduction</h3>
           <p>
-            Placeholder text.
+            With the increase of new multimodal large language models (MLLMs) being released with incredible results across various benchmarks, it has become more important than ever before to understand how we actually compare these amazing models. Most standard benchmarks used to demonstrate the capabilities of recent MLLMs have been curated datasets based on high level (college and beyond) questions, expert generated problems, and even screenshots of images from textbooks or webpages. Initially intending to develop a multi-agent system to leverage the power of small open-source MLLMs, through the course of my experimentation I now instead present an investigation into the shortcomings of popular benchmark evaluation, as well as a discussion of how it might be improved. In the process of evaluating benchmarks for various models as well as a multi-agent framework developed by myself, I also present a flexible system designed to test one or more MLLMs on common multimodal benchmarks.
           </p>
 
 
-          <h3>What is a "MLLM"?</h3>
+          <h3>What is an "MLLM"?</h3>
           <p>
-            Placeholder text.
+            Most current MLLMs combine a vision encoder such as a vision transformer (ViT) with a standard pre-trained language model, thus incorporating both text and visual information into a single model. [PROVIDE MORE EXPLANATION AND EXAMPLES HERE]
           </p>
 
 
           <h3>How is benchmarking currently done?</h3>
           <p>
-            Placeholder text.
+            Through the process of implementing my multi-agent system, I sought benchmarks to evaluate the quality of my models. Reading through reports and papers from popular new MLLMs such as QwenVL and InternVL amongst others, I chose the ScienceQA and MMMU benchmark datasets to dive deeper into. 
+          </p>
+
+          <p>
+            In order to establish a baseline, I first attempted to look online for any publicly available
+            evaluation code. Unfortunately, reading more into the Qwen and Intern papers as well as the official
+            GitHub repositories, there was minimal code available to reproduce their results. However, on the
+            ScienceQA GitHub I discovered code for evaluating GPT3 on the dataset, and decided to use this
+            script as the base for my own code. Quickly, I discovered many challenges in implementing these
+            evaluations. Under the hood, typical evaluation results are achieved through very extensive prompt
+            engineering and brute force regular expression pattern matching. I also investigate other popular
+            benchmarks such as GPQA (graduate level QA) and found very similar results.
           </p>
 
 
           <h3>The problem...</h3>
           <p>
-            Placeholder text.
+            As mentioned earlier, I found many confusing and arbitrary lines of code throughout my research. For example, in the original ScienceQA evaluation code, the standard prompt actually includes an in-context example to help the model follow an expected format, such as: "output = f"Answer: The answer is {answer}."". Similarly, in the GPQA evaluation code, the model is simply asked nicely to return a format as follows: "After your reasoning, provide your final, single letter choice, formatted as "The answer is (X)"".
+          </p>
+          <p>
+            After some trial and error to successfully run the original scripts, I achieved very low accuracy scores,
+            especially for the open source models with Qwen2-VL-2B getting a score of 18.70%. Meanwhile,
+            gpt-4o and gpt-4o-mini both achieved socres of over 85%. Upon closer inspection, the smaller
+            MLLMs were producing many "invalid" results, with Qwen2-VL-2B producing over 700+. However,
+            in many instance the results being produced are actually correct, but just not following the exact
+            format expected by the evaluation code (e.g. "The answer is A"), instead returning a single letter or
+            even a different format like "Choice A. In other benchmark repositories like GPQA, rather than deep approaches to improving the model being tested, high error rates are simply mitigated by providing a wide net to capture potential answer formats in the form of regular expression patterns. For example, here is the answer parsing code used in an actual GPQA evaluation example script:
+          </p>
+          <pre>
+            def parse_sampled_answer(answer, answer_choice_tokens):
+              """Copy pasted from GPQA repo + more patterns"""
+              patterns = [
+                r"answer is \((.)\)",
+                r"Answer: \((.)\)",
+                r"answer: \((.)\)",
+                r"answer \((.)\)",
+                r"answer is (\w)\.",
+                r"Answer: (\w)\.",
+                r"answer: (\w)\.",
+                r"answer (\w)\.",
+                r"answer is option \((.)\)",
+                r"answer is Option \((.)\)",
+                r"answer is option (\w)",
+                r"answer is Option (\w)",
+              ]
+              for pattern in patterns:
+                match = re.search(pattern, answer)
+                if match and match.group(1) in answer_choice_tokens:
+                  return match.group(1)
+              return None
+          </pre>
+          <p>
+            Is this actually an honest way of "benchmarking" and comparing models? How can we actually say one model is better than the other, if the prompting strategies and answer matching patterns used could be wildly different? In my opinion, this approach to model evaluation is actually testing the ability of a team to prompt engineer, or the amount of resources a company has to run a benchmark long enough and enough times to get a better result.
           </p>
 
           <h3>My approach</h3>
           <p>
-            Placeholder text.
+            How could we do better?
+          </p>
+          <p>
+            As a small proof of concept, I developed a set of tools in Python to evaluate two benchmarks across many different types of models. I focused on working towards consistency of prompting and answer parsing, as well as easier control over datasets and models. Rather than writing a new unique script for every single model and dataset, my goal is to create one single system to evaluate all of the popular ones with a single tool. 
+          </p>
+
+          <p>
+            This way, if the code and prompts used are the same (as similar as possible, sometimes models require different formats or data-types), the resulting accuracy scores will be fair for every model tested. Model A won't get a higher score than model B simply because the A had a longer regex pattern set!
           </p>
 
           <h3>MMO, a multimodal multi-agent organization system</h3>
