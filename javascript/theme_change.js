@@ -6,37 +6,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
 
-    // Check if dark mode is already enabled in localStorage (optional)
-    if (localStorage.getItem('darkMode') === 'enabled') {
-    document.body.classList.add('dark-mode');
-    themeIcon.classList.remove('fa-regular');
-    themeIcon.classList.add('fa-solid'); // Set moon icon
-    }
-
     // Function to toggle dark mode and switch icons
     themeToggle.addEventListener('click', function() {
-    if (document.body.classList.contains('dark-mode')) {
-        document.body.classList.remove('dark-mode');
+    if (themeIcon.classList.contains('dark-mode')) {
+        themeIcon.classList.remove('dark-mode');
         themeIcon.classList.remove('fa-solid');
-        themeIcon.classList.add('fa-regular'); // Set sun icon
-        localStorage.setItem('darkMode', 'disabled'); // Optional: store the state
+        themeIcon.classList.add('fa-regular'); 
     } else {
-        document.body.classList.add('dark-mode');
+        themeIcon.classList.add('dark-mode');
+        themeIcon.classList.add('fa-solid'); 
         themeIcon.classList.remove('fa-regular');
-        themeIcon.classList.add('fa-solid'); // Set moon icon
-        localStorage.setItem('darkMode', 'enabled'); // Optional: store the state
     }
     });
 
     const targetElements = document.querySelectorAll('[data-theme-target]');
-    const defaultTheme = 'light'; // Default theme if not set
+    const defaultTheme = 'dark'; // Default theme if not set
     const originalColors = {}; // Store original colors for restoration
     const originalTextColors = {}; // Store original text colors for restoration
     const originalLinkColors = {}; // Store original link colors within target elements
     const navLinkColors = {};
 
     // getting references to the header and footer
-    let navElements = document.querySelectorAll('.navbar, .footer');
+    let navElements = document.querySelectorAll('.navbar, .footer, .navbar-brand');
 
     navElements.forEach((el) => {
         const links = el.querySelectorAll('a');
