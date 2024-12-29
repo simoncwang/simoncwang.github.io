@@ -99,25 +99,37 @@
 
           <h3>Introduction</h3>
           <p>
-            With the increase of new multimodal large language models (MLLMs) being released with incredible results across various benchmarks, it has become more important than ever before to understand how we actually compare these amazing models. Most standard benchmarks used to demonstrate the capabilities of recent MLLMs have been curated datasets based on high level (college and beyond) questions, expert generated problems, and even screenshots of images from textbooks or webpages. Initially intending to develop a multi-agent system to leverage the power of small open-source MLLMs, through the course of my experimentation I now instead present an investigation into the shortcomings of popular benchmark evaluation, as well as a discussion of how it might be improved. In the process of evaluating benchmarks for various models as well as a multi-agent framework developed by myself, I also present a flexible system designed to test one or more MLLMs on common multimodal benchmarks.
+            With the increase of new multimodal large language models (MLLMs) being released with incredible results across various benchmarks, it has become more important than ever before to understand how we actually compare these amazing models. Most standard benchmarks used to demonstrate the capabilities of recent MLLMs have been curated datasets based on high level (college and beyond) questions, expert generated problems, and even screenshots of images from textbooks or webpages. Initially intending to develop a multi-agent system to leverage the power of small open-source MLLMs, through the course of my experimentation I now instead present an <b>investigation into the shortcomings of popular benchmark evaluation, as well as a discussion of how it might be improved.</b> In the process of evaluating benchmarks for various models as well as a multi-agent framework developed by myself, I also present a <b>flexible system designed to test one or more MLLMs on common multimodal benchmarks.</b>
           </p>
 
 
           <h3>What is an "MLLM"?</h3>
           <p>
-            Most current MLLMs combine a vision encoder such as a vision transformer (ViT) with a standard pre-trained language model, thus incorporating both text and visual information into a single model. [PROVIDE MORE EXPLANATION AND EXAMPLES HERE]
+            Most current MLLMs combine a vision encoder such as a vision transformer (ViT) with a standard pre-trained language model, thus incorporating both text and visual information into a single model. Closed models such as gpt-4o are most likely also trained using a similar method; use some vision encoder to incorporate image information alongside text information, equals "native" multimodality!
+          </p>
+
+          <p>
+            For example, <a href="https://arxiv.org/abs/2409.12191" target="_blank">Qwen2-VL</a> trains their MLLM by using a vision encoder in the form of a ViT to encode visual data and passed into a Qwen language model. Through training, the model learns to understand content within images, and therefore employ this knowledge to complete multimodal tasks. The structure is shown below in the following figure taken from the Qwen2-VL paper:
+          </p>
+
+          <center><img src="../images/qwenvl.png" style="width:60%"></center>
+          <center class="image-caption">Qwen2-VL Structure</center>
+          <br>
+
+          <p>
+            For more detailed implementation and training details please refer to the <a href="https://arxiv.org/abs/2409.12191" target="_blank">official Qwen2-VL technical report!</a>
           </p>
 
 
           <h3>How is benchmarking currently done?</h3>
           <p>
-            Through the process of implementing my multi-agent system, I sought benchmarks to evaluate the quality of my models. Reading through reports and papers from popular new MLLMs such as QwenVL and InternVL amongst others, I chose the ScienceQA and MMMU benchmark datasets to dive deeper into. 
+            Through the process of implementing my multi-agent system, I sought benchmarks to evaluate the quality of my models. Referencing reports and papers from popular new MLLMs such as QwenVL and InternVL amongst others, I chose the ScienceQA and MMMU benchmark datasets to dive deeper into. 
           </p>
 
           <p>
             In order to establish a baseline, I first attempted to look online for any publicly available
             evaluation code. Unfortunately, reading more into the Qwen and Intern papers as well as the official
-            GitHub repositories, there was minimal code available to reproduce their results. However, on the
+            GitHub repositories, <b>there was minimal code available to reproduce their results.</b> However, on the
             ScienceQA GitHub I discovered code for evaluating GPT3 on the dataset, and decided to use this
             script as the base for my own code. Quickly, I discovered many challenges in implementing these
             evaluations. Under the hood, typical evaluation results are achieved through very extensive prompt
@@ -198,15 +210,27 @@
             This way, if the code and prompts used are the same (as similar as possible, sometimes models require different formats or data-types), the resulting accuracy scores will be fair for every model tested. Model A won't get a higher score than model B simply because the A had a longer regex pattern set!
           </p>
 
-          <h3>MMO, a multimodal multi-agent organization system</h3>
           <p>
-            Placeholder text.
+            Please see my <a href="https://github.com/simoncwang/MMO" target="_blank">GitHub</a> and my <a href="../documents/mmo.pdf" target="_blank">technical report</a> for more specific details of prompts used and implementation as well as experimental results from my chosen set of models!
           </p>
 
-          <h3>Towards better benchmarks!</h3>
+          <h3>MMO, a Multimodal Multi-agent Organization system</h3>
+          <p>
+            As mentioned towards the beginning, I had initially intended to create a multimodal multi-agent system for this course project. The idea was that for complex multimodal reasoning tasks, <b>single models can tend to struggle due to context length or simply getting confused between all the different components of the input.</b> So, leveraging lighter-weight multimodal models, my goal was to orchestrate these "agents" to handle smaller parts of the problem in isolation. To control the agents, a single reliable model (in this case gpt-4o) is used to <b>assign tasks and aggregate subtask results to produce a (hopefully) more robust final answer!</b> Due to time limitation, and above all, resource limitations (it takes a lot of time and compute to train and evaluate models...), I was unable to get conclusive results from the multi-agent system. However, as a proof-of-concept the simple system I did implement shows that this approach could have potential given more time and development! In case you are curious, the account was able to use on my school's GPU cluster had access to a maximum of four Nvidia A4000 GPUs, with 16GB of VRAM each. However, for some of the models (especially Qwen2VL), the provided inference code was not optimized for multi-GPU execution, and therefore I faced CUDA out of memory errors when running larger benchmarks or using the multi-agent system.
+          </p>
+
+          <p>
+            Overall, my multi-agent system, called "MMO" as explained in the title of this article, consists of several components. The system is organized into two main components; the Commander, which assigns subtasks and analyzes them to produce a final response, and the Roster, which consists of a list of agents (the smaller models) and initializes them to be ready for inference. Below is a simple flow chart of the general system:
+          </p>
+          <center><img src="../images/mmoflow.png" style="width:60%"></center>
+          <center class="image-caption">MMO System Flow</center>
+
+          <h3>Experimental Results</h3>
           <p>
             Placeholder text.
           </p>
+          <center><img src="../images/scienceqaresults.png" style="width:50%"></center>
+          <center class="image-caption">ScienceQA Results</center>
 
           <h3>Future work</h3>
           <p>
