@@ -128,18 +128,18 @@
 
           <h3>The problem...</h3>
           <p>
-            As mentioned earlier, I found many confusing and arbitrary lines of code throughout my research. For example, in the original ScienceQA evaluation code, the standard prompt actually includes an in-context example to help the model follow an expected format, such as: "output = f"Answer: The answer is {answer}."". Similarly, in the GPQA evaluation code, the model is simply asked nicely to return a format as follows: "After your reasoning, provide your final, single letter choice, formatted as "The answer is (X)"".
+            As mentioned earlier, I found many confusing and arbitrary lines of code throughout my research. For example, in the original ScienceQA evaluation code, the standard prompt actually includes an in-context example to help the model follow an expected format, such as: "output = f"Answer: The answer is {answer}."". Similarly, in the GPQA evaluation code, the model is simply asked nicely to return a format as follows: "After your reasoning, provide your final, single letter choice, formatted as "The answer is (X)"". <b>But, none of this is actually disclosed when model developers share their benchmark results (most of the time)!</b>
           </p>
           <p>
             After some trial and error to successfully run the original scripts, I achieved very low accuracy scores,
             especially for the open source models with Qwen2-VL-2B getting a score of 18.70%. Meanwhile,
             gpt-4o and gpt-4o-mini both achieved socres of over 85%. Upon closer inspection, the smaller
             MLLMs were producing many "invalid" results, with Qwen2-VL-2B producing over 700+. However,
-            in many instance the results being produced are actually correct, but just not following the exact
+            in many instances the results being produced are actually correct, but just not following the exact
             format expected by the evaluation code (e.g. "The answer is A"), instead returning a single letter or
             even a different format like "Choice A. In other benchmark repositories like GPQA, rather than deep approaches to improving the model being tested, high error rates are simply mitigated by providing a wide net to capture potential answer formats in the form of regular expression patterns. For example, here is the answer parsing code used in an actual GPQA evaluation example script:
           </p>
-          <pre>
+          <pre data-theme-target>
             def parse_sampled_answer(answer, answer_choice_tokens):
               """Copy pasted from GPQA repo + more patterns"""
               patterns = [
@@ -162,8 +162,28 @@
                   return match.group(1)
               return None
           </pre>
+
           <p>
-            Is this actually an honest way of "benchmarking" and comparing models? How can we actually say one model is better than the other, if the prompting strategies and answer matching patterns used could be wildly different? In my opinion, this approach to model evaluation is actually testing the ability of a team to prompt engineer, or the amount of resources a company has to run a benchmark long enough and enough times to get a better result.
+            To illustrate this problem, I tested several models (gpt-4o, gpt-4o-mini, Qwen2-VL 2B Instruct, InternVL 2.5 2B, and Qwen2.5 1.5B Instruct) on a random 1000 samples (same seed) from the ScienceQA dataset. To show how arbitrary changes in prompting and parsing can drastically change benchmark results, the following graph shows accuracy across three strategies. The <i>base prompt</i> is very similar to the original ScienceQA prompt, simply asking the model to return their final answer choice as a single digit. The <i>ask twice</i> approach means just that...appending a prompt to the base prompt asking again "please return your choice in the following format: Answer: single digit". Finally, <i>single chars</i> is an additional regex pattern added to the end of the original list (which is the same as the GPQA parser expect modified to match single digits). Here, the last pattern allows for matching single digit answers, without the prompted "Answer: single digit" format.
+
+          </p>
+          <center><img src="../images/mmoprompting.png" style="width:60%"></center>
+
+          <p>
+            As you can see, trivial changes such as re-wording prompts, being more generous with answer matching, and other methods that I haven't explicitly tested like providing in-context examples can cause <b>seemingly random changes in accuracy.</b>
+          </p>
+
+          <p>
+            Is this actually an honest way of "benchmarking" and comparing models? <b>How can we actually say one model is better than the other, if the prompting strategies and answer matching patterns used could be wildly different?</b> In my opinion, this approach to model evaluation is actually testing the ability of a team to prompt engineer, or the amount of resources a company has to run a benchmark long enough and enough times to get a better result.
+          </p>
+
+          <h3>An Observation and a Hypothesis</h3>
+          <p>
+            Throughout this month of research into these benchmarking methods, I have increasingly questioned what a "good" model actually means. In my opinion, it is highly likely that a big reason large models with many hundreds of billions of parameters like gpt-4o perform better on benchmarks is because <b>they just "listen" better</b> for lack of better terminology. Empirically, many of the smaller models I tested (all 2B parameters or under) would often answer the benchmark questions correctly, yet were very inconsistent in the wording and format of their responses. This leads to significantly deflated accuracy scores due to it, put simply, being hard to automate evaluating natural language answers. Which, is the point of large language models, right? More "capable" models like GPTs or Claude and larger Llama models (results not included in this project scope) seem to almost always return a response that follows what we ask for. OpenAI even has a new structured response beta that claims to guarantee 100% adherence to your specified format. 
+          </p>
+
+          <p>
+            So, <b>could benchmarking language models in this way be fundamentally flawed?</b> Maybe not. In my opinion, at worst the discourse around benchmarking models is misleading. It is true that being better at following instructions is a highly desirable trait for a model, because, if we want use them for real-world applications we want them to listen to us of course. However, all the new papers claim that their models have improved [X subject] knowledge, or better logical reasoning, etc. etc.. This isn't quite accurate in my opinion, because as stated before, there should be more transparency about the methods used to actually achieve those numbers. What prompts did they use? How did they count correct answers? Without a central standardized body doing the actual testing, why <i>wouldn't</i> every company and researcher do everything they can to get the highest score? But does this really mean that the models are getting smarter...or are scores too influenced by the disparities in evaluation method?
           </p>
 
           <h3>My approach</h3>
