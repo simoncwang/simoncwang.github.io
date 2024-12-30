@@ -1,11 +1,23 @@
 
-// remove the sidenav when a page is loaded
+// remove the sidenav when a page is loaded, also reset section header arrows accordingly
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(removeSideNav,1500);
     function removeSideNav() {
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("expandBtn").style.display = "block";
     }
+
+    // initializing the sidenav arrows correctly
+    sections = document.querySelectorAll('.section-content');
+    sections.forEach((section) => {
+        var sectionId = section.id;
+        currentDisplay = window.getComputedStyle(sectionId).display;
+        headers = document.querySelectorAll('.section-header');
+        headers.forEach((header) => {
+            icon = header.querySelector('i');    // the arrow icon of the header
+            updateArrows(section,currentDisplay,icon);
+        });
+    });
 });    
 
 function openNav() {
@@ -27,7 +39,12 @@ function toggleSection(sectionId, headerId) {
     var icon = header.querySelector('i');    // the arrow icon of the header
     var currentDisplay = window.getComputedStyle(section).display;
 
-    if (currentDisplay === "none") {
+    updateArrows(section,currentDisplay,icon);
+
+}
+
+function updateArrows(section,display,icon) {
+    if (display === "none") {
         section.style.display = "block";   // switch display to visible
 
         // switch arrow icon from down to up
@@ -40,7 +57,6 @@ function toggleSection(sectionId, headerId) {
         icon.classList.remove('fa-angle-up');   
         icon.classList.add('fa-angle-down'); 
     }
-
 }
 
 function switchContent(currentID, nextID) {
