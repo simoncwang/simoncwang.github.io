@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }));
 
         // applying theme to sidenav section headers
-        sectionHeaders = document.querySelectorAll('.section-header');
+        sectionHeaders = document.querySelectorAll('.section-button');
         sectionHeaders.forEach((el => {
             if (theme === 'dark') {
                 el.style.color = "#9edecf";

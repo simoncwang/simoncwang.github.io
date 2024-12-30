@@ -52,16 +52,25 @@
             <!-- Sidebar Title -->
             <hr>
 
-            <button class="section-header" onclick="toggleSection('projectSection')">School Projects</button>
-            <div id="projectSection" class="section-content show-section">
+            <div id="header1" class="section-header">
+              <button class="section-button" onclick="toggleSection('section1','header1')">School Projects</button>
+              <i class="fa-solid fa-angle-up"></i>
+            </div>
+
+            <div id="section1" class="section-content show-section">
                 <a class="nav-item nav-link" href="./defaultproject.html">MMO - MLLM Benchmarking</a>
+                <a class="nav-item nav-link" href="./disneybrdf.html">Disney BRDF & Monte Carlo Rendering in PyTorch</a>
+                <a class="nav-item nav-link" href="./magicalpet.html">MagicalPet - A Desktop AI Assistant</a>
                 <a class="nav-item nav-link" href="./videogen.html">Consistent Video Generation</a>
                 <a class="nav-item nav-link active" href="./vrclass.html">XR Education</a>
                 <a class="nav-item nav-link" href="./emd.html">Accessibility of Touch Screens for Elderly</a>
             </div>
-    
-            <button class="section-header" onclick="toggleSection('anotherSection')">Personal Projects</button>
-            <div id="anotherSection" class="section-content">
+            
+            <div id="header2" class="section-header">
+              <button class="section-button" onclick="toggleSection('section2','header2')">Personal Projects</button>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div id="section2" class="section-content">
               <a class="nav-item nav-link" href="./personalrag.html">RAG Quiz</a>
               <a class="nav-item nav-link" href="./artadvisor.html">AI Art Advisor</a>
             </div>

@@ -218,7 +218,7 @@ h1 {
   
 }
 
-.section-header {
+.section-button {
   background: none;
   cursor: pointer;
   padding: 10px;
@@ -227,7 +227,13 @@ h1 {
   outline: none;
   font-size: 20px;
   font-weight: bold;
-  width: 100%;
+  /* width: 100%; */
+} 
+
+.section-header {
+  display:flex;
+  justify-content:flex-start;
+  align-items: center;
 }
 
 .show-section {
@@ -235,7 +241,7 @@ h1 {
 }
 
 .section-header:hover {
-  background-color: #ddd;
+  background-color: #adc0b2;
 }
 
 .navbar-nav .active {

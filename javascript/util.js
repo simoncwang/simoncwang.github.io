@@ -21,15 +21,26 @@ function closeNav() {
     // document.getElementById("expandBtn").style.top=document.getElementById("topnav").offsetHeight;
 }
 
-function toggleSection(sectionId) {
+function toggleSection(sectionId, headerId) {
     var section = document.getElementById(sectionId);
+    var header = document.getElementById(headerId)
+    var icon = header.querySelector('i');    // the arrow icon of the header
     var currentDisplay = window.getComputedStyle(section).display;
 
     if (currentDisplay === "none") {
-        section.style.display = "block";
+        section.style.display = "block";   // switch display to visible
+
+        // switch arrow icon from down to up
+        icon.classList.remove('fa-angle-down');   
+        icon.classList.add('fa-angle-up'); 
     } else {
         section.style.display = "none";
+
+        // switch arrow icon from up to down
+        icon.classList.remove('fa-angle-up');   
+        icon.classList.add('fa-angle-down'); 
     }
+
 }
 
 function switchContent(currentID, nextID) {
