@@ -83,9 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }));
 
-        // applying theme to sidenav section headers
-        sectionHeaders = document.querySelectorAll('.section-button');
-        sectionHeaders.forEach((el => {
+        // applying theme to sidenav section headers and buttons
+        sectionButtons = document.querySelectorAll('.section-button');
+        sectionButtons.forEach((el => {
             if (theme === 'dark') {
                 el.style.color = "#9edecf";
             } else {
@@ -93,11 +93,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }));
 
+        // updating hover color of section-header
+        const sectionHeaders = document.querySelectorAll('.section-header');
+        sectionHeaders.forEach(el => {
+            if (theme === 'dark') {
+                el.style.setProperty('--hover-color', '#177951');
+            } else {
+                el.style.setProperty('--hover-color', '#7fa5b9');
+            }
+        });
+
+
         // different color for active sidenav element
         activeSideNav = document.querySelectorAll('.sidenav .nav-item.nav-link.active');
         activeSideNav.forEach((el => {
             if (theme === 'dark') {
-                el.style.backgroundColor = "black";
+                el.style.backgroundColor = "#0b4d3a";
             } else {
                 el.style.backgroundColor = "#b0d0ea";
             }

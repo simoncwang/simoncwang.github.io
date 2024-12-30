@@ -236,15 +236,20 @@ h1 {
   display:flex;
   justify-content:flex-start;
   align-items: center;
+
+  /* variables to store hover color */
+  --hover-color: #7fa5b9;
 }
+
+.section-header:hover{
+  background-color: var(--hover-color);
+}
+
 
 .show-section {
   display: block;
 }
 
-.section-header:hover {
-  background-color: #adc0b2;
-}
 
 .navbar-nav .active {
   text-decoration: underline;
