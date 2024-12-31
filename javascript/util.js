@@ -27,7 +27,6 @@ function openNav() {
 }
   
 function closeNav() {
-    
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("expandBtn").style.display = "block";
     // document.getElementById("expandBtn").style.top=document.getElementById("topnav").offsetHeight;
