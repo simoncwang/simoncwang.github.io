@@ -121,11 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 links.forEach((link) => {
                     link.style.color = '#ffffff';
                 });
-                el.style.background = "linear-gradient(90deg, #486a67,#688d8b, #7f9f98, #8bb4aa)";
+                el.style.background = "linear-gradient(-90deg, #486a67,#688d8b, #7f9f98, #8bb4aa)";
                 el.style.backgroundColor = '#85b8ab';
                 el.style.color = "white"
             } else {
-                el.style.background = "linear-gradient(90deg, #afc9ca,#bdd7d2, #cde4df, #d4eadb)";
+                el.style.background = "linear-gradient(90deg, #a2c0c3,#abcbc5, #cde4df, #d4eadb)";
                 el.style.backgroundColor = '#cde4df';
                 links.forEach((link) => {
                     link.style.color = navLinkColors[link.href]
