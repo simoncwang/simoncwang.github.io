@@ -111,6 +111,7 @@ h1 {
 .navbar {
   position:sticky;
   z-index:1000;
+  background: linear-gradient(90deg, #afc9ca,#b2d0ca, #cde4df, #d4eadb);
   background-color: #cde4df;
   transition: background-color 0.3s;
   box-shadow: 0px 5px 10px rgb(117, 192, 227);
@@ -118,7 +119,9 @@ h1 {
 
 .navbar-brand {
   font-weight: bold;
-  transition: background-color 0.3s;
+  background: transparent !important; /* Override inline styles */
+  color: inherit !important;
+  /* transition: background-color 0.3s; */
 }
 
 /* project page side nav styles */
