@@ -1,6 +1,6 @@
 # My Personal Webpage!
 
-This repository contains the code for my personal website hosted with GitHub pages.
+Check it out here! --> [**🌐 My Website**](https://simoncwang.github.io/)
 
 ## Contents
 
