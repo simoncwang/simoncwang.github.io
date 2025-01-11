@@ -59,129 +59,51 @@
   </div>
   
 </nav>
-  <!-- introduction section -->
-<div id = "intro" class="jumbotron jumbotron-fluid" data-theme-target>
 
-  <div class="container">
-
-    <div class="row">
-      <!-- introduction + info -->
-      <div class="col">
-        <h1 class="display-4"><b>Simon Wang</b></h1>
-        <hr>
-        <p>
-          Welcome! My name is Simon and I am currently a student in the Combined BS/MS program in the Computer Science department at the University of Maryland, College Park (UMD)!
-        </p>
-        <hr>
-        <h5><b>Contact Info:</b></h5>
-        <p>
-          School email: <a href= "mailto: scwang00@umd.edu">scwang00@umd.edu</a> <br>
-          Personal email: <a href= "mailto: wang.c.simon@gmail.com">wang.c.simon@gmail.com</a> <br>
-          UMD CS department: <a href="https://www.cs.umd.edu/">https://www.cs.umd.edu/</a>
-        </p>
+<!-- introduction section -->
+<div class="hero-container"  data-theme-target>
+  <div class="hero">
+    <h1>Simon Wang</h1>
+  
+    <div id="interests">
+      <h2 style="color:gray">pursuing research interests in:</h3>
+      <h2 id="interest">Generative AI</h3>
+    </div>
+  
+    <div id="hero-description">
+      <p>
+        I'm a <b>Computer Science Master's Student</b> at the University of Maryland (UMD). I love applying what I study to create impactful tools that show the amazing potential of technology to engage and assist everyone! Check out the <b>links below</b> and look through this site to find out more. Thanks :)
+      </p>
+    </div>
+    
+    <div class="hero-links">
+      <a href="https://github.com/simoncwang" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href = "https://www.linkedin.com/in/simon-wang-519902193/" target="_blank" >
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href= "mailto: scwang00@umd.edu">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+  
+      <div id="resume-link">
+        <a href = "./documents/resume.pdf" target="_blank" >
+          resume
+        </a>
       </div>
-
-      <!-- my picture -->
-      <div class="col" id="myPic">
-        <img src="images/lake.jpeg" class="rounded mx-auto d-block" alt="image 1" style="width:100%">       
-      </div>
-
-      <!-- news/updates section -->
-      <div class="col">
-        <div class="card shadow rounded" id = "news" data-theme-target>
-          <div class="card-body">
-            <center>
-              <h4>Recent News & Updates!</h4>
-            </center>
-            <center class="image-caption" style="padding-bottom:1%">Last updated: 1/2/25</center>
-
-            <ul class="list-group">
-              <li class="list-group-item news-item">
-                <b>12/18/2024</b><br>
-                Completed and submitted course research paper: <a href="./projects/defaultproject.html" target="_blank">MMO-Multimodal Multiagent Organization</a>
-              </li>
-              <li class="list-group-item news-item">
-                <b>12/18/2024</b><br>
-                Completed Fall semester at UMD with 4.0 semester GPA!
-              </li>
-              <li class="list-group-item news-item">
-                <b>12/18/2024</b><br>
-                Completed and submitted final course project: <a href="./projects/disneybrdf.html" target="_blank">Monte Carlo Renderer and Disney BRDF in PyTorch</a>
-              </li>
-              <li class="list-group-item news-item">
-                <b>08/26/2024</b><br>
-                Starting Fall semester at UMD
-              </li>
-              <li class="list-group-item news-item">
-                <b>06/29/2024</b><br>
-                Attending <a href="https://2024.hci.international/" target="_blank">HCII 2024</a> in DC!
-              </li>
-              <li class="list-group-item news-item">
-                <b>05/17/2024</b><br>
-                Presented <a href="./projects/vrclass.html">XR course project</a>
-              </li>
-              <li class="list-group-item news-item">
-                <b>05/02/2024</b><br>
-                Submitted <a href="./projects/videogen.html">deep learning course research paper</a>
-              </li>
-              <li class="list-group-item news-item">
-                <b>01/24/2024</b><br>
-                Started my BS/MS education at UMD!
-              </li>
-            </ul>
-            
-          </div>
-        </div>
-      </div>
-
-      <!-- script to set height of news section equal to height of photo -->
-      <script>
-        picHeight = document.getElementById('myPic').style.height
-        // setting height of news to the pic height
-        document.getElementById('news').style.height = picHeight
-      </script>
       
     </div>
-
-    <hr>
-
-      <!-- research interests -->
-      <h5><b>Research & Experience:</b></h5>
-      
-      <p>
-        My interests generally include <b>machine learning</b>, <b>generative AI</b>, <b>extended reality (XR)</b>, and <b>human-computer interaction (HCI)</b>. 
-        In particular, I am interested in using these techniques in tandem with <b>computer graphics</b> and <b>computer vision</b> methods for applications such
-        as <b>education</b>, <b>accessibility</b>, and <b>art</b>.
-      </p>
-
-      <p>
-        Check out the links below for more details about my experience.
-      </p>
-
-  
-      <div class="buttons" >
-        <a href = "./documents/resume.pdf" target="_blank" >
-          <button id="resumeButton" class="button-1" data-theme-target>
-            Resume
-          </button>
-        </a>
-
-        <a href = "https://www.linkedin.com/in/simon-wang-519902193/" target="_blank" >
-          <button id="linkedinButton" class="button-1" data-theme-target>
-            LinkedIn
-          </button>
-        </a>
-
-        <a href = "https://github.com/simoncwang" target="_blank" >
-          <button id="githubButton" class="button-1" data-theme-target>
-            GitHub
-          </button>
-        </a>
-
-      </div>
+    
   </div>
-   
+
+  <div class="contact">
+    <img src="./images/lake.jpeg">
+    
+  </div>
+  
 </div>
+
 
 <!-- projects section -->
 <div id="project-highlights" data-theme-target>

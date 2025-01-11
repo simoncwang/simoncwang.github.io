@@ -1,9 +1,127 @@
+/* fonts */
+@font-face { font-family: Roobert; src: url("./fonts/RoobertTRIALVF.ttf"); } 
+@font-face { font-family: Inter; src: url("./fonts/Inter-VariableFont_opsz\,wght.ttf"); } 
+
+
 
 /* dark mode stuff */
 /* Default (light mode) */
 [data-theme-target] {
   transition: background-color 0.3s;
   transition: color 0.3s;
+}
+
+/* overall styles */
+p {
+  font-family: Inter, Helvetica;
+}
+
+.hero-container {
+  display:flex;
+  flex-direction:row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding:5%;
+  gap:5%;
+  background-color: #cfe3e6;
+}
+
+.contact {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
+  /* padding:5%; */
+  width:40%;
+}
+
+.hero-container img {
+  width:100%;
+  height:auto;
+  /* padding:5%; */
+  border-radius: 50%; /* Make the image a circle */
+  object-fit: cover;
+}
+
+.hero {
+  display:flex;
+  flex-direction: column;
+  padding-left:0;
+  /* padding-right:5%; */
+  /* padding:3%; */
+  justify-content: left;
+  background:none;
+}
+
+.hero h1 {
+  /* letter-spacing: 5px; */
+  font-family: Inter;
+  font-size:72px;
+}
+
+.hero h2 {
+  font-family: Inter, Helvetica;
+  font-size:36px;
+}
+
+.hero h3 {
+  font-family: Inter, Helvetica;
+  font-size:24px;
+}
+
+#interests {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 8px;
+}
+
+#interest {
+  transition: opacity 1s ease-in-out; /* Smooth fade */
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+
+#hero-description {
+  padding-top:8px;
+  display: flex;
+  /* width: 70%; */
+  overflow:wrap;
+}
+
+
+#resume-link {
+  border: 2px solid #217cd6; 
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius:20px;
+}
+
+.hero-links {
+  display:flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap:20px;
+  padding-top:10px;
+  /* padding-left: 20px; */
+}
+
+.hero-links i {
+  font-size:25px;
+}
+
+.hero-links a {
+  /* color:#032f2a; */
+  font-family: Inter;
+  font-size:15px;
 }
 
 #intro {
@@ -13,7 +131,7 @@
 }
 
 #project-highlights {
-  background-color: #e2f3ec;
+  background-color: #e2f1f3;
   padding-top:2%;
   padding-bottom:2%;
   margin-top: 0;
@@ -112,7 +230,7 @@ h1 {
 .navbar {
   position:sticky;
   z-index:1000;
-  background: linear-gradient(90deg, #a2c0c3,#abcbc5, #cde4df, #d4eadb);
+  /* background: linear-gradient(90deg, #a2c0c3,#abcbc5, #cde4df, #d4eadb); */
   background-color: #cde4df;
   transition: background-color 0.3s;
   box-shadow: 0px 5px 10px rgb(117, 192, 227);

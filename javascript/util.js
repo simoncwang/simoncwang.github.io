@@ -1,3 +1,42 @@
+// animation for cycling through interests
+document.addEventListener('DOMContentLoaded', () => {
+    const interests = ["Machine Learning", "Human Computer Interaction", "AR/VR", "Generative AI"];
+    cycleText("interest", interests, 3000);
+});
+
+function cycleText(divId, strings, interval) {
+    let currentIndex = 0;
+
+    // Get the div element by its ID
+    const targetDiv = document.getElementById(divId);
+    if (!targetDiv) {
+        console.error(`Div with ID "${divId}" not found.`);
+        return;
+    }
+
+    // Function to update the text and synchronize with animation
+    function updateText() {
+        // Apply fade-out class
+        targetDiv.classList.remove('fade-in');
+        targetDiv.classList.add('fade-out');
+
+        // wait until the animation finishes
+        setTimeout(() => {
+            // Update the text
+            targetDiv.textContent = strings[currentIndex];
+            currentIndex = (currentIndex + 1) % strings.length;
+
+            // Apply fade-in class
+            targetDiv.classList.remove('fade-out');
+            targetDiv.classList.add('fade-in');
+        }, interval / 3);
+    }
+
+    // Start the cycle
+    updateText(); // Update immediately
+    setInterval(updateText, interval);
+}
+
 
 // remove the sidenav when a page is loaded, also reset section header arrows accordingly
 document.addEventListener('DOMContentLoaded', () => {
