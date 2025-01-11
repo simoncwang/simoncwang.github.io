@@ -106,6 +106,10 @@ p {
   gap: 8px;
 }
 
+#interests div {
+  overflow: hidden;
+}
+
 #interest {
   transition: opacity 1s ease-in-out; /* Smooth fade */
 }
