@@ -43,7 +43,7 @@ p {
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .hero-container {
-    flex-direction: column-reverse; /* Switch to vertical layout for narrow displays */
+    flex-direction: column; /* Switch to vertical layout for narrow displays */
     align-items: center;    /* Center the content */
   }
   
