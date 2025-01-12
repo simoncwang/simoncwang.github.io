@@ -25,7 +25,7 @@
 
 </head>
 
-<body>
+<body class="homepage-body" data-theme-target>
 
 <!-- <div id="toggle-container">
   <label for="toggle-ripple">ripple animation: </label>
@@ -37,7 +37,7 @@
 
 
 <!-- navbar section -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+<nav class="navbar navbar-expand-sm navbar-light fixed-top">
   <button id="theme-toggle">
     <i id = "theme-icon" class="fa-regular fa-lightbulb"></i>
   </button>
@@ -61,12 +61,12 @@
 </nav>
 
 <!-- introduction section -->
-<div class="hero-container"  data-theme-target>
+<div class="hero-container">
   <div class="contact">
     <img src="./images/lake.jpeg">
     
   </div>
-  
+
   <div class="hero">
     <h1>Simon Wang</h1>
   
@@ -102,161 +102,164 @@
     
   </div>
 
-  
-  
 </div>
 
 
+<!-- <div class="aboutme-container" data-theme-target>
+  <h2>About Me</h2>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam illo cupiditate minima molestiae! Iure tempora, saepe, corrupti blanditiis optio facilis nulla in enim, ad quisquam ut harum sit sequi ex
+  </p>
+</div> -->
+
+
+
 <!-- projects section -->
-<div id="project-highlights" data-theme-target>
-  <div class="container container-fluid" >
-    <h1 style="text-align: center;">Project highlights</h1>
-    <br>
-    <p style="text-align:center">Check out some of my recent project highlights below. See my full <a href = "./projects/defaultproject.html" target="_blank">Projects</a> page and my <a href = "https://github.com/simoncwang" target="_blank">GitHub</a> for complete details and code!.
-    </p>
-    <hr>
+<div id="project-highlights" class="container-fluid" >
+  <h1>Project highlights</h1>
+  <br>
+  <p>Check out some of my recent project highlights below. See my full <a href = "./projects/defaultproject.html" target="_blank">Projects</a> page and my <a href = "https://github.com/simoncwang" target="_blank">GitHub</a> for complete details and code!.
+  </p>
+  <hr>
 
-    <div class="row">
+  <div class="row">
+    <div class="col-sm">
+      <h3>MMO - Multi-modal Multi-agent Organization & Robust Benchmarking</h3>
+      <p class="date">December 18, 2024</p>
 
-      <div class="col">
-        <h3 style="text-align: center">MMO - Multi-modal Multi-agent Organization & Robust Benchmarking</h3>
-        <center><p class="date">December 18, 2024</p></center>
+      <img src="images/mllm.webp" class="rounded mx-auto d-block"style="width:100%">
+      <center class="image-caption">AI generated using DALL-E</center>
 
-        <img src="images/mllm.webp" class="rounded mx-auto d-block"style="width:100%">
-        <center class="image-caption">AI generated using DALL-E</center>
+      <br>
+      <p>
+        Course research project for CMSC848K - Multimodal Foundation Models. Developed a multi-modal multi-agent system and investigated how to improve multimodal large language model (MLLM) benchmarking.
+      </p>
 
-        <br>
-        <p>
-          Course research project for CMSC848K - Multimodal Foundation Models. Developed a multi-modal multi-agent system and investigated how to improve multimodal large language model (MLLM) benchmarking.
-        </p>
+      <a href = "./projects/defaultproject.html">
+        <button id="button" class="button-1" data-theme-target>
+          Read more!
+        </button>
+      </a>
 
-        <a href = "./projects/defaultproject.html">
-          <button id="button" class="button-1" data-theme-target>
-            Read more!
-          </button>
-        </a>
-
-      </div>
-
-      
-      <div class="col">
-        <h3 style="text-align: center">Monte Carlo Rendering and Disney BRDF in PyTorch</h3>
-        <center><p class="date">December 14, 2024</p></center>
-        
-        <img src="images/disneythumbnail.png" class="rounded mx-auto d-block"style="width:100%">
-        <center class="image-caption">Two spheres with Disney style shading!</center>
-        
-        <br>
-        <p>
-          An implementation of Monte Carlo path tracing and <a href="https://media.disneyanimation.com/uploads/production/publication_asset/48/asset/s2012_pbs_disney_brdf_notes_v3.pdf" target="_blank">Disney "principled" BRDF</a> in PyTorch. An extension of an assignment codebase from CMSC740 - Advanced Graphics course. Implemented advanced computer graphics concepts such as Monte Carlo integration, neural radiosity, and multiple importance sampling. As a final project, I also implemented the Disney shading system in the existing renderer with fine-grained control of object appearance using 10 parameters.
-        </p>
-
-        <a href = "./projects/disneybrdf.html">
-          <button id="button" class="button-1" data-theme-target>
-            Read more!
-          </button>
-        </a>
-
-      </div>
     </div>
 
-    <hr>
-  
-    <div class="row">
-      <div class="col">
-        <h3 style="text-align: center">AI Art Advisor</h3>
-        <center><p class="date">July, 2024</p></center>
-
-        <img src="images/artexample.png" class="rounded mx-auto d-block" alt="art" style="width:100%">
-
-        <br>
-        <p>
-          To illustrate a potential application of AI models to benefit artists, I created a prototype "AI art advisor" using the latest vison-language model <a href="https://openai.com/index/hello-gpt-4o/" target="_blank">GPT-4o ("omni")</a> from OpenAI. This new GPT model now has vision capabilities, so, I was inspired to ask the question: <b>how well can it understand art?</b>
-        </p>
-
-        <p>
-          I created a simple user interface where the user can upload any image (png or jpg format) of their art, along with their API key and any specific requests. In the backend, these inputs are parsed into several API calls to GPT-4o. In the API call, the system is told its role as an art advisor that gives constructive feedback (both negative and positive). Finally, the response is returned and formatted into clean markdown format before being printed out in the Gradio app interface. 
-        </p>
-
-        <a href = "./projects/artadvisor.html">
-          <button id="button" class="button-1" data-theme-target>
-            Read more!
-          </button>
-        </a>
-      </div>
-
-      <div class="col">
-        <h3 style="text-align: center">Virtual Classroom</h3>
-        <center><p class="date">May 17, 2024</p></center>
-        
-        <img src="images/vectordemo1.png" class="rounded mx-auto d-block" alt="vector" style="width:100%">
-        <center class="image-caption">A scene from our VR vector math lecture</center>
-        
-        <br>
-        <p>
-          This is a virtual reality (VR) project created in the Unity game engine throughout the Spring 2024 semester for the course CMSC838C: Advances in XR.
-          I led a group of 5 classmates to design a virtual classroom environment, and we conducted a user study to investigate the benefits of XR education
-          over traditional remote learning mediums such as video.
-        </p>
-
-        <a href = "./projects/vrclass.html">
-          <button id="button" class="button-1" data-theme-target>
-            Read more!
-          </button>
-        </a>
-
-      </div>
+    <div class="col-sm">
+      <h3>Monte Carlo Rendering and Disney BRDF in PyTorch</h3>
+      <p class="date">December 14, 2024</p>
       
+      <img src="images/disneythumbnail.png" class="rounded mx-auto d-block"style="width:100%">
+      <center class="image-caption">Two spheres with Disney style shading!</center>
+      
+      <br>
+      <p>
+        An implementation of Monte Carlo path tracing and <a href="https://media.disneyanimation.com/uploads/production/publication_asset/48/asset/s2012_pbs_disney_brdf_notes_v3.pdf" target="_blank">Disney "principled" BRDF</a> in PyTorch. An extension of an assignment codebase from CMSC740 - Advanced Graphics course. Implemented advanced computer graphics concepts such as Monte Carlo integration, neural radiosity, and multiple importance sampling. As a final project, I also implemented the Disney shading system in the existing renderer with fine-grained control of object appearance using 10 parameters.
+      </p>
+
+      <a href = "./projects/disneybrdf.html">
+        <button id="button" class="button-1" data-theme-target>
+          Read more!
+        </button>
+      </a>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-sm">
+      <h3>AI Art Advisor</h3>
+      <p class="date">July, 2024</p>
+
+      <img src="images/artexample.png" class="rounded mx-auto d-block" alt="art" style="width:100%">
+
+      <br>
+      <p>
+        To illustrate a potential application of AI models to benefit artists, I created a prototype "AI art advisor" using the latest vison-language model <a href="https://openai.com/index/hello-gpt-4o/" target="_blank">GPT-4o ("omni")</a> from OpenAI. This new GPT model now has vision capabilities, so, I was inspired to ask the question: <b>how well can it understand art?</b>
+      </p>
+
+      <p>
+        I created a simple user interface where the user can upload any image (png or jpg format) of their art, along with their API key and any specific requests. In the backend, these inputs are parsed into several API calls to GPT-4o. In the API call, the system is told its role as an art advisor that gives constructive feedback (both negative and positive). Finally, the response is returned and formatted into clean markdown format before being printed out in the Gradio app interface. 
+      </p>
+
+      <a href = "./projects/artadvisor.html">
+        <button id="button" class="button-1" data-theme-target>
+          Read more!
+        </button>
+      </a>
     </div>
 
-    <hr>
-
-    <div class="row">
-
-      <div class="col">
-        <h3 style="text-align: center">Improving Control and Consistency of Diffusion-Generated Video</h3>
-        <center><p class="date">May 2, 2024</p></center>
-
-        <img src="images/jeep1.png" class="rounded mx-auto d-block" alt="jeep" style="width:100%">
-        <center class="image-caption">Selected frames from a video I generated</center>
-
-        <br>
-        <p>
-          Semester-long course project created for CMSC720: Foundations of Deep Learning. Investigated state of the art diffusion-based video generation
-          methods, and experimented with various approaches to improving their quality in terms of consistency and controllability. Wrote and submitted
-          a NEURIPS format paper for a mock-conference within our class. 
-        </p>
-
-        <a href = "./projects/videogen.html">
-          <button id="button" class="button-1" data-theme-target>
-            Read more!
-          </button>
-        </a>
-
-      </div>
-
+    <div class="col-sm">
+      <h3>Virtual Classroom</h3>
+      <p class="date">May 17, 2024</p>
       
-      <div class="col">
-        <h3 style="text-align: center">Augmented Reality for Enhancing Elderly Interaction with Touch Screens (Idea)</h3>
-        <center><p class="date">May, 2024</p></center>
-        
-        <img src="images/emdpaper.png" class="rounded mx-auto d-block" alt="emd" style="width:100%">
-        
-        <br>
-        <p>
-          Hypothetical research project for CMSC839A: Embodied Media Design.
-        </p>
+      <img src="images/vectordemo1.png" class="rounded mx-auto d-block" alt="vector" style="width:100%">
+      <center class="image-caption">A scene from our VR vector math lecture</center>
+      
+      <br>
+      <p>
+        This is a virtual reality (VR) project created in the Unity game engine throughout the Spring 2024 semester for the course CMSC838C: Advances in XR.
+        I led a group of 5 classmates to design a virtual classroom environment, and we conducted a user study to investigate the benefits of XR education
+        over traditional remote learning mediums such as video.
+      </p>
 
-        <a href = "./projects/emd.html">
-          <button id="button" class="button-1" data-theme-target>
-            Read more!
-          </button>
-        </a>
+      <a href = "./projects/vrclass.html">
+        <button id="button" class="button-1" data-theme-target>
+          Read more!
+        </button>
+      </a>
 
-      </div>
     </div>
     
   </div>
+
+  <hr>
+
+  <div class="row">
+
+    <div class="col-sm">
+      <h3>Improving Control and Consistency of Diffusion-Generated Video</h3>
+      <p class="date">May 2, 2024</p>
+
+      <img src="images/jeep1.png" class="rounded mx-auto d-block" alt="jeep" style="width:100%">
+      <center class="image-caption">Selected frames from a video I generated</center>
+
+      <br>
+      <p>
+        Semester-long course project created for CMSC720: Foundations of Deep Learning. Investigated state of the art diffusion-based video generation
+        methods, and experimented with various approaches to improving their quality in terms of consistency and controllability. Wrote and submitted
+        a NEURIPS format paper for a mock-conference within our class. 
+      </p>
+
+      <a href = "./projects/videogen.html">
+        <button id="button" class="button-1" data-theme-target>
+          Read more!
+        </button>
+      </a>
+
+    </div>
+
+    
+    <div class="col-sm">
+      <h3>Augmented Reality for Enhancing Elderly Interaction with Touch Screens (Idea)</h3>
+      <p class="date">May, 2024</p>
+      
+      <img src="images/emdpaper.png" class="rounded mx-auto d-block" alt="emd" style="width:100%">
+      
+      <br>
+      <p>
+        Hypothetical research project for CMSC839A: Embodied Media Design.
+      </p>
+
+      <a href = "./projects/emd.html">
+        <button id="button" class="button-1" data-theme-target>
+          Read more!
+        </button>
+      </a>
+
+    </div>
+  </div>
+  
 </div>
 
 <!-- footer section -->

@@ -27,7 +27,7 @@
     <title>Dafault Project</title>
   </head>
 
-  <body>
+  <body class = "project-body" data-theme-target>
     <!-- navbar section -->
     <nav id="topnav" class="navbar navbar-expand-lg navbar-light fixed-top">
       <button id="theme-toggle">
@@ -51,7 +51,7 @@
       
     </nav>
 
-    <div class="project-page" data-theme-target>
+    <div class="project-page">
       <!-- sidebar section -->
       <div id="mySidenav" class="sidenav" data-theme-target >
         <div class="collapse">
@@ -171,7 +171,7 @@
             format expected by the evaluation code (e.g. "The answer is A"), instead returning a single letter or
             even a different format like "Choice A. In other benchmark repositories like GPQA, rather than deep approaches to improving the model being tested, high error rates are simply mitigated by providing a wide net to capture potential answer formats in the form of regular expression patterns. For example, here is the answer parsing code used in an actual GPQA evaluation example script:
           </p>
-          <pre data-theme-target>
+          <pre> 
             def parse_sampled_answer(answer, answer_choice_tokens):
               """Copy pasted from GPQA repo + more patterns"""
               patterns = [

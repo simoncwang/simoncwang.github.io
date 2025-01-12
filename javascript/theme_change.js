@@ -66,11 +66,45 @@ document.addEventListener('DOMContentLoaded', () => {
     // Apply the theme
     function applyTheme(theme) {
         // change background color of the body to theme
-        if (theme === 'dark') {
-            document.body.style.backgroundColor = "black";
-        } else {
-            document.body.style.backgroundColor = originalColors["body"];
-        }
+        // if (theme === 'dark') {
+        //     // Darken the background color
+        //     var darkerColor = darkenColor(originalColors["body"], 30);
+        //     console.log(darkerColor);
+        //     document.body.style.backgroundColor = darkerColor;
+        // } else {
+        //     console.log(originalColors["body"]);
+        //     document.body.style.backgroundColor = originalColors["body"];
+        // }
+        // applying theme for any data-theme-target elements
+        targetElements.forEach((el) => {
+            if (theme === 'dark') {
+                // Darken the background color
+                const darkerColor = darkenColor(originalColors[el.id], 70);
+                el.style.backgroundColor = darkerColor;
+    
+                // Lighten the text color
+                const lighterTextColor = lightenColor(originalTextColors[el.id], 80);
+                // el.style.color = lighterTextColor;
+                el.style.color = "#dceed4";
+    
+                // Adjust the link colors for dark mode
+                const links = el.querySelectorAll('a');
+                links.forEach((link) => {
+                    const lighterLinkColor = lightenColor(originalLinkColors[link.href], 50);
+                    link.style.color = lighterLinkColor;
+                });
+            } else {
+                // Restore original background, text, and link colors
+                el.style.backgroundColor = originalColors[el.id];
+                el.style.color = originalTextColors[el.id]; // Restore original text color
+    
+                // Restore the link colors
+                const links = el.querySelectorAll('a');
+                links.forEach((link) => {
+                link.style.color = originalLinkColors[link.href];
+                });
+            }
+            });
 
 
         // for course page switch list border colors
@@ -134,36 +168,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }));
         
-        // applying theme for any data-theme-target elements
-        targetElements.forEach((el) => {
-        if (theme === 'dark') {
-            // Darken the background color
-            const darkerColor = darkenColor(originalColors[el.id], 60);
-            el.style.backgroundColor = darkerColor;
-
-            // Lighten the text color
-            const lighterTextColor = lightenColor(originalTextColors[el.id], 80);
-            // el.style.color = lighterTextColor;
-            el.style.color = "#dceed4";
-
-            // Adjust the link colors for dark mode
-            const links = el.querySelectorAll('a');
-            links.forEach((link) => {
-                const lighterLinkColor = lightenColor(originalLinkColors[link.href], 50);
-                link.style.color = lighterLinkColor;
-            });
-        } else {
-            // Restore original background, text, and link colors
-            el.style.backgroundColor = originalColors[el.id];
-            el.style.color = originalTextColors[el.id]; // Restore original text color
-
-            // Restore the link colors
-            const links = el.querySelectorAll('a');
-            links.forEach((link) => {
-            link.style.color = originalLinkColors[link.href];
-            });
-        }
+        // switching pre element colors
+        const pres = document.querySelectorAll("pre");
+        pres.forEach((el) => {
+            if (theme === "dark") {
+                el.style.color="#dba4d7";
+            } else {
+                el.style.color="#b33cab";
+            }
         });
+        
     }
   
     // Function to darken a color (background color)
