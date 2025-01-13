@@ -179,12 +179,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // switching project highlight titles
-        const highlight_titles = document.querySelectorAll(".highlight-link h3")
+        const highlight_titles = document.querySelectorAll(".highlight-link h3");
         highlight_titles.forEach((el) => {
             if (theme === "dark") {
                 el.style.color = "#dceed4";
             } else {
                 el.style.color = "black";
+            }
+        });
+
+        // switching tag colors
+        const tags = document.querySelectorAll(".tag");
+        tags.forEach((el) => {
+            if (theme==="dark") {
+                el.style.color="#dceed4";
+            } else{
+                el.style.color="#006f4a";
             }
         });
     }
