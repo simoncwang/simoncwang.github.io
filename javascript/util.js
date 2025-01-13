@@ -1,3 +1,33 @@
+// interactions with info icon popups
+document.addEventListener('DOMContentLoaded', () => {
+    const infoIcon = document.getElementById('info-icon');
+    const infoPopup = document.getElementById('info-popup');
+    const closePopup = document.getElementById('close-popup');
+
+    let offsetX = 0;
+    let offsetY = 0;
+    let isDragging = false;
+
+    // Show popup on icon click
+    infoIcon.addEventListener('click', () => {
+        infoPopup.style.display = 'block';
+    });
+
+    // Hide popup on close button click
+    closePopup.addEventListener('click', () => {
+        infoPopup.style.display = 'none';
+    });
+
+    // Hide popup when clicking outside it
+    document.addEventListener('click', (e) => {
+        if (!infoPopup.contains(e.target) && e.target !== infoIcon) {
+            infoPopup.style.display = 'none';
+        }
+    });
+});
+
+
+
 // animation for cycling through interests
 document.addEventListener('DOMContentLoaded', () => {
     const interests = ["Machine Learning", "Human Computer Interaction", "AR/VR", "Generative AI"];

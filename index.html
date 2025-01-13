@@ -68,7 +68,37 @@
   </div>
 
   <div class="hero">
-    <h1>Simon Wang</h1>
+    <span id="title">
+      <h1>
+        Simon Wang
+      </h1>
+      <i id="info-icon" class="fa-regular fa-circle-question info-icon"></i>
+      <!-- <span id="info-icon" class="info-icon">about me</span> -->
+    </span>
+    
+    <div id="info-popup" class="info-popup">
+      <h3>who am I?</h3>
+      <hr>
+      <p>Hello! I'm Simon!</p>
+      <p>
+        Spring 2025 will be my final semester in UMD's Combined BS/MS program, and I'm so excited to use what I've learned over the past few years to make a real impact!
+      </p>
+
+      <h3>do I have interests?</h3>
+      <hr>
+      <p>
+        Aside from creating AI tools, studying deep learning, and developing webpages (like this one), in my free time I love to...
+      </p>
+      <ul class="popup-list">
+        <li><i class="fa-solid fa-palette"></i> Create art | digital & oil paint are my faves!</li>
+        <li><i class="fa-solid fa-pen-ruler"></i> Design & 3D print cool things w/ my Bambu Labs P1S!</li>
+        <li><i class="fa-solid fa-person-running"></i> Run | as a former track athlete that doesn't run enough anymore...</li>
+        <li><i class="fa-solid fa-gamepad"></i> Play video games | Minecraft, Apex Legends, Genshin, and more</li>
+      </ul>
+      
+
+      <i id="close-popup" class="fa-solid fa-xmark close-popup"></i>
+    </div>
   
     <div id="interests">
       <h3 style="color:gray">pursuing research interests in:</h3>
@@ -112,14 +142,20 @@
 <!-- projects section -->
 <div id="project-highlights" class="container-fluid" >
   <h1>Project highlights</h1>
-  <br>
-  <p>Check out some of my recent project highlights below. See my full <a href = "./projects/defaultproject.html" target="_blank">Projects</a> page and my <a href = "https://github.com/simoncwang" target="_blank">GitHub</a> for complete details and code!.
+  
+  <p>Check out some of my project highlights! See my <a href = "./projects/defaultproject.html" target="_blank">Projects</a> page and my <a href = "https://github.com/simoncwang" target="_blank">GitHub</a> for complete details and code.
   </p>
   <hr>
 
   <div class="row">
     <div class="col-sm">
       <h3>MMO - Multi-modal Multi-agent Organization & Robust Benchmarking</h3>
+      <div class="tag-group">
+        <span class="tag">llms</span>
+        <span class="tag">mllms</span>
+        <span class="tag">benchmarking</span>
+        <span class="tag">Python</span>
+      </div>
       <p class="date">December 18, 2024</p>
 
       <img src="images/mllm.webp" class="rounded mx-auto d-block"style="width:100%">
@@ -140,6 +176,14 @@
 
     <div class="col-sm">
       <h3>Monte Carlo Rendering and Disney BRDF in PyTorch</h3>
+
+      <div class="tag-group">
+        <span class="tag">computer-graphics</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">monte-carlo</span>
+        <span class="tag">path-tracing</span>
+      </div>
+
       <p class="date">December 14, 2024</p>
       
       <img src="images/disneythumbnail.png" class="rounded mx-auto d-block"style="width:100%">
@@ -164,6 +208,12 @@
   <div class="row">
     <div class="col-sm">
       <h3>AI Art Advisor</h3>
+      <div class="tag-group">
+        <span class="tag">OpenAI-API</span>
+        <span class="tag">gpt-4o</span>
+        <span class="tag">vison-language</span>
+        <span class="tag">Gradio</span>
+      </div>
       <p class="date">July, 2024</p>
 
       <img src="images/artexample.png" class="rounded mx-auto d-block" alt="art" style="width:100%">
@@ -186,6 +236,13 @@
 
     <div class="col-sm">
       <h3>Virtual Classroom</h3>
+      <div class="tag-group">
+        <span class="tag">AR/VR</span>
+        <span class="tag">Unity</span>
+        <span class="tag">c#</span>
+        <span class="tag">education</span>
+        <span class="tag">user-study</span>
+      </div>
       <p class="date">May 17, 2024</p>
       
       <img src="images/vectordemo1.png" class="rounded mx-auto d-block" alt="vector" style="width:100%">
@@ -214,6 +271,12 @@
 
     <div class="col-sm">
       <h3>Improving Control and Consistency of Diffusion-Generated Video</h3>
+      <div class="tag-group">
+        <span class="tag">deep-learning</span>
+        <span class="tag">stable-diffusion</span>
+        <span class="tag">controlnet</span>
+        <span class="tag">video-gen</span>
+      </div>
       <p class="date">May 2, 2024</p>
 
       <img src="images/jeep1.png" class="rounded mx-auto d-block" alt="jeep" style="width:100%">
@@ -236,7 +299,11 @@
 
     
     <div class="col-sm">
-      <h3>Augmented Reality for Enhancing Elderly Interaction with Touch Screens (Idea)</h3>
+      <h3>Augmented Reality for Enhancing Elderly Interaction with Touch Screens (Concept)</h3>
+      <div class="tag-group">
+        <span class="tag">human-computer-interaction</span>
+        <span class="tag">augmented-reality</span>
+      </div>
       <p class="date">May, 2024</p>
       
       <img src="images/emdpaper.png" class="rounded mx-auto d-block" alt="emd" style="width:100%">
