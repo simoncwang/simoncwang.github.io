@@ -177,7 +177,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 el.style.color="#b33cab";
             }
         });
-        
+
+        // switching project highlight titles
+        const highlight_titles = document.querySelectorAll(".highlight-link h3")
+        highlight_titles.forEach((el) => {
+            if (theme === "dark") {
+                el.style.color = "#dceed4";
+            } else {
+                el.style.color = "black";
+            }
+        });
     }
   
     // Function to darken a color (background color)
