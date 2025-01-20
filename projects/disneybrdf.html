@@ -104,21 +104,71 @@
           <center class="image-caption">(yes I know this is just two balls...but look at the shading!)</center>
 
           <hr>
+          <h3>About the project</h3>
           <p>
-            <h3>About the project</h3>
+            This project was built on top of a Monte-Carlo path tracing renderer built in PyTorch as part of my advanced graphics course at UMD (CMSC740 w/ Prof. Zwicker). A skeleton code-base was provided to us as a way to complete course assignments and implement various advanced computer graphics techniques such as sample warping, multiple-importance sampling, neural radiosity, and more! 
           </p>
 
           <p>
-            <h3>Motivation</h3>
-            
+            For my final course project, I used this renderer as the base to implement the <a href="https://media.disneyanimation.com/uploads/production/publication_asset/48/asset/s2012_pbs_disney_brdf_notes_v3.pdf" target="_blank">Disney "principled" BRDF.</a> 
+          </p>
+
+          <h3>Motivation/Background</h3>
+          <p>
+            BRDFs, or <b>bi-directional reflectance distribution functions</b>, are mathematical functions to represent appearance characteristics of materials. This implemented as a continuous function across a surface, describing how light should reflect or scatter at each point.
           </p>
 
           <p>
-            <h3>Implementation</h3>
+            In the technical report "Physically Based Shading at Disney" (linked earlier), the authors describe a new BRDF they implemented with input from graphic artists. It is called "principled", because they <b>prioritize artistic control and ease of use</b>, at times approximating "true" physical accuracy.
           </p>
 
           <p>
-            <h3>Challenges</h3>
+            The result is a shading system with over 10 parameters, allowing appearance to be fine-tuned, demonstrated in various Disney works such as "Wreck-It Ralph"!
+          </p>
+
+          <h3>Implementation</h3>
+          <p>
+            To add the functionality of the Disney BRDF, there are several important functions to implement. 
+          </p>
+
+          <p>
+            Due to the Monte-Carlo approach of my renderer, <b>light is modeled as large PyTorch tensors of rays</b> (origins and directions), which are then cast out into the 3D scene, calculating what objects they intersect and how that affects the intensity of light they "carry". To render the entire scene, we take many samples per pixel of these rays, essentially integrating over all the light in the scene and creating a nice picture (hopefully).
+          </p>
+
+          <p>
+            Therefore, in contrast to similar existing implementations online that deal with single vectors, I had to approach this in a batched context, performing operations on Tensors of 3D vectors rather than the vectors individually.
+          </p>
+
+          <p>
+            After creating a Disney BRDF Python class, I first implement a function that handles <b>sampling distributions depending on the various parameters.</b> To make the parameters in the Disney BRDF work, this involved implementing various sampling functions such as Cosine-Hemisphere sample warping, Fresnel terms, GGX distributions, and more. 
+          </p>
+
+          <p>
+            Next, we must implement the <b>evaluation function</b>, or how the final colors of pixels is calculated. To do this, I borrowed the existing path tracing structure from my original renderer, then modified it to evaluate light contributions based on functions determined by the Disney parameters.
+          </p>
+
+          <h3>Using LLMs to Control Rendering?</h3>
+          <p>
+            As a secondary experiment, I explored the possiblity of <b>using an LLM (gpt-4o in this case) to control the parameters of the BRDF.</b> Despite the Disney report emphasizing controllability, I found the parameters still a bit hard to tune and somewhat unintuitive (although I am not a graphic artist to be fair...).
+          </p>
+
+          <p>
+            With over 10 scalar parameters that can be set anywhere from 0 to 1, I found myself quite confused on <b>how to set them correctly to get the appearance I wanted.</b> Certain parameters like "specularity" or "metallic" made a lot of intuitive sense, allowing my to just set them to high numbers to make a shiny ball. However, when you combine them all together and throw in more complicated parameters, it becomes quite difficult to get the results I wanted.
+          </p>
+
+          <p>
+            My solution here was to use gpt-4o to generate the set of parameters, testing if it has inherent understanding of how BRDF terms relate to appearance. The results were quite promising, with simple natural language prompts producing parameter values that rendered images quite accurate to the intended prompt. For example, when prompted to create "two copper spheres", the model gave parameters that produced some pretty convincing results (will insert image later).
+          </p>
+
+          <h3>Results</h3>
+          <p>
+            Full details can be found in my <a href="../documents/disneybrdf.pdf" target="_blank">technical report</a> but here are some highlights of pictures I rendered using my implementation! (insert here soon)
+          </p>
+          
+
+          <h3>Future Work</h3>
+          <p>
+            In the future, I plan to further explore how computer graphics algorithms can create amazing scenes. Rather than just implementing an existing BRDF, I also would like to experiment with creating my own shading system, perhaps controlled by an LLM interface to even further imporve ease-of-use. On that end, I intend to try using structured outputs to improve the reliability of LLM outputs, which is a problem I faced during my experiments (I ended up manually editing the outputs before passing them to my renderer).
           </p>
 
 
