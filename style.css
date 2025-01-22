@@ -391,6 +391,26 @@
   box-shadow: 0px 5px 10px rgb(117, 192, 227);
 }
 
+/* .nav-logo {
+  height: 35px;
+  width: auto;
+  padding-left:30px;
+  padding-right:10px;
+  vertical-align: middle;
+} */
+
+.nav-logo {
+  display: inline-block;
+  background-image: url('./assets/logov2.svg');
+  background-size: contain;
+  background-repeat: no-repeat; 
+  width: 30px;
+  height: 30px;
+  margin-left:30px;
+  vertical-align: middle; 
+}
+
+
 .navbar-brand {
   font-weight: bold;
   background: transparent !important; /* Override inline styles */
