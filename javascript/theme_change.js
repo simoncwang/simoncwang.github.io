@@ -197,6 +197,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 el.style.color="#006f4a";
             }
         });
+
+        // switching skill colors
+        const skills = document.querySelectorAll(".skill");
+        skills.forEach((el) => {
+            if (theme==="dark") {
+                el.style.color="#d6e3f7";
+            } else{
+                el.style.color="#0d006f";
+            }
+        });
     }
   
     // Function to darken a color (background color)
