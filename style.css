@@ -238,8 +238,8 @@
 /* SKILLS SECTION */
 .skills-container {
   display:flex;
-  padding-left:15%;
-  padding-right:15%;
+  padding-left:10%;
+  padding-right:10%;
   padding-bottom:5%;
   padding-top:0;
   background:none;
@@ -253,13 +253,14 @@
   font-size:48px;
 }
 
-/* .skills-container h3 {
-  font-display;
+/* .skills-container p {
+  font-style: italic;
 } */
 
-.skills-container p {
-  font-style: italic;
-}
+/* span {
+  padding:5px;
+  border-radius: 10px;
+} */
 
 .skills {
   display: flex;
@@ -268,7 +269,11 @@
   justify-content: center;
   align-items: center;
   padding:25px;
-  padding-top:5px;
+  background:none;
+  border: rgb(127, 159, 177);
+  border-width:2px;
+  border-style: dashed;
+  border-radius:25px;
 }
 
 .skill {
@@ -277,8 +282,19 @@
   align-items: center; 
   padding:12px;
   border-radius: 25px; 
-  background-color: rgba(129, 203, 225, 0.486);
-  color: #d6e3f7;
+  color: #0d006f;
+}
+
+.programming-skills{
+  background-color: rgba(148, 221, 159, 0.486);
+}
+
+.ML-skills{
+  background-color: rgba(129, 219, 225, 0.486);
+}
+
+.software-skills{
+  background-color: rgba(108, 146, 213, 0.486);
 }
 
 
@@ -440,7 +456,7 @@
 
 .nav-logo {
   display: inline-block;
-  background-image: url('./assets/logov2.svg');
+  background-image: url('./assets/logo-darkv2.svg');
   background-size: contain;
   background-repeat: no-repeat; 
   width: 30px;

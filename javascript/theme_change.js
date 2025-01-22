@@ -207,6 +207,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 el.style.color="#0d006f";
             }
         });
+
+        // switching logo version
+        // Switching logo version
+        const logo = document.querySelector(".nav-logo"); // Use querySelector for a single element
+        if (theme === "dark") {
+            logo.style.backgroundImage = "url('./assets/logo-lightv2.svg')";
+        } else {
+            logo.style.backgroundImage = "url('./assets/logo-darkv2.svg')";
+        }
+
     }
   
     // Function to darken a color (background color)
