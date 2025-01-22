@@ -242,6 +242,11 @@
 
 /* PROJECT HIGHLIGHTS */
 
+.highlight-image {
+  width: 60%;
+  height: auto;
+}
+
 #project-highlights {
   background:none;
   /* background-color: #e2f1f3; */
@@ -581,7 +586,7 @@
 }
 
 .blog-thumbnail {
-  width: 100%;
+  width: 50%;
 }
 
 #blog-title {
