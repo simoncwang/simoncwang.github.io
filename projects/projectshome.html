@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) for tracking analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0BPLED61CJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0BPLED61CJ');
+    </script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
+    <script src="../javascript/util.js"></script>
+    <script src="../javascript/theme_change.js"></script>
+    <link rel = "stylesheet" href = "../style.css">
+    <title>Default Project</title>
+  </head>
+
+  <body class = "project-body" data-theme-target>
+    <!-- navbar section -->
+    <nav id="topnav" class="navbar navbar-expand-lg navbar-light fixed-top">
+      <button id="theme-toggle">
+        <i id = "theme-icon" class="fa-regular fa-lightbulb"></i>
+      </button>
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <span class="nav-logo"></span>
+          Simon Wang
+        </a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="../index.html">Home</a>
+            <a class="nav-item nav-link active" href="./projectshome.html">Projects</a>
+            <a class="nav-item nav-link" href="../courses.html">Coursework</a>
+            <a class="nav-item nav-link" href="https://scw-blog.vercel.app/" target="_blank">Blog</a>
+          </div>
+      </div>
+      
+    </nav>
+    
+    <div class="projects-home">
+        <h1>My Projects</h1>
+        <p>
+            Welcome to my collection of projects!
+            <br>
+            Below you can find articles detailing various projects I have completed, both through my coursework as well as in my personal time.
+        </p>
+
+        <div class="row">
+            <div class="col-lg project-group">
+                <h3>AI/ML</h3>
+                <hr>
+                <ul class="project-list">
+                    <li><a href="mmo.html">MMO - Multimodal Multi-agent Organization & Benchmarking</a></li>
+                    <li><a href="personalrag.html">Personal RAG Quiz System</a></li>
+                    <li><a href="videogen.html">Improving Control and Consistency of Diffusion-Generated Video</a></li>
+                    <li><a href="artadvisor.html">AI Art Advisor</a></li>
+                </ul>
+            </div>
+            <div class="col-lg project-group">
+                <h3>Computer Graphics</h3>
+                <hr>
+                <ul class="project-list">
+                    <li><a href="disneybrdf.html">Monte Carlo Rendering and Disney BRDF in PyTorch</a></li>
+                </ul>
+            </div>
+            <div class="col-lg project-group">
+                <h3>HCI</h3>
+                <hr>
+                <ul class="project-list">
+                    <li><a href="magicalpet.html">MagicalPet - A Friendly Desktop AI Assistant</a></li>
+                    <li><a href="vrclass.html">Virtual Classroom - Interactive Education in VR</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+    </div>
+
+    
+    <!-- footer section -->
+    <div class="footer">
+    <p>
+        &copy; Simon Wang, 2024.
+    </p>
+    
+    <p>
+        <a href="https://getbootstrap.com/" target="_blank">
+        <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="">
+        </a>
+        &nbsp;
+        Created with Bootstrap. &nbsp;
+    
+        P.s. thanks to the amazing <a href="https://emilywudesign.myportfolio.com/" target="_blank">Emily Wu</a> for helping with the graphic design!
+    </p>
+    </div>
+
+</body>
+</html>
