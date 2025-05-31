@@ -27,6 +27,12 @@
 }
 
 /* HERO SECTION */
+.alert-info {
+  background-color: #e8f4fd;
+  /* color: #084298; */
+  border-color: #b6e0fe;
+}
+
 #title {
   display: flex;
   flex-wrap:nowrap;
