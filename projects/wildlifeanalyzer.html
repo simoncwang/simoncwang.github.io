@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) for tracking analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0BPLED61CJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0BPLED61CJ');
+    </script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
+    <script src="../javascript/util.js"></script>
+    <script src="../javascript/theme_change.js"></script>
+    <link rel = "stylesheet" href = "../style.css">
+    <title>Default Project</title>
+  </head>
+
+  <body class = "project-body" data-theme-target>
+    <!-- navbar section -->
+    <nav id="topnav" class="navbar navbar-expand-lg navbar-light fixed-top">
+      <button id="theme-toggle">
+        <i id = "theme-icon" class="fa-regular fa-lightbulb"></i>
+      </button>
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <span class="nav-logo"></span>
+          Simon Wang
+        </a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="../index.html">Home</a>
+            <a class="nav-item nav-link active" href="./projectshome.html">Projects</a>
+            <a class="nav-item nav-link" href="../courses.html">Coursework</a>
+            <a class="nav-item nav-link" href="https://scw-blog.vercel.app/" target="_blank">Blog</a>
+          </div>
+      </div>
+      
+    </nav>
+
+    <div class="project-page">
+      <!-- sidebar section -->
+      <div id="mySidenav" class="sidenav" data-theme-target >
+        <div class="collapse">
+            <a href="javascript:void(0)" onclick="closeNav()"> &times;</a>
+        </div>
+    
+        <div class="container-fluid" style="text-align:center">
+            <!-- Sidebar Title -->
+            <hr>
+
+            <div id="header1" class="section-header" onclick="toggleSection('section1','header1')">
+              <div class="section-button">School Projects</div>
+              <i class="fa-solid fa-angle-up"></i>
+            </div>
+
+            <div id="section1" class="section-content">
+                <a class="nav-item nav-link active" href="./mmo.html">MMO - MLLM Benchmarking</a>
+                <a class="nav-item nav-link" href="./disneybrdf.html">Disney BRDF & Monte Carlo Rendering in PyTorch</a>
+                <a class="nav-item nav-link" href="./magicalpet.html">MagicalPet - A Desktop AI Assistant</a>
+                <a class="nav-item nav-link" href="./videogen.html">Consistent Video Generation</a>
+                <a class="nav-item nav-link" href="./vrclass.html">XR Education</a>
+                <a class="nav-item nav-link" href="./emd.html">Accessibility of Touch Screens for Elderly</a>
+            </div>
+            
+            <div id="header2" class="section-header" onclick="toggleSection('section2','header2')">
+              <button class="section-button">Personal Projects</button>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+
+            <div id="section2" class="section-content show-section">
+                <a class="nav-item nav-link" href="./wildlifeanalyzer.html">Wildlife Analyzer</a>
+              <a class="nav-item nav-link" href="./personalrag.html">RAG Quiz</a>
+              <a class="nav-item nav-link" href="./artadvisor.html">AI Art Advisor</a>
+            </div>
+            
+        </div>
+      </div>
+      
+      <div id="expandBtn" class="expand">
+        <a href="javascript:void(0)" onclick="openNav()"> &#9776;</a>
+      </div>
+    
+      <!-- main content -->
+      <div class="container" > 
+        <div id = "myContent" class="content">
+          <br>
+          <h1 style="text-align: center;">Wildlife Analyzer</h1>
+          <h5 style="text-align: center; font-weight:lighter;">An MLOps Dashboard for Wildlife Observations</h5>
+          
+          <div class="links">
+            <div>
+              <i class="fa-solid fa-laptop-code"></i> <a href="https://wildlife-analyzer-dashboard.streamlit.app/" target="_blank">Demo</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-github-alt"></i> <a href="https://github.com/simoncwang/wildlife-analyzer" target="_blank">GitHub</a>
+            </div>
+            
+          </div>
+          
+          <br>
+          <img src="../images/moose-analysis.png" class="blog-thumbnail rounded mx-auto d-block">
+          <center class="image-caption">AI generated using gpt-4o</center>
+
+          <hr>
+
+          <h3>Introduction</h3>
+          <p>
+            <p>This project leverages the <a href="https://api.inaturalist.org/v1/docs/" target="_blank">iNaturalist API</a>, which is an open source community for sharing high-quality wildlife sightings.</p>
+
+            <p>The Wildlife Analyzer consists of a modular MLOps-style pipeline with the following stages:</p>
+
+            <ul>
+            <li><b>Fetch:</b> Fetches relevant observation data from the API based on the parameters specified in the settings</li>
+            <li><b>Pre-Processing:</b> Uses Pandas and Python to parse the data into a clean dataframe format, saving it as a CSV</li>
+            <li><b>Modeling:</b> Depending on parameter settings, can run various ML and GenAI analyses on the data, including:
+                <ul>
+                <li><b>KMeans Clustering</b> using Sci-Kit Learn (in which case there will be a <b>feature engineering</b> pipeline stage prior to clustering)</li>
+                <li><b>LLM Summary</b> using gpt-4o through OpenAI API</li>
+                <li><b>LLM Analysis</b> gpt-4o analysis of the data, giving more directed insights and leveraging structured outputs</li>
+                <li><b>LLM QA</b> through a simple chat UI, allowing users to have multi-round conversations about the data</li>
+                </ul>
+            </li>
+            <li><b>Visualization:</b> Depending on which modeling stages were run, the UI can display various visualizations of the results and metrics</li>
+            <li><b>Logging/Monitoring:</b> Following common MLOps practices, various metrics and outputs are logged and saved in a cloud storage system (default a "mock cloud" in a local directory, but AWS S3 logging can be enabled if this repo is run locally)</li>
+            <li><b>TODO:</b> While not currently implemented yet, I intend to add periodic monitoring logic to the project, along with automatic parameter updating and pipeline re-deployment based on metrics and performance to follow <b>CI/CD principles</b>, continuously testing/monitoring and delivering</li>
+            <ul>
+                <li>The current state of the project is meant as a proof of concept, with all of the needed features (logging and cloud storage) to eventually incorporate CI/CD through periodic data fetching, continuous metric monitoring, and managing deployment through tools like GitHub Actions</li>
+                <li>I have also set up and experimented with using <b>MLflow</b> for higher quality and efficient logging, however the code is currently commented out because it is meant to be a local tool. Instructions for setup are below.</li>
+            </ul>
+            </ul>
+          </p>
+
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="https://streamlit.io/" target="_blank">Streamlit</a> for the dashboard interface.</li>
+            <li><a href="https://api.inaturalist.org/v1/docs/" target="_blank">iNaturalist API</a> for fetching wildlife observations.</li>
+            <li><a href="https://platform.openai.com/docs/api-reference" target="_blank">OpenAI API</a> for generating summaries.</li>
+            <li><a href="https://plotly.com/python/" target="_blank">Plotly</a> for interactive visualizations.</li>
+            <li><a href="https://pandas.pydata.org/" target="_blank">Pandas</a> for data manipulation.</li>
+            <li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html" target="_blank">KMeans</a> from scikit-learn for clustering observations.</li>
+            <li><a href="https://mlflow.org/" target="_blank">MLflow</a> for tracking runs and logging model metrics.</li>
+            <li><a href="https://aws.amazon.com/" target="_blank">AWS</a> for cloud storage and services.</li>
+            <li><a href="https://www.databricks.com/glossary/mlops" target="_blank">Databricks: MLOps</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    
+<!-- footer section -->
+<div class="footer">
+  <p>
+    &copy; Simon Wang, 2024.
+  </p>
+  
+  <p>
+    <a href="https://getbootstrap.com/" target="_blank">
+      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="">
+    </a>
+    &nbsp;
+    Created with Bootstrap. &nbsp;
+  
+    P.s. thanks to the amazing <a href="https://emilywudesign.myportfolio.com/" target="_blank">Emily Wu</a> for helping with the graphic design!
+  </p>
+</div>
+
+</body>
+</html>
