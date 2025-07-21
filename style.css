@@ -300,6 +300,7 @@
 
 .highlight-image {
   width: 60%;
+  padding:5px;
   height: auto;
 }
 
@@ -670,6 +671,12 @@
   display: none;
 }
 
+.image-caption {
+  font-size:medium;
+  font-style: italic;
+  color: gray;
+  padding-bottom: 5px;
+}
 
 .callout {
   border:1px solid rgb(22, 101, 204);
@@ -680,12 +687,6 @@
   align-items: center;
   text-align: center;
   font-size: small;
-}
-
-.image-caption {
-  font-size:medium;
-  font-style: italic;
-  color: gray;
 }
 
 .blog-content {
@@ -701,8 +702,17 @@
   margin-right:5%;
 }
 
+.blog-image {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  padding: 10px;
+  border-radius: 15px;
+}
+
 .blog-thumbnail {
   width: 50%;
+  padding: 10px;
 }
 
 #blog-title {
