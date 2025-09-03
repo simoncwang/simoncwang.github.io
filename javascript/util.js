@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // animation for cycling through interests
 document.addEventListener('DOMContentLoaded', () => {
-    const interests = ["Machine Learning", "HCI", "AR/VR", "Generative AI"];
+    const interests = ["Machine Learning", "MLOps", "HCI", "Data Interaction", "Generative AI"];
     cycleText("interest", interests, 3000);
 });
 
