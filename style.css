@@ -45,6 +45,10 @@ body.theme-dark [data-theme-target]:not(.button-1) {
   color: #dceed4;
 }
 
+body.theme-dark .course-content[data-theme-target] {
+  background-color: transparent;
+}
+
 body.theme-dark [data-theme-target]:not(.button-1) a {
   color: #bfe8ff;
 }
