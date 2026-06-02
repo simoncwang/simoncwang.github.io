@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07100f">
+  <title>Simon Wang | Terminal</title>
+  <link rel="stylesheet" href="./terminal.css">
+</head>
+<body>
+  <main class="terminal-page">
+    <a class="return-link" href="../index.html" aria-label="Return to simoncwang.github.io">
+      <span aria-hidden="true">&larr;</span> return to simoncwang.github.io
+    </a>
+
+    <section class="terminal-window" aria-label="Interactive terminal">
+      <header class="terminal-header">
+        <div class="window-controls" aria-hidden="true">
+          <span class="window-control window-control-close"></span>
+          <span class="window-control window-control-minimize"></span>
+          <span class="window-control window-control-expand"></span>
+        </div>
+        <p class="terminal-title">simon@portfolio: ~/terminal</p>
+        <span class="header-spacer" aria-hidden="true"></span>
+      </header>
+
+      <div class="terminal-body" id="terminal-body" tabindex="-1">
+        <div class="terminal-output" id="terminal-output" aria-live="polite"></div>
+        <form class="prompt-line is-hidden" id="prompt-form" autocomplete="off">
+          <label class="prompt-label" for="terminal-input">
+            <span class="prompt-user">visitor@simoncwang.github.io</span>
+            <span class="prompt-path" id="prompt-path">:~$</span>
+          </label>
+          <input
+            class="terminal-input"
+            id="terminal-input"
+            name="command"
+            type="text"
+            aria-label="Terminal command"
+            autocapitalize="none"
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+          >
+        </form>
+      </div>
+    </section>
+
+    <p class="page-note">a small experiment in browser-native interfaces</p>
+  </main>
+
+  <script src="./filesystem.js"></script>
+  <script src="./commands.js"></script>
+  <script src="./terminal.js"></script>
+</body>
+</html>
