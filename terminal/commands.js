@@ -140,7 +140,7 @@
         "role: research engineer",
         "interests: agentic systems, creative tools, human-AI interaction",
         "site: a lightweight portfolio with a hidden terminal interface",
-        "status: building useful things with a little bit of weirdness",
+        "status: building weird things",
       ].join("\n"));
     }
 

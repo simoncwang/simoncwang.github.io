@@ -3,6 +3,7 @@
 
   const themes = {
     default: "modern dark terminal",
+    glacier: "cool blue terminal",
     matrix: "green-on-black glow",
     amber: "warm vintage terminal",
     light: "bright terminal for daylight",
@@ -16,6 +17,10 @@
       description,
       active: name === currentTheme,
     }));
+  }
+
+  function names() {
+    return Object.keys(themes);
   }
 
   function setTheme(name) {
@@ -39,6 +44,7 @@
 
   window.TerminalThemes = {
     listThemes,
+    names,
     setTheme,
   };
 })();

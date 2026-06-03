@@ -107,12 +107,38 @@
     }
 
     const command = value.slice(0, firstSpace).toLowerCase();
+    if (command === "theme") {
+      completeTheme(value, firstSpace);
+      return;
+    }
+
     if (!["cd", "ls", "open"].includes(command)) return;
 
     const spacing = value.slice(0, firstSpace + 1);
     const path = value.slice(firstSpace + 1);
     const matches = window.TerminalFileSystem.completePath(path);
     if (matches.length === 1) input.value = `${spacing}${matches[0]}`;
+  }
+
+  function completeTheme(value, firstSpace) {
+    const prefix = value.slice(0, firstSpace + 1);
+    const rest = value.slice(firstSpace + 1);
+    const tokens = rest.split(/\s+/);
+
+    if (tokens.length === 1) {
+      const matches = ["list", "set", ...window.TerminalThemes.names()].filter((option) => (
+        option.startsWith(tokens[0].toLowerCase())
+      ));
+      if (matches.length === 1) input.value = `${prefix}${matches[0]}`;
+      return;
+    }
+
+    if (tokens.length === 2 && tokens[0].toLowerCase() === "set") {
+      const matches = window.TerminalThemes.names().filter((theme) => (
+        theme.startsWith(tokens[1].toLowerCase())
+      ));
+      if (matches.length === 1) input.value = `${prefix}set ${matches[0]}`;
+    }
   }
 
   function browseHistory(direction) {
