@@ -145,6 +145,39 @@
       .sort((a, b) => a.localeCompare(b));
   }
 
+  function tree(path = ".") {
+    const result = resolve(path);
+    if (result.error) return result;
+
+    const rootLabel = result.parts.length
+      ? result.parts[result.parts.length - 1]
+      : ".";
+
+    if (result.node.type !== "directory") {
+      return { lines: [rootLabel] };
+    }
+
+    const lines = [rootLabel];
+    appendTreeLines(result.node, "", lines);
+    return { lines };
+  }
+
+  function appendTreeLines(node, prefix, lines) {
+    const entries = Object.entries(node.children)
+      .sort(([a], [b]) => a.localeCompare(b));
+
+    entries.forEach(([name, child], index) => {
+      const isLast = index === entries.length - 1;
+      const connector = isLast ? "`-- " : "|-- ";
+      const suffix = child.type === "directory" ? "/" : "";
+      lines.push(`${prefix}${connector}${name}${suffix}`);
+
+      if (child.type === "directory") {
+        appendTreeLines(child, `${prefix}${isLast ? "    " : "|   "}`, lines);
+      }
+    });
+  }
+
   window.TerminalFileSystem = {
     changeDirectory,
     completePath,
@@ -152,5 +185,6 @@
     getDisplayPath,
     list,
     resolve,
+    tree,
   };
 })();

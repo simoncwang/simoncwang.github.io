@@ -193,6 +193,7 @@
 
   const commandRegistry = window.TerminalCommands.createCommands({
     clear,
+    delay,
     escapeHtml,
     getHistory: () => commandHistory,
     runAsciiRain,
