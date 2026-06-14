@@ -135,6 +135,15 @@ button {
   display: none !important;
 }
 
+picture {
+  display: block;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* PAGE BODY LEVEL STYLES */
 .homepage-body {
   font-family: Inter, Helvetica;

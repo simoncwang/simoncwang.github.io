@@ -40,7 +40,11 @@
           </div>
 
           <br>
-          <img src="../images/paintbrush.jpg" class="rounded mx-auto d-block" alt="Paintbrushes and art supplies" style="width:60%">
+          <picture>
+            <source type="image/avif" srcset="../images/generated/paintbrush-768.avif 768w, ../images/generated/paintbrush-1280.avif 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+            <source type="image/webp" srcset="../images/generated/paintbrush-768.webp 768w, ../images/generated/paintbrush-1280.webp 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+            <img src="../images/paintbrush.jpg" class="rounded mx-auto d-block" alt="Paintbrushes and art supplies" style="width:60%" width="5184" height="3456" decoding="async" loading="eager" fetchpriority="high">
+          </picture>
 
           <hr>
 
@@ -73,7 +77,11 @@
             Below is a simple flow diagram to describe this implementation:
           </p>
           <div class="centered-media">
-            <img src="../images/ArtAdvisorFlow.png" class="rounded mx-auto d-block" alt="Flowchart of the AI Art Advisor application" style="width:70%; background-color: aliceblue; padding:1%;">
+            <picture>
+              <source type="image/avif" srcset="../images/generated/artadvisorflow-768.avif 768w" sizes="(max-width: 768px) 90vw, 70vw">
+              <source type="image/webp" srcset="../images/generated/artadvisorflow-768.webp 768w" sizes="(max-width: 768px) 90vw, 70vw">
+              <img src="../images/ArtAdvisorFlow.png" class="rounded mx-auto d-block" alt="Flowchart of the AI Art Advisor application" style="width:70%; background-color: aliceblue; padding:1%;" width="967" height="461" decoding="async" loading="lazy">
+            </picture>
           </div>
 
           <h3>Features</h3>
@@ -107,7 +115,11 @@
           <p>
             The interface of the Gradio app along with an example use case is shown below using the famous <em>Mona Lisa</em> by Leonardo da Vinci.
           </p>
-            <img src="../images/artexample.png" alt="AI Art Advisor interface analyzing the Mona Lisa" style="width:100%">
+            <picture>
+              <source type="image/avif" srcset="../images/generated/artexample-768.avif 768w, ../images/generated/artexample-1280.avif 1280w" sizes="(max-width: 768px) 100vw, 70vw">
+              <source type="image/webp" srcset="../images/generated/artexample-768.webp 768w, ../images/generated/artexample-1280.webp 1280w" sizes="(max-width: 768px) 100vw, 70vw">
+              <img src="../images/artexample.png" alt="AI Art Advisor interface analyzing the Mona Lisa" style="width:100%" width="1550" height="1052" decoding="async" loading="lazy">
+            </picture>
 
           <h3>Conclusions</h3>
 
@@ -128,7 +140,7 @@
 
       <p>
         <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">
-          <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="">
+          <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="" decoding="async" loading="lazy">
         </a>
         &nbsp;
         Created with Bootstrap. &nbsp;

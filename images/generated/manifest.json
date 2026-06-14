@@ -1,0 +1,228 @@
+[
+  {
+    "source": "images/lake.jpeg",
+    "width": 1478,
+    "height": 1478,
+    "generatedWidths": [
+      256,
+      512
+    ]
+  },
+  {
+    "source": "images/multiagent.png",
+    "width": 1536,
+    "height": 1024,
+    "generatedWidths": [
+      480,
+      768,
+      800,
+      1280
+    ]
+  },
+  {
+    "source": "images/moose-analysis.png",
+    "width": 1536,
+    "height": 1024,
+    "generatedWidths": [
+      480,
+      768,
+      800,
+      1280
+    ]
+  },
+  {
+    "source": "images/agenticdataanalysis.png",
+    "width": 1024,
+    "height": 1024,
+    "generatedWidths": [
+      480,
+      800
+    ]
+  },
+  {
+    "source": "images/mllm.webp",
+    "width": 1024,
+    "height": 1024,
+    "generatedWidths": [
+      480,
+      768,
+      800
+    ]
+  },
+  {
+    "source": "images/disneythumbnail.png",
+    "width": 596,
+    "height": 452,
+    "generatedWidths": [
+      480
+    ]
+  },
+  {
+    "source": "images/learning.webp",
+    "width": 1024,
+    "height": 1024,
+    "generatedWidths": [
+      480,
+      768,
+      800
+    ]
+  },
+  {
+    "source": "images/jeep1.png",
+    "width": 986,
+    "height": 274,
+    "generatedWidths": [
+      480,
+      768,
+      800
+    ]
+  },
+  {
+    "source": "images/vectordemo1.png",
+    "width": 728,
+    "height": 440,
+    "generatedWidths": [
+      480
+    ]
+  },
+  {
+    "source": "images/computeruse.webp",
+    "width": 1024,
+    "height": 1024,
+    "generatedWidths": [
+      480,
+      800
+    ]
+  },
+  {
+    "source": "images/websitecoding.webp",
+    "width": 1024,
+    "height": 1024,
+    "generatedWidths": [
+      480,
+      800
+    ]
+  },
+  {
+    "source": "images/robotagent.webp",
+    "width": 1024,
+    "height": 1024,
+    "generatedWidths": [
+      480,
+      800
+    ]
+  },
+  {
+    "source": "images/paintbrush.jpg",
+    "width": 5184,
+    "height": 3456,
+    "generatedWidths": [
+      768,
+      1280
+    ]
+  },
+  {
+    "source": "images/ArtAdvisorFlow.png",
+    "width": 967,
+    "height": 461,
+    "generatedWidths": [
+      768
+    ]
+  },
+  {
+    "source": "images/artexample.png",
+    "width": 1550,
+    "height": 1052,
+    "generatedWidths": [
+      768,
+      1280
+    ]
+  },
+  {
+    "source": "images/emdpaper.png",
+    "width": 1876,
+    "height": 1562,
+    "generatedWidths": [
+      768,
+      1280
+    ]
+  },
+  {
+    "source": "images/gaiaexample.png",
+    "width": 1236,
+    "height": 660,
+    "generatedWidths": [
+      768
+    ]
+  },
+  {
+    "source": "images/huggingfacefinalscore.png",
+    "width": 1916,
+    "height": 653,
+    "generatedWidths": [
+      768,
+      1280
+    ]
+  },
+  {
+    "source": "images/huggingfacecertificate.webp",
+    "width": 2000,
+    "height": 1414,
+    "generatedWidths": [
+      768,
+      1280
+    ]
+  },
+  {
+    "source": "images/magicalpet.avif",
+    "width": 900,
+    "height": 675,
+    "generatedWidths": [
+      768
+    ]
+  },
+  {
+    "source": "images/qwenvl.png",
+    "width": 1958,
+    "height": 1266,
+    "generatedWidths": [
+      768,
+      1280
+    ]
+  },
+  {
+    "source": "images/mmoprompting.png",
+    "width": 1504,
+    "height": 726,
+    "generatedWidths": [
+      768,
+      1280
+    ]
+  },
+  {
+    "source": "images/mmoflow.png",
+    "width": 1534,
+    "height": 910,
+    "generatedWidths": [
+      768,
+      1280
+    ]
+  },
+  {
+    "source": "images/scienceqaresults.png",
+    "width": 1060,
+    "height": 728,
+    "generatedWidths": [
+      768
+    ]
+  },
+  {
+    "source": "images/quizapp.png",
+    "width": 2598,
+    "height": 1640,
+    "generatedWidths": [
+      768,
+      1280
+    ]
+  }
+]

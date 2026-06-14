@@ -1,0 +1,10 @@
+{
+  "name": "simoncwang-github-io",
+  "private": true,
+  "scripts": {
+    "images:build": "node scripts/build-images.js"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.3"
+  }
+}

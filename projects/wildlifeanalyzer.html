@@ -51,7 +51,11 @@
           </div>
 
           <br>
-          <img src="../images/moose-analysis.png" class="blog-thumbnail rounded mx-auto d-block" alt="Illustration of a scientist analyzing a moose observation">
+          <picture>
+            <source type="image/avif" srcset="../images/generated/moose-analysis-768.avif 768w, ../images/generated/moose-analysis-1280.avif 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+            <source type="image/webp" srcset="../images/generated/moose-analysis-768.webp 768w, ../images/generated/moose-analysis-1280.webp 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+            <img src="../images/moose-analysis.png" class="blog-thumbnail rounded mx-auto d-block" alt="Illustration of a scientist analyzing a moose observation" width="1536" height="1024" decoding="async" loading="eager" fetchpriority="high">
+          </picture>
           <p class="image-caption centered-caption">AI generated using gpt-4o</p>
 
           <hr>
@@ -108,7 +112,7 @@
 
   <p>
     <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">
-      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="">
+      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="" decoding="async" loading="lazy">
     </a>
     &nbsp;
     Created with Bootstrap. &nbsp;

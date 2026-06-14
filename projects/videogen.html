@@ -40,7 +40,11 @@
 
           <br>
 
-          <img src="../images/jeep1.png" class="rounded mx-auto d-block" alt="Three generated frames of a Jeep driving through snow" style="width:90%">
+          <picture>
+            <source type="image/avif" srcset="../images/generated/jeep1-768.avif 768w" sizes="(max-width: 768px) 95vw, 90vw">
+            <source type="image/webp" srcset="../images/generated/jeep1-768.webp 768w" sizes="(max-width: 768px) 95vw, 90vw">
+            <img src="../images/jeep1.png" class="rounded mx-auto d-block" alt="Three generated frames of a Jeep driving through snow" style="width:90%" width="986" height="274" decoding="async" loading="eager" fetchpriority="high">
+          </picture>
           <p class="image-caption centered-caption">3 frames from a video of a jeep driving through the snow, generated with Stable Diffusion and Uni-Controlnet</p>
 
           <hr>
@@ -88,7 +92,7 @@
 
   <p>
     <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">
-      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="">
+      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="" decoding="async" loading="lazy">
     </a>
     &nbsp;
     Created with Bootstrap. &nbsp;

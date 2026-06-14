@@ -44,7 +44,11 @@
 
           <br>
 
-          <img src="../images/magicalpet.avif" class="rounded mx-auto d-block" alt="MagicalPet desktop turtle assistant" style="width:60%">
+          <picture>
+            <source type="image/avif" srcset="../images/generated/magicalpet-768.avif 768w" sizes="(max-width: 768px) 90vw, 60vw">
+            <source type="image/webp" srcset="../images/generated/magicalpet-768.webp 768w" sizes="(max-width: 768px) 90vw, 60vw">
+            <img src="../images/magicalpet.avif" class="rounded mx-auto d-block" alt="MagicalPet desktop turtle assistant" style="width:60%" width="900" height="675" decoding="async" loading="eager" fetchpriority="high">
+          </picture>
 
           <hr>
           <h3>About the project</h3>
@@ -75,7 +79,7 @@
 
   <p>
     <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">
-      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="">
+      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="" decoding="async" loading="lazy">
     </a>
     &nbsp;
     Created with Bootstrap. &nbsp;

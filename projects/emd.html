@@ -40,7 +40,11 @@
 
           <br>
 
-          <img src="../images/emdpaper.png" class="rounded mx-auto d-block" alt="Cover of the augmented reality accessibility research paper" style="width:60%">
+          <picture>
+            <source type="image/avif" srcset="../images/generated/emdpaper-768.avif 768w, ../images/generated/emdpaper-1280.avif 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+            <source type="image/webp" srcset="../images/generated/emdpaper-768.webp 768w, ../images/generated/emdpaper-1280.webp 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+            <img src="../images/emdpaper.png" class="rounded mx-auto d-block" alt="Cover of the augmented reality accessibility research paper" style="width:60%" width="1876" height="1562" decoding="async" loading="eager" fetchpriority="high">
+          </picture>
 
           <hr>
           <h3>About the project</h3>
@@ -69,7 +73,7 @@
 
   <p>
     <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">
-      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="">
+      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="" decoding="async" loading="lazy">
     </a>
     &nbsp;
     Created with Bootstrap. &nbsp;

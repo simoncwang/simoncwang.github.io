@@ -40,7 +40,11 @@
 
           <br>
 
-          <img src="../images/disneythumbnail.png" class="blog-thumbnail mx-auto d-block" alt="Two rendered spheres demonstrating Disney BRDF materials">
+          <picture>
+            <source type="image/avif" srcset="../images/generated/disneythumbnail-480.avif 480w" sizes="(max-width: 768px) 90vw, 60vw">
+            <source type="image/webp" srcset="../images/generated/disneythumbnail-480.webp 480w" sizes="(max-width: 768px) 90vw, 60vw">
+            <img src="../images/disneythumbnail.png" class="blog-thumbnail mx-auto d-block" alt="Two rendered spheres demonstrating Disney BRDF materials" width="596" height="452" decoding="async" loading="eager" fetchpriority="high">
+          </picture>
           <p class="image-caption centered-caption">(yes I know this is just two balls...but look at the shading!)</p>
 
           <hr>
@@ -130,7 +134,7 @@
 
   <p>
     <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">
-      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="">
+      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="" decoding="async" loading="lazy">
     </a>
     &nbsp;
     Created with Bootstrap. &nbsp;

@@ -37,7 +37,11 @@
             </div>
 
             <br>
-            <img src="../images/learning.webp" class="blog-thumbnail rounded mx-auto d-block" alt="Illustration of personalized learning with AI" style="width:50%">
+            <picture>
+              <source type="image/avif" srcset="../images/generated/learning-768.avif 768w" sizes="(max-width: 768px) 90vw, 50vw">
+              <source type="image/webp" srcset="../images/generated/learning-768.webp 768w" sizes="(max-width: 768px) 90vw, 50vw">
+              <img src="../images/learning.webp" class="blog-thumbnail rounded mx-auto d-block" alt="Illustration of personalized learning with AI" style="width:50%" width="1024" height="1024" decoding="async" loading="eager" fetchpriority="high">
+            </picture>
             <p class="image-caption centered-caption">AI generated using DALL-E</p>
 
             <hr>
@@ -145,7 +149,11 @@
             Below is a screenshot of the main UI of the app, showing the features described earlier. Feel free to go to my <a href="https://github.com/simoncwang/RAGQuiz" target="_blank" rel="noopener noreferrer">GitHub</a> to download and test out the app for yourself! Note, you will have to provide your own OpenAI API key! NOTE: A public demo hosted on Huggingface Spaces is in the works as well!
             </p>
 
-            <img src="../images/quizapp.png" alt="Personal RAG quiz application interface" style="width:100%">
+            <picture>
+              <source type="image/avif" srcset="../images/generated/quizapp-768.avif 768w, ../images/generated/quizapp-1280.avif 1280w" sizes="(max-width: 768px) 100vw, 70vw">
+              <source type="image/webp" srcset="../images/generated/quizapp-768.webp 768w, ../images/generated/quizapp-1280.webp 1280w" sizes="(max-width: 768px) 100vw, 70vw">
+              <img src="../images/quizapp.png" alt="Personal RAG quiz application interface" style="width:100%" width="2598" height="1640" decoding="async" loading="lazy">
+            </picture>
 
         </div>
         </div>
@@ -160,7 +168,7 @@
 
     <p>
         <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">
-            <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="">
+            <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="" decoding="async" loading="lazy">
           </a>
       &nbsp;
       Created with Bootstrap. &nbsp;

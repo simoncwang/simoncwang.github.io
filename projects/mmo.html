@@ -52,7 +52,11 @@
           </div>
 
           <br>
-          <img src="../images/mllm.webp" class="blog-thumbnail rounded mx-auto d-block" alt="Illustration representing multimodal language models">
+          <picture>
+            <source type="image/avif" srcset="../images/generated/mllm-768.avif 768w" sizes="(max-width: 768px) 90vw, 60vw">
+            <source type="image/webp" srcset="../images/generated/mllm-768.webp 768w" sizes="(max-width: 768px) 90vw, 60vw">
+            <img src="../images/mllm.webp" class="blog-thumbnail rounded mx-auto d-block" alt="Illustration representing multimodal language models" width="1024" height="1024" decoding="async" loading="eager" fetchpriority="high">
+          </picture>
           <p class="image-caption centered-caption">AI generated using DALL-E</p>
 
           <hr>
@@ -72,7 +76,13 @@
             For example, <a href="https://arxiv.org/abs/2409.12191" target="_blank" rel="noopener noreferrer">Qwen2-VL</a> trains their MLLM by using a vision encoder in the form of a ViT to encode visual data and passed into a Qwen language model. Through training, the model learns to understand content within images, and therefore employ this knowledge to complete multimodal tasks. The structure is shown below in the following figure taken from the Qwen2-VL paper:
           </p>
 
-          <div class="centered-media"><img src="../images/qwenvl.png" alt="Diagram of the Qwen2-VL model architecture" style="width:60%"></div>
+          <div class="centered-media">
+            <picture>
+              <source type="image/avif" srcset="../images/generated/qwenvl-768.avif 768w, ../images/generated/qwenvl-1280.avif 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+              <source type="image/webp" srcset="../images/generated/qwenvl-768.webp 768w, ../images/generated/qwenvl-1280.webp 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+              <img src="../images/qwenvl.png" alt="Diagram of the Qwen2-VL model architecture" style="width:60%" width="1958" height="1266" decoding="async" loading="lazy">
+            </picture>
+          </div>
           <p class="image-caption centered-caption">Qwen2-VL Structure</p>
           <br>
 
@@ -139,7 +149,13 @@
             To illustrate this problem, I tested several models (gpt-4o, gpt-4o-mini, Qwen2-VL 2B Instruct, InternVL 2.5 2B, and Qwen2.5 1.5B Instruct) on a random 1000 samples (same seed) from the ScienceQA dataset. To show how arbitrary changes in prompting and parsing can drastically change benchmark results, the following graph shows accuracy across three strategies. The <i>base prompt</i> is very similar to the original ScienceQA prompt, simply asking the model to return their final answer choice as a single digit. The <i>ask twice</i> approach means just that...appending a prompt to the base prompt asking again "please return your choice in the following format: Answer: single digit". Finally, <i>single chars</i> is an additional regex pattern added to the end of the original list (which is the same as the GPQA parser expect modified to match single digits). Here, the last pattern allows for matching single digit answers, without the prompted "Answer: single digit" format.
 
           </p>
-          <div class="centered-media"><img src="../images/mmoprompting.png" alt="Chart comparing MMO prompting strategies" style="width:60%"></div>
+          <div class="centered-media">
+            <picture>
+              <source type="image/avif" srcset="../images/generated/mmoprompting-768.avif 768w, ../images/generated/mmoprompting-1280.avif 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+              <source type="image/webp" srcset="../images/generated/mmoprompting-768.webp 768w, ../images/generated/mmoprompting-1280.webp 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+              <img src="../images/mmoprompting.png" alt="Chart comparing MMO prompting strategies" style="width:60%" width="1504" height="726" decoding="async" loading="lazy">
+            </picture>
+          </div>
 
           <p>
             As you can see, trivial changes such as re-wording prompts, being more generous with answer matching, and other methods that I haven't explicitly tested like providing in-context examples can cause <b>seemingly random changes in accuracy.</b>
@@ -182,14 +198,26 @@
           <p>
             Overall, my multi-agent system, called "MMO" as explained in the title of this article, consists of several components. The system is organized into two main components; the Commander, which assigns subtasks and analyzes them to produce a final response, and the Roster, which consists of a list of agents (the smaller models) and initializes them to be ready for inference. Below is a simple flow chart of the general system:
           </p>
-          <div class="centered-media"><img src="../images/mmoflow.png" alt="Flowchart of the MMO multi-agent system" style="width:60%"></div>
+          <div class="centered-media">
+            <picture>
+              <source type="image/avif" srcset="../images/generated/mmoflow-768.avif 768w, ../images/generated/mmoflow-1280.avif 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+              <source type="image/webp" srcset="../images/generated/mmoflow-768.webp 768w, ../images/generated/mmoflow-1280.webp 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+              <img src="../images/mmoflow.png" alt="Flowchart of the MMO multi-agent system" style="width:60%" width="1534" height="910" decoding="async" loading="lazy">
+            </picture>
+          </div>
           <p class="image-caption centered-caption">MMO System Flow</p>
 
           <h3>Experimental Results</h3>
           <p>
             Placeholder text.
           </p>
-          <div class="centered-media"><img src="../images/scienceqaresults.png" alt="ScienceQA benchmark results chart" style="width:50%"></div>
+          <div class="centered-media">
+            <picture>
+              <source type="image/avif" srcset="../images/generated/scienceqaresults-768.avif 768w" sizes="(max-width: 768px) 90vw, 50vw">
+              <source type="image/webp" srcset="../images/generated/scienceqaresults-768.webp 768w" sizes="(max-width: 768px) 90vw, 50vw">
+              <img src="../images/scienceqaresults.png" alt="ScienceQA benchmark results chart" style="width:50%" width="1060" height="728" decoding="async" loading="lazy">
+            </picture>
+          </div>
           <p class="image-caption centered-caption">ScienceQA Results</p>
 
           <h3>Future work</h3>
@@ -210,7 +238,7 @@
 
   <p>
     <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">
-      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="">
+      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="" decoding="async" loading="lazy">
     </a>
     &nbsp;
     Created with Bootstrap. &nbsp;
