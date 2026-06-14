@@ -10,24 +10,71 @@ class SiteNavbar extends HTMLElement {
         ];
 
         this.innerHTML = `
-            <!-- navbar section -->
-            <nav id="topnav" class="navbar navbar-expand-lg navbar-light fixed-top">
-                <button id="theme-toggle">
-                    <i id="theme-icon" class="fa-regular fa-lightbulb"></i>
-                </button>
-
-                <div class="container">
-                    <a class="navbar-brand" href="${basePath}index.html">
+            <nav id="topnav" class="navbar navbar-light site-navigation" aria-label="Primary navigation">
+                <div class="container site-navigation-container">
+                    <a class="navbar-brand" href="${basePath}index.html" aria-label="Simon Wang home">
                         <span class="nav-logo"></span>
                         Simon Wang
                     </a>
 
-                    <div class="navbar-nav">
+                    <div class="site-navigation-actions">
+                        <button
+                            id="theme-toggle"
+                            class="navigation-icon-button"
+                            type="button"
+                            aria-label="Switch to dark theme"
+                        >
+                            <i id="theme-icon" class="fa-regular fa-lightbulb" aria-hidden="true"></i>
+                        </button>
+                        <button
+                            class="navigation-icon-button navigation-menu-toggle"
+                            type="button"
+                            aria-label="Open navigation menu"
+                            aria-controls="primary-navigation-links"
+                            aria-expanded="false"
+                        >
+                            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="navbar-nav site-navigation-links" id="primary-navigation-links">
                         ${navItems.map((item) => this.renderNavItem(item, activePage)).join('')}
                     </div>
                 </div>
             </nav>
         `;
+
+        const menuButton = this.querySelector('.navigation-menu-toggle');
+        const menu = this.querySelector('#primary-navigation-links');
+        if (!menuButton || !menu) return;
+
+        const setMenuOpen = (open) => {
+            menu.classList.toggle('is-open', open);
+            menuButton.setAttribute('aria-expanded', String(open));
+            menuButton.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+            const icon = menuButton.querySelector('i');
+            icon?.classList.toggle('fa-bars', !open);
+            icon?.classList.toggle('fa-xmark', open);
+        };
+
+        menuButton.addEventListener('click', () => {
+            setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true');
+        });
+
+        menu.addEventListener('click', (event) => {
+            if (event.target.closest('a')) setMenuOpen(false);
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+                setMenuOpen(false);
+                menuButton.focus();
+            }
+        });
+
+        window.matchMedia('(min-width: 769px)').addEventListener('change', (event) => {
+            if (event.matches) setMenuOpen(false);
+        });
     }
 
     getBasePath() {
@@ -47,9 +94,10 @@ class SiteNavbar extends HTMLElement {
 
     renderNavItem(item, activePage) {
         const activeClass = item.key === activePage ? ' active' : '';
+        const ariaCurrent = item.key === activePage ? ' aria-current="page"' : '';
         const target = item.external ? ' target="_blank"' : '';
         const rel = item.external ? ' rel="noopener noreferrer"' : '';
-        return `<a class="nav-item nav-link${activeClass}" href="${item.href}"${target}${rel}>${item.label}</a>`;
+        return `<a class="nav-item nav-link${activeClass}" href="${item.href}"${ariaCurrent}${target}${rel}>${item.label}</a>`;
     }
 }
 

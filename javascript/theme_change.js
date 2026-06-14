@@ -24,6 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateIcon(theme) {
         if (!themeIcon) return;
+        if (themeToggle) {
+            themeToggle.setAttribute(
+                'aria-label',
+                theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme',
+            );
+        }
         if (theme === 'dark') {
             themeIcon.classList.remove('fa-regular');
             themeIcon.classList.add('fa-solid');
