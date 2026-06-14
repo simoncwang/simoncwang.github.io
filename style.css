@@ -301,6 +301,8 @@ body.theme-dark .navbar-light .navbar-nav .nav-link:focus {
 
 .contact {
   display:flex;
+  width: 20%;
+  flex: 0 0 20%;
   flex-direction: column;
   align-items: center;
   gap:10px;
@@ -327,6 +329,7 @@ body.theme-dark .navbar-light .navbar-nav .nav-link:focus {
 
   .contact {
     width: 92px;
+    flex-basis: auto;
     max-width: none;
   }
 
@@ -342,6 +345,10 @@ body.theme-dark .navbar-light .navbar-nav .nav-link:focus {
   /* padding:5%; */
   border-radius: 50%; /* Make the image a circle */
   object-fit: cover;
+}
+
+.contact picture {
+  width: 100%;
 }
 
 .hero {
@@ -632,15 +639,15 @@ body.theme-dark .navbar-light .navbar-nav .nav-link:focus {
 }
 
 .site-navigation {
+  position: sticky;
   padding: 0.55rem 1rem;
 }
 
 .site-navigation-container {
   display: flex;
-  max-width: 1200px;
+  max-width: 1140px;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
 }
 
 .site-navigation-actions {
@@ -676,6 +683,19 @@ body.theme-dark .navbar-light .navbar-nav .nav-link:focus {
   display: flex;
   flex-direction: row;
   margin-left: auto;
+}
+
+.site-navigation-links .nav-link {
+  padding: 0.5rem;
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 50%;
+  left: 0.9375rem;
+  width: 30px;
+  height: 38px;
+  transform: translateY(-50%);
 }
 
 .nav-logo {
@@ -1085,6 +1105,7 @@ body.theme-dark .navbar-light .navbar-nav .nav-link:focus {
   }
 
   .navbar-brand {
+    margin-left: 0;
     margin-right: auto;
     font-size: 1.05rem;
   }
@@ -1096,6 +1117,13 @@ body.theme-dark .navbar-light .navbar-nav .nav-link:focus {
 
   .navigation-menu-toggle {
     display: inline-flex;
+  }
+
+  #theme-toggle {
+    position: static;
+    width: 44px;
+    height: 44px;
+    transform: none;
   }
 
   .site-navigation-links {
