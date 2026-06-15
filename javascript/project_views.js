@@ -23,7 +23,7 @@
 
             for (let index = 0; index < entries.length; index += 2) {
                 rows.push(`
-                    <div class="row">
+                    <div class="project-highlight-row">
                         ${entries.slice(index, index + 2).map((entry) => this.renderCard(entry)).join("")}
                     </div>
                 `);
@@ -54,7 +54,7 @@
                 .join(", ");
 
             return `
-                <div class="col-sm">
+                <div class="project-highlight-column">
                     <a class="highlight-link" href="${href}"${externalAttributes(entry.external)}>
                         <h3>${entry.highlightTitle || entry.title}</h3>
                     </a>
@@ -95,9 +95,9 @@
             const categories = ["AI/ML", "Computer Graphics", "HCI"];
 
             this.innerHTML = `
-                <div class="row">
+                <div class="project-index-row">
                     ${categories.map((category) => `
-                        <div class="col-lg project-group">
+                        <div class="project-index-column project-group">
                             <h3>${category}</h3>
                             <hr>
                             <ul class="project-list">

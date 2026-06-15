@@ -80,7 +80,7 @@ class ProjectNavigation extends HTMLElement {
                         const active = item.file === currentPage;
                         return `
                             <a
-                                class="nav-item nav-link${active ? " active" : ""}"
+                                class="project-navigation-link${active ? " active" : ""}"
                                 href="./${item.file}"
                                 ${active ? 'aria-current="page"' : ""}
                             >${item.navLabel}</a>

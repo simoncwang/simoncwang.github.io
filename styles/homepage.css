@@ -1,23 +1,4 @@
 /* HERO SECTION */
-.alert-info {
-  background-color: var(--alert-bg);
-  border-color: var(--alert-border);
-  color: var(--alert-text);
-}
-
-.alert-info a.btn-primary {
-  background-color: var(--alert-button-bg);
-  border-color: var(--alert-button-bg);
-  color: var(--alert-button-text);
-}
-
-.alert-info a.btn-primary:hover,
-.alert-info a.btn-primary:focus {
-  background-color: var(--alert-button-hover-bg);
-  border-color: var(--alert-button-hover-bg);
-  color: var(--alert-button-text);
-}
-
 #title {
   display: flex;
   flex-wrap:nowrap;

@@ -42,6 +42,38 @@
   background-color: var(--project-divider);
 }
 
+.project-highlight-row,
+.project-index-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.project-highlight-column,
+.project-index-column {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 576px) {
+  .project-highlight-column {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .project-index-column {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}
+
 .project-page {
   margin:0;
 }

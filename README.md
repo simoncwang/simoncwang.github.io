@@ -40,7 +40,7 @@ content-authoring workflow.
 ## Stack
 
 - Static HTML, CSS, and vanilla JavaScript
-- Bootstrap 4 via CDN
+- Site-owned modular CSS
 - Font Awesome via CDN
 - Sharp for development-time responsive image generation
 - GitHub Pages deployment

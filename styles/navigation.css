@@ -1,5 +1,8 @@
 /* NAVBAR STYLES */
-.navbar {
+.site-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position:sticky;
   top: 0;
   z-index:1001;
@@ -11,7 +14,6 @@
 }
 
 .site-navigation {
-  position: sticky;
   padding: 0.55rem 1rem;
 }
 
@@ -57,7 +59,12 @@
   margin-left: auto;
 }
 
-.site-navigation-links .nav-link {
+.site-navigation-link {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.site-navigation-links .site-navigation-link {
   padding: 0.5rem;
 }
 
@@ -82,8 +89,15 @@
 }
 
 
-.navbar-brand {
+.site-navigation-brand {
+  display: inline-block;
+  margin-right: 1rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
   font-weight: bold;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
   background: transparent !important; /* Override inline styles */
   color: inherit !important;
   /* transition: background-color 0.3s; */
@@ -110,7 +124,7 @@
   transform: translateX(0);
 }
 
-.sidenav .nav-item{
+.project-navigation-link {
   padding: 0.75rem 1rem;
   font-size:14.5px;
   color: var(--sidenav-link);

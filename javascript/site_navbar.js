@@ -10,9 +10,9 @@ class SiteNavbar extends HTMLElement {
         ];
 
         this.innerHTML = `
-            <nav id="topnav" class="navbar navbar-light site-navigation" aria-label="Primary navigation">
+            <nav id="topnav" class="site-navigation" aria-label="Primary navigation">
                 <div class="container site-navigation-container">
-                    <a class="navbar-brand" href="${basePath}index.html" aria-label="Simon Wang home">
+                    <a class="site-navigation-brand" href="${basePath}index.html" aria-label="Simon Wang home">
                         <span class="nav-logo"></span>
                         Simon Wang
                     </a>
@@ -37,7 +37,7 @@ class SiteNavbar extends HTMLElement {
                         </button>
                     </div>
 
-                    <div class="navbar-nav site-navigation-links" id="primary-navigation-links">
+                    <div class="site-navigation-links" id="primary-navigation-links">
                         ${navItems.map((item) => this.renderNavItem(item, activePage)).join('')}
                     </div>
                 </div>
@@ -97,7 +97,7 @@ class SiteNavbar extends HTMLElement {
         const ariaCurrent = item.key === activePage ? ' aria-current="page"' : '';
         const target = item.external ? ' target="_blank"' : '';
         const rel = item.external ? ' rel="noopener noreferrer"' : '';
-        return `<a class="nav-item nav-link${activeClass}" href="${item.href}"${ariaCurrent}${target}${rel}>${item.label}</a>`;
+        return `<a class="site-navigation-item site-navigation-link${activeClass}" href="${item.href}"${ariaCurrent}${target}${rel}>${item.label}</a>`;
     }
 }
 
