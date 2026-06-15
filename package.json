@@ -2,7 +2,14 @@
   "name": "simoncwang-github-io",
   "private": true,
   "scripts": {
-    "images:build": "node scripts/build-images.js"
+    "css:build": "node scripts/build-css.js",
+    "images:build": "node scripts/build-images.js",
+    "check:js": "node scripts/check-js.js",
+    "check:css": "node scripts/check-css.js",
+    "check:links": "node scripts/check-links.js",
+    "check:html": "node scripts/check-html.js",
+    "check:images": "node scripts/check-images.js",
+    "test": "npm run check:js && npm run check:css && npm run check:links && npm run check:html && npm run check:images"
   },
   "devDependencies": {
     "sharp": "^0.34.3"

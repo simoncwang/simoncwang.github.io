@@ -1,20 +1,13 @@
 class ProjectNavigation extends HTMLElement {
     connectedCallback() {
+        const allProjects = window.PORTFOLIO_PROJECTS || [];
         const projects = {
-            school: [
-                ["mmo.html", "MMO - MLLM Benchmarking"],
-                ["disneybrdf.html", "Disney BRDF & Monte Carlo Rendering in PyTorch"],
-                ["magicalpet.html", "MagicalPet - A Desktop AI Assistant"],
-                ["videogen.html", "Consistent Video Generation"],
-                ["vrclass.html", "XR Education"],
-                ["emd.html", "Accessibility of Touch Screens for Elderly"],
-            ],
-            personal: [
-                ["huggingfaceagents.html", "Multi-Agent Systems w/ SmolAgents"],
-                ["wildlifeanalyzer.html", "Wildlife Analyzer"],
-                ["personalrag.html", "RAG Quiz"],
-                ["artadvisor.html", "AI Art Advisor"],
-            ],
+            school: allProjects
+                .filter((project) => project.navGroup === "school")
+                .sort((a, b) => a.navOrder - b.navOrder),
+            personal: allProjects
+                .filter((project) => project.navGroup === "personal")
+                .sort((a, b) => a.navOrder - b.navOrder),
         };
         const currentPage = window.location.pathname.split("/").pop();
 
@@ -66,7 +59,7 @@ class ProjectNavigation extends HTMLElement {
     }
 
     renderSection(id, label, items, currentPage) {
-        const isActiveSection = items.some(([href]) => href === currentPage);
+        const isActiveSection = items.some((item) => item.file === currentPage);
         return `
             <section class="project-navigation-section">
                 <button
@@ -83,14 +76,14 @@ class ProjectNavigation extends HTMLElement {
                     ></i>
                 </button>
                 <div id="${id}" class="section-content" ${isActiveSection ? "" : "hidden"}>
-                    ${items.map(([href, itemLabel]) => {
-                        const active = href === currentPage;
+                    ${items.map((item) => {
+                        const active = item.file === currentPage;
                         return `
                             <a
                                 class="nav-item nav-link${active ? " active" : ""}"
-                                href="./${href}"
+                                href="./${item.file}"
                                 ${active ? 'aria-current="page"' : ""}
-                            >${itemLabel}</a>
+                            >${item.navLabel}</a>
                         `;
                     }).join("")}
                 </div>

@@ -1,11 +1,8 @@
 
-// dark mode toggle
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
-    const defaultTheme = 'light';
-
-    let currentTheme = localStorage.getItem('theme') || defaultTheme;
+    let currentTheme = document.documentElement.dataset.theme || 'light';
     applyTheme(currentTheme);
     updateIcon(currentTheme);
 
@@ -19,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function applyTheme(theme) {
-        document.body.classList.toggle('theme-dark', theme === 'dark');
+        document.documentElement.classList.toggle('theme-dark', theme === 'dark');
+        document.documentElement.dataset.theme = theme;
     }
 
     function updateIcon(theme) {

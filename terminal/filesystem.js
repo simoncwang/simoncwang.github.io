@@ -6,6 +6,13 @@
   const directory = (children) => ({ type: "directory", children });
   const textFile = (content) => ({ type: "text", content });
   const link = (url, description = "") => ({ type: "link", url, description });
+  const projectFiles = Object.fromEntries([
+    ["all-projects", link("../projects/projectshome.html", "Browse the complete project portfolio")],
+    ...(window.PORTFOLIO_PROJECTS || []).map((project) => [
+      project.id,
+      link(`../projects/${project.file}`, project.terminalDescription),
+    ]),
+  ]);
 
   const root = directory({
     "about.txt": textFile([
@@ -24,19 +31,7 @@
       "github    github.com/simoncwang",
       "linkedin  linkedin.com/in/simon-wang-519902193",
     ].join("\n")),
-    projects: directory({
-      "all-projects": link("../projects/projectshome.html", "Browse the complete project portfolio"),
-      "art-advisor": link("../projects/artadvisor.html", "AI-powered feedback for visual art"),
-      "disney-brdf": link("../projects/disneybrdf.html", "Physically based rendering research"),
-      "emd": link("../projects/emd.html", "Research on touchscreen accessibility for older adults"),
-      "huggingface-agents": link("../projects/huggingfaceagents.html", "Multi-agent systems with SmolAgents"),
-      "magical-pet": link("../projects/magicalpet.html", "Interactive AI character experience"),
-      "mmo": link("../projects/mmo.html", "Multimodal multi-agent organization and benchmarking"),
-      "personal-rag": link("../projects/personalrag.html", "Personal retrieval-augmented generation"),
-      "video-generation": link("../projects/videogen.html", "Controllable diffusion-generated video"),
-      "virtual-classroom": link("../projects/vrclass.html", "XR learning environment"),
-      "wildlife-analyzer": link("../projects/wildlifeanalyzer.html", "MLOps dashboard for wildlife observations"),
-    }),
+    projects: directory(projectFiles),
     documents: directory({
       "resume.pdf": link("../documents/resume.pdf", "Resume"),
     }),

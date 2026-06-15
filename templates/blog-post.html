@@ -1,0 +1,22 @@
+<!-- Add this button to #blog-index. -->
+<button
+  class="button-1"
+  type="button"
+  data-blog-open="post-id"
+  aria-controls="post-id"
+  aria-expanded="false"
+>
+  Read more!
+</button>
+
+<!-- Add this article beside the existing data-blog-post articles. -->
+<article class="blog-content" id="post-id" data-blog-post hidden>
+  <div class="blog-home">
+    <button class="blog-back-button" type="button" data-blog-close aria-label="Return to blog index">
+      <i class="fa-solid fa-circle-left" aria-hidden="true"></i>
+    </button>
+  </div>
+  <h2 class="blog-post-title" tabindex="-1">Post title</h2>
+  <p class="date centered-caption">Month Day, Year</p>
+  <p>Post content.</p>
+</article>

@@ -1,28 +1,46 @@
-# My Personal Webpage!
+# Simon Wang Portfolio
 
-Check it out here! --> [**🌐 My Website**](https://simoncwang.github.io/)
+[View the website](https://simoncwang.github.io/)
 
-## Contents
+This repository contains my static HTML, CSS, and JavaScript portfolio hosted
+directly through GitHub Pages.
 
-My webpage contains basic information about my **experience, research interests, coursework, and other ways to find out more about me!** It also serves as a portfolio of my various **research, course, and personal projects** including articles describing their motivation and development. 
+## Development
 
-## Implementation
+Install the development-only image tooling:
 
-I created this webpage from scratch in html, javascript, and css! I used the following libraries and toolkits:
+```sh
+npm ci
+```
 
-* [Boostrap](https://getbootstrap.com/) - CSS and Javascript framework used via CDN with jsDelivr
-* [Font Awesome](https://fontawesome.com/) - icon library and toolkit
+Run all source, link, HTML, project-data, and image checks:
 
-For more details, please check out my blog post about the process of creating this website as well as the challenges I faced! _(coming soon)_
+```sh
+npm test
+```
 
-## WIP (works in progress)
+Rebuild responsive AVIF and WebP assets:
 
-* **Personal Blog** (can find the beginnings under the blog tab in the top navbar!)
-  * The direction of this blog has still not being finalized, but in general I intend to have it be a representation of things I am interested in or excited about in general!
-  * Additionally, I intend to write about my opinions and thoughts about technology, especially AI. Important note: my opinions are not representative of my school or anyone I work with
-* **Creative portfolio**
-  * Aside from my primary work studying computer science, I am also very passionate about art!
-  * For example, I look forward to sharing my creative works such as: oil paintings, 3D designs and prints, digital illustrations, and much more!
-* **Usable code and detailed documentation**
-  * While several of my projects have links to GitHub repositories, work still needs to be done on most to clean up the code and make them easier to use
-  * I intend to work on more open-source projects that can actually be used and helpful to others!
+```sh
+npm run images:build
+```
+
+CSS source is organized under `styles/` and compiled into `style.css`:
+
+```sh
+npm run css:build
+```
+
+Project metadata lives in `javascript/project_data.js` and drives the homepage,
+Projects page, project drawer, and terminal filesystem.
+
+See [docs/ADDING_CONTENT.md](docs/ADDING_CONTENT.md) for page templates and the
+content-authoring workflow.
+
+## Stack
+
+- Static HTML, CSS, and vanilla JavaScript
+- Bootstrap 4 via CDN
+- Font Awesome via CDN
+- Sharp for development-time responsive image generation
+- GitHub Pages deployment
