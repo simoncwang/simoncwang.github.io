@@ -3,6 +3,15 @@
     "source": "images/lake.jpeg",
     "width": 1478,
     "height": 1478,
+    "sourceHash": "246e5ac5ce25ae88f8f0f589ba47ff09995cb7337c66d29bdc6440293a9cc2e0",
+    "kind": "photo",
+    "profiles": [
+      "avatar"
+    ],
+    "quality": {
+      "webp": 78,
+      "avif": 52
+    },
     "generatedWidths": [
       256,
       512
@@ -12,6 +21,16 @@
     "source": "images/multiagent.png",
     "width": 1536,
     "height": 1024,
+    "sourceHash": "ecce5722f25e59fdad33e288cff74e4e2132fcf054b17c342005c782b3a6f3d6",
+    "kind": "illustration",
+    "profiles": [
+      "card",
+      "article"
+    ],
+    "quality": {
+      "webp": 80,
+      "avif": 54
+    },
     "generatedWidths": [
       480,
       768,
@@ -23,6 +42,16 @@
     "source": "images/moose-analysis.png",
     "width": 1536,
     "height": 1024,
+    "sourceHash": "7a9ca99d4ee13726b8e045de07bdb7586b7e32e21a8a7a4fb62aac7ef59a42d6",
+    "kind": "illustration",
+    "profiles": [
+      "card",
+      "article"
+    ],
+    "quality": {
+      "webp": 80,
+      "avif": 54
+    },
     "generatedWidths": [
       480,
       768,
@@ -34,6 +63,15 @@
     "source": "images/agenticdataanalysis.png",
     "width": 1024,
     "height": 1024,
+    "sourceHash": "6ded834a473bce99b9004fac478ab1c553c1715f7b2623a8f841e4db76068983",
+    "kind": "illustration",
+    "profiles": [
+      "card"
+    ],
+    "quality": {
+      "webp": 80,
+      "avif": 54
+    },
     "generatedWidths": [
       480,
       800
@@ -43,6 +81,16 @@
     "source": "images/mllm.webp",
     "width": 1024,
     "height": 1024,
+    "sourceHash": "cc4a127467ea08aad6d0be3e3f4fcf2f3feda21d028b6aedfbcd894825483885",
+    "kind": "illustration",
+    "profiles": [
+      "card",
+      "article"
+    ],
+    "quality": {
+      "webp": 80,
+      "avif": 54
+    },
     "generatedWidths": [
       480,
       768,
@@ -53,6 +101,16 @@
     "source": "images/disneythumbnail.png",
     "width": 596,
     "height": 452,
+    "sourceHash": "c4e4346ca0fd6efd6834fe03694616efcf00093f2df8599f0979b86cb61e3d01",
+    "kind": "graphic",
+    "profiles": [
+      "card",
+      "article"
+    ],
+    "quality": {
+      "webp": 88,
+      "avif": 68
+    },
     "generatedWidths": [
       480
     ]
@@ -61,6 +119,16 @@
     "source": "images/learning.webp",
     "width": 1024,
     "height": 1024,
+    "sourceHash": "7616f0d9551be0b5136283944e11c6c32c6ab710cb8b9738c30012f7b3a7c95c",
+    "kind": "illustration",
+    "profiles": [
+      "card",
+      "article"
+    ],
+    "quality": {
+      "webp": 80,
+      "avif": 54
+    },
     "generatedWidths": [
       480,
       768,
@@ -71,6 +139,16 @@
     "source": "images/jeep1.png",
     "width": 986,
     "height": 274,
+    "sourceHash": "458638ba22d01c61972cb8f6732564788b10e2ffed286e251130eba7e8b8126f",
+    "kind": "graphic",
+    "profiles": [
+      "card",
+      "article"
+    ],
+    "quality": {
+      "webp": 88,
+      "avif": 68
+    },
     "generatedWidths": [
       480,
       768,
@@ -81,6 +159,16 @@
     "source": "images/vectordemo1.png",
     "width": 728,
     "height": 440,
+    "sourceHash": "5c275af32dba831c41bac779f1080e16c72cf6bd5071b045002fd7fe37727448",
+    "kind": "graphic",
+    "profiles": [
+      "card",
+      "article"
+    ],
+    "quality": {
+      "webp": 88,
+      "avif": 68
+    },
     "generatedWidths": [
       480
     ]
@@ -89,6 +177,15 @@
     "source": "images/computeruse.webp",
     "width": 1024,
     "height": 1024,
+    "sourceHash": "e63d4fce8714eb0a6a607c657ca764fb6d809b57418804f1a5cf5ff577420fbd",
+    "kind": "illustration",
+    "profiles": [
+      "card"
+    ],
+    "quality": {
+      "webp": 80,
+      "avif": 54
+    },
     "generatedWidths": [
       480,
       800
@@ -98,6 +195,15 @@
     "source": "images/websitecoding.webp",
     "width": 1024,
     "height": 1024,
+    "sourceHash": "5fa252c76c5cab7afb9cce39fe6e5b4515a89b2bc1b41956e107892cb4476a1a",
+    "kind": "illustration",
+    "profiles": [
+      "card"
+    ],
+    "quality": {
+      "webp": 80,
+      "avif": 54
+    },
     "generatedWidths": [
       480,
       800
@@ -107,6 +213,15 @@
     "source": "images/robotagent.webp",
     "width": 1024,
     "height": 1024,
+    "sourceHash": "85281778999b5712b804bd2fdf2dcdba0d586e743241183bf0aad19ccd1f20bf",
+    "kind": "illustration",
+    "profiles": [
+      "card"
+    ],
+    "quality": {
+      "webp": 80,
+      "avif": 54
+    },
     "generatedWidths": [
       480,
       800
@@ -116,6 +231,15 @@
     "source": "images/paintbrush.jpg",
     "width": 5184,
     "height": 3456,
+    "sourceHash": "bd6d81608660a9d7293f7f941ffc6ed0dc821e203217b32d73abda3561d58789",
+    "kind": "photo",
+    "profiles": [
+      "article"
+    ],
+    "quality": {
+      "webp": 78,
+      "avif": 52
+    },
     "generatedWidths": [
       768,
       1280
@@ -125,6 +249,15 @@
     "source": "images/ArtAdvisorFlow.png",
     "width": 967,
     "height": 461,
+    "sourceHash": "b7ff8e09bc751b391b856f466019b8f80c8f4305d2e4aaeb4dfb55ee02f4b2c3",
+    "kind": "graphic",
+    "profiles": [
+      "article"
+    ],
+    "quality": {
+      "webp": 88,
+      "avif": 68
+    },
     "generatedWidths": [
       768
     ]
@@ -133,6 +266,15 @@
     "source": "images/artexample.png",
     "width": 1550,
     "height": 1052,
+    "sourceHash": "53155399e44826d639b568c8cb6710b8b384ee9f524a6d7c4c742de30993706b",
+    "kind": "graphic",
+    "profiles": [
+      "article"
+    ],
+    "quality": {
+      "webp": 88,
+      "avif": 68
+    },
     "generatedWidths": [
       768,
       1280
@@ -142,6 +284,15 @@
     "source": "images/emdpaper.png",
     "width": 1876,
     "height": 1562,
+    "sourceHash": "adf9a9fd7fa60f17a808bd40d718f595bab7c48b7bd090bb6b321fe000ba25c6",
+    "kind": "graphic",
+    "profiles": [
+      "article"
+    ],
+    "quality": {
+      "webp": 88,
+      "avif": 68
+    },
     "generatedWidths": [
       768,
       1280
@@ -151,6 +302,15 @@
     "source": "images/gaiaexample.png",
     "width": 1236,
     "height": 660,
+    "sourceHash": "f3906c0c30a1246aaa5b4097b9fd4097c6786d408a3495c28741af731870cbd1",
+    "kind": "graphic",
+    "profiles": [
+      "article"
+    ],
+    "quality": {
+      "webp": 88,
+      "avif": 68
+    },
     "generatedWidths": [
       768
     ]
@@ -159,6 +319,15 @@
     "source": "images/huggingfacefinalscore.png",
     "width": 1916,
     "height": 653,
+    "sourceHash": "d856687d925dcbd04a9dd90886569069f2218d186c9be5994cd6264a19084538",
+    "kind": "graphic",
+    "profiles": [
+      "article"
+    ],
+    "quality": {
+      "webp": 88,
+      "avif": 68
+    },
     "generatedWidths": [
       768,
       1280
@@ -168,6 +337,15 @@
     "source": "images/huggingfacecertificate.webp",
     "width": 2000,
     "height": 1414,
+    "sourceHash": "1087714fbab03a15d6dbb27e145ca170f15b60b8566f7d9473271114e0f52c09",
+    "kind": "graphic",
+    "profiles": [
+      "article"
+    ],
+    "quality": {
+      "webp": 88,
+      "avif": 68
+    },
     "generatedWidths": [
       768,
       1280
@@ -177,6 +355,15 @@
     "source": "images/magicalpet.avif",
     "width": 900,
     "height": 675,
+    "sourceHash": "0f1221c748fa090d0710f2ac0ef57898dac2a30ce5c333d7f8c643e42bed0fab",
+    "kind": "graphic",
+    "profiles": [
+      "article"
+    ],
+    "quality": {
+      "webp": 88,
+      "avif": 68
+    },
     "generatedWidths": [
       768
     ]
@@ -185,6 +372,15 @@
     "source": "images/qwenvl.png",
     "width": 1958,
     "height": 1266,
+    "sourceHash": "62bd3e855ebedb5fc186be31d718f5007e727e94f8c2064828d1958ea25a3035",
+    "kind": "graphic",
+    "profiles": [
+      "article"
+    ],
+    "quality": {
+      "webp": 88,
+      "avif": 68
+    },
     "generatedWidths": [
       768,
       1280
@@ -194,6 +390,15 @@
     "source": "images/mmoprompting.png",
     "width": 1504,
     "height": 726,
+    "sourceHash": "7922d71fe2351cd3cdce5719cb20a409d4825b5e8fd45f4b21ddc9bca9e1d4c5",
+    "kind": "graphic",
+    "profiles": [
+      "article"
+    ],
+    "quality": {
+      "webp": 88,
+      "avif": 68
+    },
     "generatedWidths": [
       768,
       1280
@@ -203,6 +408,15 @@
     "source": "images/mmoflow.png",
     "width": 1534,
     "height": 910,
+    "sourceHash": "677d90d68960db166dcbc63c359339d9b2dc4eb8498253c219e913471f6e15aa",
+    "kind": "graphic",
+    "profiles": [
+      "article"
+    ],
+    "quality": {
+      "webp": 88,
+      "avif": 68
+    },
     "generatedWidths": [
       768,
       1280
@@ -212,6 +426,15 @@
     "source": "images/scienceqaresults.png",
     "width": 1060,
     "height": 728,
+    "sourceHash": "2f90c27564a3393aee500b5b859d9a9a6af3a4b0ee4772b9cbf080eb28995bbb",
+    "kind": "graphic",
+    "profiles": [
+      "article"
+    ],
+    "quality": {
+      "webp": 88,
+      "avif": 68
+    },
     "generatedWidths": [
       768
     ]
@@ -220,6 +443,15 @@
     "source": "images/quizapp.png",
     "width": 2598,
     "height": 1640,
+    "sourceHash": "0f7847e7b4b42af9ed0c1560f4f138a989d5928bef474da92bc28a0183a1c495",
+    "kind": "graphic",
+    "profiles": [
+      "article"
+    ],
+    "quality": {
+      "webp": 88,
+      "avif": 68
+    },
     "generatedWidths": [
       768,
       1280

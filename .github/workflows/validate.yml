@@ -25,4 +25,4 @@ jobs:
       - run: npm run css:build
       - run: npm run images:build
       - name: Verify generated assets are current
-        run: git diff --exit-code -- style.css images/generated
+        run: git diff --exit-code -- style.css images/generated/manifest.json

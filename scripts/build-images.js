@@ -1,4 +1,5 @@
 const fs = require("node:fs/promises");
+const crypto = require("node:crypto");
 const path = require("node:path");
 const sharp = require("sharp");
 const manifest = require("./image-manifest.json");
@@ -20,6 +21,11 @@ const slugify = (source) => path.basename(source, path.extname(source))
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
+
+async function fileHash(filePath) {
+    const buffer = await fs.readFile(filePath);
+    return crypto.createHash("sha256").update(buffer).digest("hex");
+}
 
 async function buildImage(entry) {
     const sourcePath = path.join(root, entry.source);
@@ -53,6 +59,10 @@ async function buildImage(entry) {
         source: entry.source,
         width: metadata.width,
         height: metadata.height,
+        sourceHash: await fileHash(sourcePath),
+        kind: entry.kind,
+        profiles: entry.profiles,
+        quality: imageQuality,
         generatedWidths: widths,
     };
 }
