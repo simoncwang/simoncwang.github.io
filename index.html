@@ -10,17 +10,20 @@
 
     gtag('config', 'G-0BPLED61CJ');
   </script>
-  
-  <title>Home Page</title>
+
+  <title>Simon Wang | Research Engineer &amp; Developer</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="./javascript/theme_init.js"></script>
   <link rel = "stylesheet" href = "./style.css">
-  <script src="./javascript/util.js"></script>
-  <script src="./javascript/site_navbar.js"></script>
-  <script src="./javascript/theme_change.js"></script>
-  <script src="./javascript/terminal_easter_egg.js"></script>
-  <script src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
+  <script defer src="./javascript/project_data.js"></script>
+  <script defer src="./javascript/project_views.js"></script>
+  <script defer src="./javascript/homepage.js"></script>
+  <script defer src="./javascript/site_navbar.js"></script>
+  <script defer src="./javascript/site_footer.js"></script>
+  <script defer src="./javascript/theme_change.js"></script>
+  <script defer src="./javascript/terminal_easter_egg.js"></script>
+  <script defer src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -37,87 +40,110 @@
 
 <site-navbar></site-navbar>
 
+<main>
+
 <!-- introduction section -->
 <div class="hero-container">
   <div class="contact">
-    <img src="./images/lake.jpeg">
-    
+    <picture>
+      <source type="image/avif" srcset="./images/generated/lake-256.avif 256w, ./images/generated/lake-512.avif 512w" sizes="(max-width: 768px) 92px, 20vw">
+      <source type="image/webp" srcset="./images/generated/lake-256.webp 256w, ./images/generated/lake-512.webp 512w" sizes="(max-width: 768px) 92px, 20vw">
+      <img src="./images/lake.jpeg" alt="Simon Wang standing beside a lake" width="1478" height="1478" decoding="async" loading="eager" fetchpriority="high">
+    </picture>
+
   </div>
 
   <div class="hero">
-    <span id="title">
+    <div id="title">
       <h1>
         Simon Wang
       </h1>
-      <i id="info-icon" class="fa-regular fa-circle-question info-icon"></i>
-      <!-- <span id="info-icon" class="info-icon">about me</span> -->
-    </span>
-    
-    <div id="info-popup" class="info-popup">
-      <h3>who am I?</h3>
+      <button
+        id="info-button"
+        class="info-icon"
+        type="button"
+        aria-label="About Simon"
+        aria-controls="info-popup"
+        aria-expanded="false"
+      >
+        <i class="fa-regular fa-circle-question" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div
+      id="info-popup"
+      class="info-popup"
+      role="dialog"
+      aria-modal="false"
+      aria-labelledby="info-popup-title"
+      hidden
+    >
+      <h2 id="info-popup-title">who am I?</h2>
       <hr>
       <p>Hello! I'm Simon!</p>
       <p>
         I just recently completed my Master's in Computer Science at UMD (May 2025), and I'm so excited to use what I've learned over the past few years to make a real impact!
       </p>
 
-      <h3>do I have interests?</h3>
+      <h2>do I have interests?</h2>
       <hr>
       <p>
         Aside from creating AI tools, studying deep learning, and developing webpages (like this one), in my free time I love to...
       </p>
       <ul class="popup-list">
-        <li><i class="fa-solid fa-palette"></i> Create art | digital illustration & oil painting are my faves!</li>
-        <li><i class="fa-solid fa-pen-ruler"></i> Design & 3D print cool things w/ my Bambu Labs P1S!</li>
-        <li><i class="fa-solid fa-person-running"></i> Run | as a former track athlete that doesn't run enough anymore...</li>
-        <li><i class="fa-solid fa-gamepad"></i> Play video games | Minecraft, Apex Legends, Genshin, and more</li>
+        <li><i class="fa-solid fa-palette" aria-hidden="true"></i> Create art | digital illustration &amp; oil painting are my faves!</li>
+        <li><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i> Design &amp; 3D print cool things w/ my Bambu Labs P1S!</li>
+        <li><i class="fa-solid fa-person-running" aria-hidden="true"></i> Run | as a former track athlete that doesn't run enough anymore...</li>
+        <li><i class="fa-solid fa-gamepad" aria-hidden="true"></i> Play video games | Minecraft, Apex Legends, Genshin, and more</li>
       </ul>
-      
 
-      <i id="close-popup" class="fa-solid fa-xmark close-popup"></i>
+
+      <button id="close-popup" class="close-popup" type="button" aria-label="Close about Simon">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
     </div>
-  
+
     <div id="interests">
       <h3 class="interest-label">pursuing research interests in:</h3>
       <h3 id="interest">Generative AI</h3>
     </div>
-  
+
     <div id="hero-description">
       <p>
         I recently got my <b>Master's in Computer Science</b> from the University of Maryland (UMD), with a focus on <b>Applied AI/ML</b>. I love applying what I study to create impactful tools that show the amazing potential of technology to engage and assist everyone! Check out the <b>links below</b> and look through this site to find out more. Thanks :)
       </p>
     </div>
-    
+
     <div class="hero-links">
-      <a href="https://github.com/simoncwang" target="_blank">
-        <i class="fa-brands fa-github"></i>
+      <a class="icon-link" href="https://github.com/simoncwang" target="_blank" rel="noopener noreferrer" aria-label="Simon Wang on GitHub">
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
       </a>
-      <a href = "https://www.linkedin.com/in/simon-wang-519902193/" target="_blank" >
-        <i class="fa-brands fa-linkedin"></i>
+      <a class="icon-link" href = "https://www.linkedin.com/in/simon-wang-519902193/" target="_blank" rel="noopener noreferrer" aria-label="Simon Wang on LinkedIn">
+        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
       </a>
-      <a href= "mailto: wang.c.simon@gmail.com">
-        <i class="fa-solid fa-envelope"></i>
+      <a class="icon-link" href="mailto:wang.c.simon@gmail.com" aria-label="Email Simon Wang">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
       </a>
-  
+
       <div id="resume-link">
-        <a href = "./documents/resume.pdf" target="_blank" >
+        <a href = "./documents/resume.pdf" target="_blank" rel="noopener noreferrer" >
           resume
         </a>
       </div>
-      
+
     </div>
-    
+
   </div>
 
 </div>
 
 
 <div class="skills-container">
-  <h1>My Skills</h1>
+  <h2>My Skills</h2>
   <p>
     <span class="programming-skills">Programming languages</span>, <span class="ML-skills">AI/ML tools</span>, and <span class="software-skills">software</span> I've picked up over the years!
   </p>
-  
+
   <div class="skills">
     <span class="programming-skills skill">Python</span>
     <span class="programming-skills skill">Java</span>
@@ -147,331 +173,15 @@
     <span class="software-skills skill">Arduino</span>
     <span class="software-skills skill">Docker</span>
   </div>
-  
+
 </div>
-
-<!-- <img id="background-test" src="./images/spaceneedle.jpeg">
-
- -->
 
 <!-- projects section -->
-<div id="project-highlights" class="container-fluid" >
-  <h1>Project Highlights</h1>
-  
-  <p>Check out some of my project highlights! See my <a href = "./projects/projectshome.html">Projects</a> page and my <a href = "https://github.com/simoncwang" target="_blank">GitHub</a> for complete details and code.
-  </p>
-  <hr>
-
-  <div class="row">
-    <div class="col-sm">
-      <a class="highlight-link" href = "./projects/disneybrdf.html">
-        <h3>Creating Multi-Agent Systems with SmolAgents - Huggingface Course</h3>
-      </a>
-      
-      <div class="tag-group">
-        <span class="tag">agentic-AI</span>
-        <span class="tag">llms</span>
-        <span class="tag">huggingface</span>
-        <span class="tag">certification</span>
-      </div>
-
-      <p class="date">July, 2025</p>
-      
-      <img src="images/multiagent.png" class="highlight-image rounded mx-auto d-block">
-      <center class="image-caption">AI generated using gpt-4o</center>
-      
-      <br>
-      <p>
-        I recently successfully completed the full certification from the <a href="https://huggingface.co/learn/agents-course/unit0/introduction" target="_blank">Hugging Face AI Agents Course</a>. As the final project of this course, I created a multi-agent system using <a href="https://huggingface.co/docs/smolagents/en/index" target="_blank">SmolAgents</a> to solve complex agentic reasoning problems from the GAIA dataset. Ultimately, through extensive system design, testing, and prompt engineering, I was able to achieve a 55% success rate on the required subset of the GAIA dataset (passing was 30%)!
-      </p>
-
-      <a href="./projects/huggingfaceagents.html">
-        <button id="button" class="button-1" data-theme-target>
-          Read more!
-        </button>
-      </a>
-
-    </div>
-
-    <div class="col-sm">
-      <a class="highlight-link" href = "./projects/mmo.html">
-        <h3>Wildlife Analyzer - An MLOps Dashboard for Wildlife Observations</h3>
-      </a>
-      
-      <div class="tag-group">
-        <span class="tag">mlops</span>
-        <span class="tag">Python</span>
-        <span class="tag">CI/CD</span>
-        <span class="tag">Streamlit</span>
-      </div>
-      <p class="date">June, 2025</p>
-
-      <img src="images/moose-analysis.png" class="highlight-image rounded mx-auto d-block">
-      <center class="image-caption">AI generated using gpt-4o</center>
-
-      <br>
-      <p>
-        An MLOps-style pipeline and dashboard for analyzing wildlife observations. This project leverages the <a href="https://api.inaturalist.org/v1/docs/" target="_blank">iNaturalist API</a>, and incorporates a variety of tools and techniques including LLMs, clustering, data visualization, and logging/monitoring via MLflow and AWS S3.
-      </p>
-
-      <a href = "./projects/wildlifeanalyzer.html">
-        <button id="button" class="button-1" data-theme-target>
-          Read more!
-        </button>
-      </a>
-
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="row">
-    <div class="col-sm">
-      <a class="highlight-link" href = "./projects/disneybrdf.html">
-        <h3>Understanding Agentic AI Systems for Data Analysis: Techniques, Components, and Considerations</h3>
-      </a>
-      
-
-      <div class="tag-group">
-        <span class="tag">agentic-AI</span>
-        <span class="tag">llms</span>
-        <span class="tag">data-analysis</span>
-        <span class="tag">research</span>
-      </div>
-
-      <p class="date">May, 2025</p>
-      
-      <img src="images/agenticdataanalysis.png" class="highlight-image rounded mx-auto d-block">
-      <center class="image-caption">AI generated using gpt-4o</center>
-      
-      <br>
-      <p>
-        A survey paper exploring state of the art agentic AI systems for data analysis. In this work I also provide an overview of the most common LLM-based approaches to general workflows, and also propose a component framework for understanding agentic AI systems inspired by the <a href="https://books.google.com/books/about/The_Project_Management_Life_Cycle.html?id=YuGoUW3ZeP8C" target="_blank">The Project Management Lifecycle</a>.
-      </p>
-
-      <a href="./documents/Understanding_Agentic_AI_Systems_for_Data_Analysis.pdf" target="_blank">
-        <button id="button" class="button-1" data-theme-target>
-          Read more!
-        </button>
-      </a>
-
-    </div>
-
-    <div class="col-sm">
-      <a class="highlight-link" href = "./projects/mmo.html">
-        <h3>MMO - Multi-modal Multi-agent Organization & Robust Benchmarking</h3>
-      </a>
-      
-      <div class="tag-group">
-        <span class="tag">llms</span>
-        <span class="tag">mllms</span>
-        <span class="tag">benchmarking</span>
-        <span class="tag">Python</span>
-      </div>
-      <p class="date">December 18, 2024</p>
-
-      <img src="images/mllm.webp" class="highlight-image rounded mx-auto d-block">
-      <center class="image-caption">AI generated using DALL-E</center>
-
-      <br>
-      <p>
-        Course research project for CMSC848K - Multimodal Foundation Models. Developed a multi-modal multi-agent system and investigated how to improve multimodal large language model (MLLM) benchmarking.
-      </p>
-
-      <a href = "./projects/mmo.html">
-        <button id="button" class="button-1" data-theme-target>
-          Read more!
-        </button>
-      </a>
-
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="row">
-    <div class="col-sm">
-      <a class="highlight-link" href = "./projects/disneybrdf.html">
-        <h3>Monte Carlo Rendering and Disney BRDF in PyTorch</h3>
-      </a>
-      
-
-      <div class="tag-group">
-        <span class="tag">computer-graphics</span>
-        <span class="tag">PyTorch</span>
-        <span class="tag">monte-carlo</span>
-        <span class="tag">path-tracing</span>
-      </div>
-
-      <p class="date">December 14, 2024</p>
-      
-      <img src="images/disneythumbnail.png" class="highlight-image rounded mx-auto d-block">
-      <center class="image-caption">Two spheres with Disney style shading!</center>
-      
-      <br>
-      <p>
-        An implementation of Monte Carlo path tracing and <a href="https://media.disneyanimation.com/uploads/production/publication_asset/48/asset/s2012_pbs_disney_brdf_notes_v3.pdf" target="_blank">Disney "principled" BRDF</a> in PyTorch. An extension of an assignment codebase from CMSC740 - Advanced Graphics course. Implemented advanced computer graphics concepts such as Monte Carlo integration, neural radiosity, and multiple importance sampling. As a final project, I also implemented the Disney shading system in the existing renderer with fine-grained control of object appearance using 10 parameters.
-      </p>
-
-      <a href = "./projects/disneybrdf.html">
-        <button id="button" class="button-1" data-theme-target>
-          Read more!
-        </button>
-      </a>
-
-    </div>
-
-    <div class="col-sm">
-      <a class="highlight-link" href = "./projects/personalrag.html">
-        <h3>Personalized RAG Quiz System using OpenAI Structured Outputs</h3>
-      </a>
-      <div class="tag-group">
-        <span class="tag">llms</span>
-        <span class="tag">structured-outputs</span>
-        <span class="tag">retrieval-augmented-generation</span>
-        <span class="tag">web-scraping</span>
-      </div>
-      <p class="date">May, 2024</p>
-      
-      <img src="images/learning.webp" class="highlight-image rounded mx-auto d-block">
-      <center class="image-caption">AI generated using DALL-E</center>
-      
-      <br>
-      <p>
-        A demonstration of using retrieval augmented generation and structured outputs through OpenAI API. Exploring how AI can be used to help us learn, automatically creating and testing us on custom uploaded knowledge from documents and webpages.
-      </p>
-
-      <a href = "./projects/personalrag.html">
-        <button id="button" class="button-1" data-theme-target>
-          Read more!
-        </button>
-      </a>
-
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="row">
-
-    <div class="col-sm">
-      <a class="highlight-link" href = "./projects/videogen.html">
-        <h3>Improving Control and Consistency of Diffusion-Generated Video</h3>
-      </a>
-      <div class="tag-group">
-        <span class="tag">deep-learning</span>
-        <span class="tag">stable-diffusion</span>
-        <span class="tag">controlnet</span>
-        <span class="tag">video-gen</span>
-      </div>
-      <p class="date">May 2, 2024</p>
-
-      <img src="images/jeep1.png" class="highlight-image rounded mx-auto d-block" alt="jeep" >
-      <center class="image-caption">Selected frames from a video I generated</center>
-
-      <br>
-      <p>
-        Semester-long course project created for CMSC720: Foundations of Deep Learning. Investigated state of the art diffusion-based video generation
-        methods, and experimented with various approaches to improving their quality in terms of consistency and controllability. Wrote and submitted
-        a NEURIPS format paper for a mock-conference within our class. 
-      </p>
-
-      <a href = "./projects/videogen.html">
-        <button id="button" class="button-1" data-theme-target>
-          Read more!
-        </button>
-      </a>
-
-    </div>
-
-    <div class="col-sm">
-      <a class="highlight-link" href = "./projects/vrclass.html">
-        <h3>Virtual Classroom</h3>
-      </a>
-      <div class="tag-group">
-        <span class="tag">AR/VR</span>
-        <span class="tag">Unity</span>
-        <span class="tag">c#</span>
-        <span class="tag">education</span>
-        <span class="tag">user-study</span>
-      </div>
-      <p class="date">May 17, 2024</p>
-      
-      <img src="images/vectordemo1.png" class="highlight-image rounded mx-auto d-block" alt="vector" >
-      <center class="image-caption">A scene from our VR vector math lecture</center>
-      
-      <br>
-      <p>
-        This is a virtual reality (VR) project created in the Unity game engine throughout the Spring 2024 semester for the course CMSC838C: Advances in XR.
-        I led a group of 5 classmates to design a virtual classroom environment, and we conducted a user study to investigate the benefits of XR education
-        over traditional remote learning mediums such as video.
-      </p>
-
-      <a href = "./projects/vrclass.html">
-        <button id="button" class="button-1" data-theme-target>
-          Read more!
-        </button>
-      </a>
-
-    </div>
-    
-  </div>
-
-  <!-- <hr>
-
-  <div class="row">
-    <div class="col-sm">
-      <a class="highlight-link" href = "./projects/artadvisor.html">
-        <h3>AI Art Advisor</h3>
-      </a>
-
-      <div class="tag-group">
-        <span class="tag">OpenAI-API</span>
-        <span class="tag">gpt-4o</span>
-        <span class="tag">vison-language</span>
-        <span class="tag">Gradio</span>
-      </div>
-      <p class="date">July, 2024</p>
-
-      <img src="images/paintbrush.jpg" class="highlight-image rounded mx-auto d-block" alt="art" >
-
-      <br>
-      <p>
-        To illustrate a potential application of AI models to benefit artists, I created a prototype "AI art advisor" using the latest vison-language model <a href="https://openai.com/index/hello-gpt-4o/" target="_blank">GPT-4o ("omni")</a> from OpenAI. This new GPT model now has vision capabilities, so, I was inspired to ask the question: <b>how well can it understand art?</b>
-      </p>
-
-      <a href = "./projects/artadvisor.html">
-        <button id="button" class="button-1" data-theme-target>
-          Read more!
-        </button>
-      </a>
-    </div>
-
-  </div> -->
-
-</div>
-
+<project-highlights></project-highlights>
+</main>
 
 <!-- footer section -->
-<div class="footer">
-  <p>
-    &copy; Simon Wang, 2024.
-  </p>
-  
-  <p>
-    <a href="https://getbootstrap.com/" target="_blank">
-      <img src="./images/bootstrap-logo-black.svg" width="35" height="30" alt="">
-    </a>
-    &nbsp;
-    Created with Bootstrap. &nbsp;
-  
-    P.s. thanks to the amazing <a href="https://emilywudesigns.myportfolio.com/" target="_blank">Emily Wu</a> for helping with the graphic design!
-  </p>
-
-  <p class="footer-hint">
-    psst: try typing <a href="./terminal/" aria-label="Open hidden terminal">simon</a>
-  </p>
-</div>
+<site-footer terminal-hint></site-footer>
 
 </body>
 </html>

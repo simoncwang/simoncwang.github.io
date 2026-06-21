@@ -15,84 +15,50 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
-    <script src="../javascript/util.js"></script>
-    <script src="../javascript/site_navbar.js"></script>
-    <script src="../javascript/theme_change.js"></script>
+    <script src="../javascript/theme_init.js"></script>
+    <script defer src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
+    <script defer src="../javascript/project_data.js"></script>
+    <script defer src="../javascript/project_navigation.js"></script>
+    <script defer src="../javascript/site_navbar.js"></script>
+    <script defer src="../javascript/site_footer.js"></script>
+  <script defer src="../javascript/theme_change.js"></script>
     <link rel = "stylesheet" href = "../style.css">
-    <title>Default Project</title>
+    <title>MMO Benchmarking | Simon Wang</title>
   </head>
 
   <body class = "project-body" data-theme-target>
     <site-navbar></site-navbar>
 
+<main>
+
     <div class="project-page">
-      <!-- sidebar section -->
-      <div id="mySidenav" class="sidenav" data-theme-target >
-        <div class="collapse">
-            <a href="javascript:void(0)" onclick="closeNav()"> &times;</a>
-        </div>
-    
-        <div class="container-fluid" style="text-align:center">
-            <!-- Sidebar Title -->
-            <hr>
+      <project-navigation></project-navigation>
 
-            <div id="header1" class="section-header" onclick="toggleSection('section1','header1')">
-              <div class="section-button">School Projects</div>
-              <i class="fa-solid fa-angle-up"></i>
-            </div>
-
-            <div id="section1" class="section-content show-section">
-                <a class="nav-item nav-link active" href="./mmo.html">MMO - MLLM Benchmarking</a>
-                <a class="nav-item nav-link" href="./disneybrdf.html">Disney BRDF & Monte Carlo Rendering in PyTorch</a>
-                <a class="nav-item nav-link" href="./magicalpet.html">MagicalPet - A Desktop AI Assistant</a>
-                <a class="nav-item nav-link" href="./videogen.html">Consistent Video Generation</a>
-                <a class="nav-item nav-link" href="./vrclass.html">XR Education</a>
-                <a class="nav-item nav-link" href="./emd.html">Accessibility of Touch Screens for Elderly</a>
-            </div>
-            
-            <div id="header2" class="section-header" onclick="toggleSection('section2','header2')">
-              <button class="section-button">Personal Projects</button>
-              <i class="fa-solid fa-angle-down"></i>
-            </div>
-
-            <div id="section2" class="section-content show-section">
-              <a class="nav-item nav-link" href="./huggingfaceagents.html">Multi-Agent Systems w/ SmolAgents</a>
-              <a class="nav-item nav-link" href="./wildlifeanalyzer.html">Wildlife Analyzer</a>
-              <a class="nav-item nav-link" href="./personalrag.html">RAG Quiz</a>
-              <a class="nav-item nav-link" href="./artadvisor.html">AI Art Advisor</a>
-            </div>
-            
-        </div>
-      </div>
-      
-      <div id="expandBtn" class="expand">
-        <a href="javascript:void(0)" onclick="openNav()"> &#9776;</a>
-      </div>
-    
       <!-- main content -->
-      <div class="container" > 
+      <div class="container" >
         <div id = "myContent" class="content">
           <br>
           <h1 style="text-align: center;">MMO: An Investigation of Multi-modal Multi-agent
             Organization and Robust Benchmarking</h1>
           <h5 style="text-align: center; font-weight:lighter;">How to better evaluate benchmarks for Multimodal Large Language Models (MLLMs)</h5>
-          
+
           <div class="links">
             <div>
-              <i class="fa-brands fa-github-alt"></i> <a href="https://github.com/simoncwang/MMO" target="_blank">GitHub</a>
+              <i class="fa-brands fa-github-alt" aria-hidden="true"></i> <a href="https://github.com/simoncwang/MMO" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
             <div>
-              <i class="fa-solid fa-book"></i> <a href="../documents/mmo.pdf" target="_blank">Technical Report</a>
+              <i class="fa-solid fa-book" aria-hidden="true"></i> <a href="../documents/mmo.pdf" target="_blank" rel="noopener noreferrer">Technical Report</a>
             </div>
-            
+
           </div>
-          
+
           <br>
-          <img src="../images/mllm.webp" class="blog-thumbnail rounded mx-auto d-block">
-          <center class="image-caption">AI generated using DALL-E</center>
+          <picture>
+            <source type="image/avif" srcset="../images/generated/mllm-768.avif 768w" sizes="(max-width: 768px) 90vw, 60vw">
+            <source type="image/webp" srcset="../images/generated/mllm-768.webp 768w" sizes="(max-width: 768px) 90vw, 60vw">
+            <img src="../images/mllm.webp" class="blog-thumbnail rounded mx-auto d-block" alt="Illustration representing multimodal language models" width="1024" height="1024" decoding="async" loading="eager" fetchpriority="high">
+          </picture>
+          <p class="image-caption centered-caption">AI generated using DALL-E</p>
 
           <hr>
 
@@ -108,21 +74,27 @@
           </p>
 
           <p>
-            For example, <a href="https://arxiv.org/abs/2409.12191" target="_blank">Qwen2-VL</a> trains their MLLM by using a vision encoder in the form of a ViT to encode visual data and passed into a Qwen language model. Through training, the model learns to understand content within images, and therefore employ this knowledge to complete multimodal tasks. The structure is shown below in the following figure taken from the Qwen2-VL paper:
+            For example, <a href="https://arxiv.org/abs/2409.12191" target="_blank" rel="noopener noreferrer">Qwen2-VL</a> trains their MLLM by using a vision encoder in the form of a ViT to encode visual data and passed into a Qwen language model. Through training, the model learns to understand content within images, and therefore employ this knowledge to complete multimodal tasks. The structure is shown below in the following figure taken from the Qwen2-VL paper:
           </p>
 
-          <center><img src="../images/qwenvl.png" style="width:60%"></center>
-          <center class="image-caption">Qwen2-VL Structure</center>
+          <div class="centered-media">
+            <picture>
+              <source type="image/avif" srcset="../images/generated/qwenvl-768.avif 768w, ../images/generated/qwenvl-1280.avif 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+              <source type="image/webp" srcset="../images/generated/qwenvl-768.webp 768w, ../images/generated/qwenvl-1280.webp 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+              <img src="../images/qwenvl.png" alt="Diagram of the Qwen2-VL model architecture" style="width:60%" width="1958" height="1266" decoding="async" loading="lazy">
+            </picture>
+          </div>
+          <p class="image-caption centered-caption">Qwen2-VL Structure</p>
           <br>
 
           <p>
-            For more detailed implementation and training details please refer to the <a href="https://arxiv.org/abs/2409.12191" target="_blank">official Qwen2-VL technical report!</a>
+            For more detailed implementation and training details please refer to the <a href="https://arxiv.org/abs/2409.12191" target="_blank" rel="noopener noreferrer">official Qwen2-VL technical report!</a>
           </p>
 
 
           <h3>How is benchmarking currently done?</h3>
           <p>
-            Through the process of implementing my multi-agent system, I sought benchmarks to evaluate the quality of my models. Referencing reports and papers from popular new MLLMs such as QwenVL and InternVL amongst others, I chose the ScienceQA and MMMU benchmark datasets to dive deeper into. 
+            Through the process of implementing my multi-agent system, I sought benchmarks to evaluate the quality of my models. Referencing reports and papers from popular new MLLMs such as QwenVL and InternVL amongst others, I chose the ScienceQA and MMMU benchmark datasets to dive deeper into.
           </p>
 
           <p>
@@ -150,7 +122,7 @@
             format expected by the evaluation code (e.g. "The answer is A"), instead returning a single letter or
             even a different format like "Choice A. In other benchmark repositories like GPQA, rather than deep approaches to improving the model being tested, high error rates are simply mitigated by providing a wide net to capture potential answer formats in the form of regular expression patterns. For example, here is the answer parsing code used in an actual GPQA evaluation example script:
           </p>
-          <pre> 
+          <pre>
             def parse_sampled_answer(answer, answer_choice_tokens):
               """Copy pasted from GPQA repo + more patterns"""
               patterns = [
@@ -178,7 +150,13 @@
             To illustrate this problem, I tested several models (gpt-4o, gpt-4o-mini, Qwen2-VL 2B Instruct, InternVL 2.5 2B, and Qwen2.5 1.5B Instruct) on a random 1000 samples (same seed) from the ScienceQA dataset. To show how arbitrary changes in prompting and parsing can drastically change benchmark results, the following graph shows accuracy across three strategies. The <i>base prompt</i> is very similar to the original ScienceQA prompt, simply asking the model to return their final answer choice as a single digit. The <i>ask twice</i> approach means just that...appending a prompt to the base prompt asking again "please return your choice in the following format: Answer: single digit". Finally, <i>single chars</i> is an additional regex pattern added to the end of the original list (which is the same as the GPQA parser expect modified to match single digits). Here, the last pattern allows for matching single digit answers, without the prompted "Answer: single digit" format.
 
           </p>
-          <center><img src="../images/mmoprompting.png" style="width:60%"></center>
+          <div class="centered-media">
+            <picture>
+              <source type="image/avif" srcset="../images/generated/mmoprompting-768.avif 768w, ../images/generated/mmoprompting-1280.avif 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+              <source type="image/webp" srcset="../images/generated/mmoprompting-768.webp 768w, ../images/generated/mmoprompting-1280.webp 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+              <img src="../images/mmoprompting.png" alt="Chart comparing MMO prompting strategies" style="width:60%" width="1504" height="726" decoding="async" loading="lazy">
+            </picture>
+          </div>
 
           <p>
             As you can see, trivial changes such as re-wording prompts, being more generous with answer matching, and other methods that I haven't explicitly tested like providing in-context examples can cause <b>seemingly random changes in accuracy.</b>
@@ -190,7 +168,7 @@
 
           <h3>An Observation and a Hypothesis</h3>
           <p>
-            Throughout this month of research into these benchmarking methods, I have increasingly questioned what a "good" model actually means. In my opinion, it is highly likely that a big reason large models with many hundreds of billions of parameters like gpt-4o perform better on benchmarks is because <b>they just "listen" better</b> for lack of better terminology. Empirically, many of the smaller models I tested (all 2B parameters or under) would often answer the benchmark questions correctly, yet were very inconsistent in the wording and format of their responses. This leads to significantly deflated accuracy scores due to it, put simply, being hard to automate evaluating natural language answers. Which, is the point of large language models, right? More "capable" models like GPTs or Claude and larger Llama models (results not included in this project scope) seem to almost always return a response that follows what we ask for. OpenAI even has a new structured response beta that claims to guarantee 100% adherence to your specified format. 
+            Throughout this month of research into these benchmarking methods, I have increasingly questioned what a "good" model actually means. In my opinion, it is highly likely that a big reason large models with many hundreds of billions of parameters like gpt-4o perform better on benchmarks is because <b>they just "listen" better</b> for lack of better terminology. Empirically, many of the smaller models I tested (all 2B parameters or under) would often answer the benchmark questions correctly, yet were very inconsistent in the wording and format of their responses. This leads to significantly deflated accuracy scores due to it, put simply, being hard to automate evaluating natural language answers. Which, is the point of large language models, right? More "capable" models like GPTs or Claude and larger Llama models (results not included in this project scope) seem to almost always return a response that follows what we ask for. OpenAI even has a new structured response beta that claims to guarantee 100% adherence to your specified format.
           </p>
 
           <p>
@@ -202,7 +180,7 @@
             How could we do better?
           </p>
           <p>
-            As a small proof of concept, I developed a set of tools in Python to evaluate two benchmarks across many different types of models. I focused on working towards consistency of prompting and answer parsing, as well as easier control over datasets and models. Rather than writing a new unique script for every single model and dataset, my goal is to create one single system to evaluate all of the popular ones with a single tool. 
+            As a small proof of concept, I developed a set of tools in Python to evaluate two benchmarks across many different types of models. I focused on working towards consistency of prompting and answer parsing, as well as easier control over datasets and models. Rather than writing a new unique script for every single model and dataset, my goal is to create one single system to evaluate all of the popular ones with a single tool.
           </p>
 
           <p>
@@ -210,7 +188,7 @@
           </p>
 
           <p>
-            Please see my <a href="https://github.com/simoncwang/MMO" target="_blank">GitHub</a> and my <a href="../documents/mmo.pdf" target="_blank">technical report</a> for more specific details of prompts used and implementation as well as experimental results from my chosen set of models!
+            Please see my <a href="https://github.com/simoncwang/MMO" target="_blank" rel="noopener noreferrer">GitHub</a> and my <a href="../documents/mmo.pdf" target="_blank" rel="noopener noreferrer">technical report</a> for more specific details of prompts used and implementation as well as experimental results from my chosen set of models!
           </p>
 
           <h3>MMO, a Multimodal Multi-agent Organization system</h3>
@@ -221,15 +199,27 @@
           <p>
             Overall, my multi-agent system, called "MMO" as explained in the title of this article, consists of several components. The system is organized into two main components; the Commander, which assigns subtasks and analyzes them to produce a final response, and the Roster, which consists of a list of agents (the smaller models) and initializes them to be ready for inference. Below is a simple flow chart of the general system:
           </p>
-          <center><img src="../images/mmoflow.png" style="width:60%"></center>
-          <center class="image-caption">MMO System Flow</center>
+          <div class="centered-media">
+            <picture>
+              <source type="image/avif" srcset="../images/generated/mmoflow-768.avif 768w, ../images/generated/mmoflow-1280.avif 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+              <source type="image/webp" srcset="../images/generated/mmoflow-768.webp 768w, ../images/generated/mmoflow-1280.webp 1280w" sizes="(max-width: 768px) 90vw, 60vw">
+              <img src="../images/mmoflow.png" alt="Flowchart of the MMO multi-agent system" style="width:60%" width="1534" height="910" decoding="async" loading="lazy">
+            </picture>
+          </div>
+          <p class="image-caption centered-caption">MMO System Flow</p>
 
           <h3>Experimental Results</h3>
           <p>
             Placeholder text.
           </p>
-          <center><img src="../images/scienceqaresults.png" style="width:50%"></center>
-          <center class="image-caption">ScienceQA Results</center>
+          <div class="centered-media">
+            <picture>
+              <source type="image/avif" srcset="../images/generated/scienceqaresults-768.avif 768w" sizes="(max-width: 768px) 90vw, 50vw">
+              <source type="image/webp" srcset="../images/generated/scienceqaresults-768.webp 768w" sizes="(max-width: 768px) 90vw, 50vw">
+              <img src="../images/scienceqaresults.png" alt="ScienceQA benchmark results chart" style="width:50%" width="1060" height="728" decoding="async" loading="lazy">
+            </picture>
+          </div>
+          <p class="image-caption centered-caption">ScienceQA Results</p>
 
           <h3>Future work</h3>
           <p>
@@ -239,25 +229,10 @@
         </div>
       </div>
     </div>
-    
+</main>
 
-    
 <!-- footer section -->
-<div class="footer">
-  <p>
-    &copy; Simon Wang, 2024.
-  </p>
-  
-  <p>
-    <a href="https://getbootstrap.com/" target="_blank">
-      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="">
-    </a>
-    &nbsp;
-    Created with Bootstrap. &nbsp;
-  
-    P.s. thanks to the amazing <a href="https://emilywudesign.myportfolio.com/" target="_blank">Emily Wu</a> for helping with the graphic design!
-  </p>
-</div>
+<site-footer></site-footer>
 
 </body>
 </html>

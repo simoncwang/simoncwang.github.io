@@ -3,36 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="./javascript/theme_init.js"></script>
   <link rel = "stylesheet" href = "./style.css">
-  <script src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
-  <script src="./javascript/util.js"></script>
-  <script src="./javascript/site_navbar.js"></script>
-  <script src="./javascript/theme_change.js"></script>
+  <script defer src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
+  <script defer src="./javascript/blog.js"></script>
+  <script defer src="./javascript/site_navbar.js"></script>
+  <script defer src="./javascript/site_footer.js"></script>
+  <script defer src="./javascript/theme_change.js"></script>
+  <title>Blog | Simon Wang</title>
 </head>
-<body>
+<body class="project-body" data-theme-target>
 
 <site-navbar></site-navbar>
 
+<main>
+
 <!-- content section -->
-<div id="thumbnails" style="padding-top:2%;" data-theme-target>
+<div id="blog-index" style="padding-top:2%;" data-theme-target>
 
   <div class="container container-fluid">
     <h1 id = "blog-title" style="text-align: center;" data-theme-target>Cool things :)</h1>
     <!-- <br> -->
     <h5 style="padding-top:1%; text-align:center; font-weight:lighter">
-      If you're interested in hearing about the things I find awesome (& maybe learning a bit about them) you're in the right place! If not...look a cute frog! <i class="fa-solid fa-frog"></i>
+      If you're interested in hearing about the things I find awesome (&amp; maybe learning a bit about them) you're in the right place! If not...look a cute frog! <i class="fa-solid fa-frog" aria-hidden="true"></i>
     </h5>
 
     <!-- <br> -->
 
-    <!-- <hr>
-    <center>
-      <div class="rounded callout" style="font-weight:lighter;">
-        NOTE: The content here is based on my opinions informed by resources I will try my best to link! It is not official research or a reflection of my University or anyone I work with unless otherwise stated!
-      </div>
-    </center> -->
-    
     <hr>
 
     <div class="blog-grid">
@@ -40,15 +37,19 @@
         <h3>AI can use computers now? Claude breaks the 4th wall!</h3>
         <p class="date">November 1, 2024</p>
 
-        <img src="images/computeruse.webp" class="blog-thumbnail rounded mx-auto d-block">
-        <center class="image-caption">AI generated using DALL-E</center>
+        <picture>
+          <source type="image/avif" srcset="images/generated/computeruse-480.avif 480w, images/generated/computeruse-800.avif 800w" sizes="(max-width: 768px) 80vw, 30vw">
+          <source type="image/webp" srcset="images/generated/computeruse-480.webp 480w, images/generated/computeruse-800.webp 800w" sizes="(max-width: 768px) 80vw, 30vw">
+          <img src="images/computeruse.webp" class="blog-thumbnail rounded mx-auto d-block" alt="Illustration of an AI assistant using a computer" width="1024" height="1024" decoding="async" loading="eager" fetchpriority="high">
+        </picture>
+        <p class="image-caption centered-caption">AI generated using DALL-E</p>
 
         <br>
         <p>
           Last week, Anthropic announced their new upgraded Claude 3.5 Sonnet model, now able to actually use your computer! But what does this mean? What are the implications? Am I going to lose my job if AI can just do all of my coding and typing (and Googling ofc) for me?
         </p>
 
-        <button onclick="switchContent('thumbnails','claude')" id="button" class="button-1">
+        <button class="button-1" type="button" data-blog-open="claude" aria-controls="claude" aria-expanded="false">
           Read more!
         </button>
 
@@ -58,15 +59,19 @@
         <h3>Coding a personal website (I know, meta right)</h3>
         <p class="date">October 22, 2024</p>
 
-        <img src="images/websitecoding.webp" class="blog-thumbnail rounded mx-auto d-block">
-        <center class="image-caption">AI generated using DALL-E</center>
+        <picture>
+          <source type="image/avif" srcset="images/generated/websitecoding-480.avif 480w, images/generated/websitecoding-800.avif 800w" sizes="(max-width: 768px) 80vw, 30vw">
+          <source type="image/webp" srcset="images/generated/websitecoding-480.webp 480w, images/generated/websitecoding-800.webp 800w" sizes="(max-width: 768px) 80vw, 30vw">
+          <img src="images/websitecoding.webp" class="blog-thumbnail rounded mx-auto d-block" alt="Illustration of coding a personal website" width="1024" height="1024" decoding="async" loading="lazy">
+        </picture>
+        <p class="image-caption centered-caption">AI generated using DALL-E</p>
 
         <br>
         <p>
           Coding and publishing my own website using GitHub pages! Yes, it's this one that you're on right now :)
         </p>
 
-        <button onclick="switchContent('thumbnails','website')" id="button" class="button-1">
+        <button class="button-1" type="button" data-blog-open="website" aria-controls="website" aria-expanded="false">
           Read more!
         </button>
 
@@ -76,22 +81,26 @@
         <h3>What makes AI an agent?</h3>
         <p class="date">October 18, 2024</p>
 
-        <img src="images/robotagent.webp" class="blog-thumbnail rounded mx-auto d-block">
-        <center class="image-caption">AI generated using DALL-E</center>
+        <picture>
+          <source type="image/avif" srcset="images/generated/robotagent-480.avif 480w, images/generated/robotagent-800.avif 800w" sizes="(max-width: 768px) 80vw, 30vw">
+          <source type="image/webp" srcset="images/generated/robotagent-480.webp 480w, images/generated/robotagent-800.webp 800w" sizes="(max-width: 768px) 80vw, 30vw">
+          <img src="images/robotagent.webp" class="blog-thumbnail rounded mx-auto d-block" alt="Illustration of an autonomous AI agent" width="1024" height="1024" decoding="async" loading="lazy">
+        </picture>
+        <p class="image-caption centered-caption">AI generated using DALL-E</p>
 
         <br>
         <p>
           We've all heard the buzzword "agentic" or "agent" being thrown around, but what exactly <i>is</i> or <i>isn't</i> an agent? I've been doing my fair share of reading papers, listening to podcasts, and just being around a bunch of AI lovers at school...so let's break down some of the main themes I've been hearing!
         </p>
 
-        
-        <button onclick="switchContent('thumbnails','agents')" id="button" class="button-1">
+
+        <button class="button-1" type="button" data-blog-open="agents" aria-controls="agents" aria-expanded="false">
           Read more!
         </button>
 
       </div>
 
-      
+
 
     </div>
 
@@ -99,57 +108,57 @@
 </div>
 
 <div class="container">
-  <div class="blog-content" id="agents">
+  <article class="blog-content" id="agents" data-blog-post hidden>
     <div class="blog-home" id="blog-home-agents">
-      <a href="javascript:void(0)" onclick="switchContent('','thumbnails')"> <i style="font-size:40px;"class="fa-solid fa-circle-left"></i></a>
+      <button class="blog-back-button" type="button" data-blog-close aria-label="Return to blog index">
+        <i class="fa-solid fa-circle-left" aria-hidden="true"></i>
+      </button>
     </div>
     <!-- <hr> -->
-    <h1 style="text-align: center;">What makes AI an agent?</h1>
-    <center>
-      <p class="date">October 18, 2024</p>
-    </center>
-  
+    <h2 class="blog-post-title" tabindex="-1">What makes AI an agent?</h2>
+    <p class="date centered-caption">October 18, 2024</p>
+
     <hr>
     <p>
       In recent years, AI has evolved from being a tool that follows pre-programmed rules to becoming more agentic, meaning that it can take actions independently to achieve specific goals. But what exactly makes an AI agentic? Let’s explore the key components.
-  
+
       Autonomy: At its core, an agentic AI can operate with minimal human intervention. Instead of waiting for a command, it can make decisions based on its environment, goals, and inputs. For example, a self-driving car continuously makes choices about speed, direction, and safety, all autonomously.
-    
+
       Goal-Directed Behavior: Agentic AI systems are designed to pursue specific objectives. This could be something as simple as optimizing a search result, or as complex as managing a smart home system. Their actions are aligned with achieving these defined goals efficiently.
-    
+
       Adaptability: An agentic AI isn’t rigid. It learns and adapts based on new information and changes in its environment. Through reinforcement learning and other techniques, it can update its strategies to better reach its objectives, much like how humans learn from experience.
-    
+
       Decision-Making Abilities: Critical to being agentic is the ability to make informed decisions. This involves evaluating possible actions, predicting outcomes, and selecting the most effective course of action. For example, a virtual assistant can assess user preferences, predict needs, and proactively suggest solutions.
-    
+
       Interaction with the Environment: To be agentic, an AI must interact with its environment in meaningful ways. This could be through sensors, data inputs, or even engaging with other AI systems. It processes real-time information and responds accordingly, much like a human agent.
-    
+
       In summary, an agentic AI combines autonomy, goal-oriented behavior, adaptability, decision-making, and environmental interaction. This shift towards more self-sufficient AI systems is paving the way for innovations across industries, from healthcare to autonomous systems.
     </p>
-    
-  </div>
-  
-  <div class="blog-content" id="website">
-    <div class="blog-home" id="blog-home-website">
-      <a href="javascript:void(0)" onclick="switchContent('','thumbnails')"> <i style="font-size:40px;"class="fa-solid fa-circle-left"></i></a>
-    </div>
-    <h1 style="text-align: center;">Coding a personal website (I know, meta right)</h1>
-    <center>
-      <p class="date">October 22, 2024</p>
-    </center>
-  
-  </div>
 
-  <div class="blog-content" id="claude">
-    <div class="blog-home" id="blog-home-claude">
-      <a href="javascript:void(0)" onclick="switchContent('','thumbnails')"> <i style="font-size:40px;"class="fa-solid fa-circle-left"></i></a>
+  </article>
+
+  <article class="blog-content" id="website" data-blog-post hidden>
+    <div class="blog-home" id="blog-home-website">
+      <button class="blog-back-button" type="button" data-blog-close aria-label="Return to blog index">
+        <i class="fa-solid fa-circle-left" aria-hidden="true"></i>
+      </button>
     </div>
-    <h1 style="text-align: center;">AI can use computers now? Claude breaks the 4th wall!</h1>
-    <center>
-      <p class="date">November 1, 2024</p>
-    </center>
-    
+    <h2 class="blog-post-title" tabindex="-1">Coding a personal website (I know, meta right)</h2>
+    <p class="date centered-caption">October 22, 2024</p>
+
+  </article>
+
+  <article class="blog-content" id="claude" data-blog-post hidden>
+    <div class="blog-home" id="blog-home-claude">
+      <button class="blog-back-button" type="button" data-blog-close aria-label="Return to blog index">
+        <i class="fa-solid fa-circle-left" aria-hidden="true"></i>
+      </button>
+    </div>
+    <h2 class="blog-post-title" tabindex="-1">AI can use computers now? Claude breaks the 4th wall!</h2>
+    <p class="date centered-caption">November 1, 2024</p>
+
     <p>
-      Last week, on October 22nd, Anthropic unveiled updates to their Claude 3.5 Sonnet model in a <a href="https://www.anthropic.com/news/3-5-models-and-computer-use" target="_blank">blog post</a>, revealing alongside general improvements the shocking new feature: <b>computer use.</b>
+      Last week, on October 22nd, Anthropic unveiled updates to their Claude 3.5 Sonnet model in a <a href="https://www.anthropic.com/news/3-5-models-and-computer-use" target="_blank" rel="noopener noreferrer">blog post</a>, revealing alongside general improvements the shocking new feature: <b>computer use.</b>
     </p>
 
     <h3>How does it work?</h3>
@@ -167,6 +176,7 @@
 
     <p>
       For example, if I prompted Claude to "Develop a simple web app that is a to do list which I can check off items, then launch it on a local server. Test the app for functionality, and use the internet to research how to do anything you don't understand," it might go through the following steps:
+    </p>
       <ol>
         <li>Navigate the cursor to the VSCode logo and open the editor</li>
         <li>Start typing code in the editor</li>
@@ -177,6 +187,7 @@
         <li>Fix the code in the editor</li>
         <li>Test the now working app by moving the cursor and clicking/unclicking the items</li>
       </ol>
+    <p>
       Before, LLMs could only provide you with responses, leaving you to plug in the code or look up the recommendation and implement it on your own (with the exception of actually using APIs and chaining together various tools, which is restricted to the more savvy users amongst us). However, this new feature bridges that gap, allowing the model not only to execute code, but manipulate your computer and <b>actually use the tools we give it!</b>
     </p>
 
@@ -191,25 +202,12 @@
       Say you are new to AI and coding in general, but have heard of all this AI hype and want to give some great app ideas you have a shot! Maybe a mom who wants an app to keep track of her family recipes, but isn't quite comfortable sharing them with an app someone else made? With this type of AI agent at her side, she could explain her idea to the model
     </p>
 
-  </div>
+  </article>
 </div>
+</main>
 
 <!-- footer section -->
-<div class="footer">
-  <p>
-    &copy; Simon Wang, 2024.
-  </p>
-  
-  <p>
-    <a href="https://getbootstrap.com/" target="_blank">
-      <img src="./images/bootstrap-logo-black.svg" width="35" height="30" alt="">
-    </a>
-    &nbsp;
-    Created with Bootstrap. &nbsp;
-  
-    P.s. thanks to the amazing <a href="https://emilywudesign.myportfolio.com/" target="_blank">Emily Wu</a> for helping with the graphic design!
-  </p>
-</div>
+<site-footer></site-footer>
 
 </body>
 </html>

@@ -1,0 +1,154 @@
+/* sidebar section headers */
+.section-content {
+  text-align: left;
+}
+
+.section-button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--section-button-text);
+  /* width: 100%; */
+}
+
+.section-header {
+  margin-top: 0.5rem;
+}
+
+
+.site-navigation-links .active {
+  text-decoration: underline;
+
+}
+
+.sidenav .active {
+  font-weight: bold;
+  background-color: var(--sidenav-active-bg);
+}
+
+.date {
+  font-size: small;
+  color: var(--date-text);
+}
+
+.blog-home {
+  padding-top:3%;
+}
+
+.image-caption {
+  font-size:medium;
+  font-style: italic;
+  color: var(--caption-text);
+  padding-bottom: 5px;
+}
+
+.callout {
+  border:1px solid var(--callout-border);
+  display: flex;
+  width: 75%;
+  padding:1%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: small;
+}
+
+.blog-content {
+  padding-bottom: 3rem;
+}
+
+.blog-grid {
+  display: grid;
+  justify-content:center;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  margin-left:5%;
+  margin-right:5%;
+}
+
+.blog-image {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.blog-thumbnail {
+  width: 50%;
+  padding: 10px;
+}
+
+#blog-title {
+  color: var(--blog-title);
+}
+
+.course-content {
+  padding-bottom: 3%;
+}
+
+.course-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.course-list-item {
+  position: relative;
+  display: block;
+  margin-bottom: -1px;
+  padding: 0.75rem 1.25rem;
+  background: none;
+  border: 1px solid var(--list-border);
+}
+
+.course-list-item:first-child {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.course-list-item:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.centered-caption {
+  display: block;
+  text-align: center;
+}
+
+.centered-media {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.icon-link {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-back-button {
+  border: 0;
+  background: none;
+  color: var(--site-link);
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+.blog-post-title {
+  text-align: center;
+}

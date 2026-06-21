@@ -3,51 +3,56 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="./javascript/theme_init.js"></script>
   <link rel = "stylesheet" href = "./style.css">
-  <script src="./javascript/site_navbar.js"></script>
-  <script src="./javascript/theme_change.js"></script>
-  <script src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
+  <script defer src="./javascript/site_navbar.js"></script>
+  <script defer src="./javascript/site_footer.js"></script>
+  <script defer src="./javascript/theme_change.js"></script>
+  <script defer src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
+  <title>Coursework | Simon Wang</title>
 </head>
 <body class="project-body" data-theme-target>
 
 <site-navbar></site-navbar>
 
+<main>
+
 <!-- content -->
 <div class="course-content" data-theme-target>
     <div class="container">
         <br>
+        <h1>Coursework</h1>
         <em><b>NOTE: </b>All courses taken at the University of Maryland, College Park.</em>
         <br><br>
 
         <h3>Graduate Coursework</h3>
         <p class="image-caption">Cumulative GPA: 3.59/4.0</p>
-        <ul class="list-group">
-            <li class="list-group-item">
+        <ul class="course-list">
+            <li class="course-list-item">
               <b>CMSC624</b> - Database System Architecture and Implementation
               <p style="margin-bottom:0" class="image-caption">Final grade: B+, Professor: Daniel Abadi</p>
             </li>
-            <li class="list-group-item">
+            <li class="course-list-item">
               <b>CMSC848K</b> - Multimodal Foundation Models
               <p style="margin-bottom:0" class="image-caption">Final grade: A, Professor: Jia-Bin Huang</p>
             </li>
-            <li class="list-group-item">
+            <li class="course-list-item">
               <b>CMSC740</b> - Advanced Computer Graphics
               <p style="margin-bottom:0" class="image-caption">Final grade: A, Professor: Matthias Zwicker</p>
             </li>
-            <li class="list-group-item">
+            <li class="course-list-item">
               <b>CMSC730</b> - Interactive Technology in Human Computer Interaction
               <p style="margin-bottom:0" class="image-caption">Final grade: A, Professor: Huaishu Peng</p>
             </li>
-            <li class="list-group-item">
+            <li class="course-list-item">
               <b>CMSC838C</b> - Advanced Topics in Programming Languages: Advances in XR
               <p style="margin-bottom:0" class="image-caption">Final grade: A, Professor: Ming Lin</p>
             </li>
-            <li class="list-group-item">
+            <li class="course-list-item">
               <b>CMSC720</b> - Foundations of Deep Learning
               <p style="margin-bottom:0" class="image-caption">Final grade: B, Professor: Soheil Feizi</p>
             </li>
-            <li class="list-group-item">
+            <li class="course-list-item">
               <b>CMSC839A</b> - Advanced Topics in Human-Computer Interaction: Embodied Media Design
               <p style="margin-bottom:0" class="image-caption">Final grade: A, Professor: Jun Nishida</p>
             </li>
@@ -56,37 +61,24 @@
 
         <h3>Relevant Undergraduate Coursework</h3>
         <p class="image-caption">Cumulative GPA: 3.52/4.0</p>
-        <ul class="list-group">
-            <li class="list-group-item"><b>CMSC421</b> - Intro to Artificial Intelligence</li>
-            <li class="list-group-item"><b>CMSC427</b> - Computer Graphics</li>
-            <li class="list-group-item"><b>CMSC420</b> - Advanced Data Structures</li>
-            <li class="list-group-item"><b>CMSC451</b> - Design and Analysis of Computer Algorithms</li>
-            <li class="list-group-item"><b>CMSC471</b> - Intro to Data Visualization</li>
-            <li class="list-group-item"><b>CMSC425</b> - Game Programming</li>
-            <li class="list-group-item"><b>CMSC320</b> - Intro to Data Science</li>
-            <li class="list-group-item"><b>STAT420</b> - Theory and Methods Statistics</li>
-            <li class="list-group-item"><b>STAT401</b> - Applied Probability and Statistics</li>
+        <ul class="course-list">
+            <li class="course-list-item"><b>CMSC421</b> - Intro to Artificial Intelligence</li>
+            <li class="course-list-item"><b>CMSC427</b> - Computer Graphics</li>
+            <li class="course-list-item"><b>CMSC420</b> - Advanced Data Structures</li>
+            <li class="course-list-item"><b>CMSC451</b> - Design and Analysis of Computer Algorithms</li>
+            <li class="course-list-item"><b>CMSC471</b> - Intro to Data Visualization</li>
+            <li class="course-list-item"><b>CMSC425</b> - Game Programming</li>
+            <li class="course-list-item"><b>CMSC320</b> - Intro to Data Science</li>
+            <li class="course-list-item"><b>STAT420</b> - Theory and Methods Statistics</li>
+            <li class="course-list-item"><b>STAT401</b> - Applied Probability and Statistics</li>
         </ul>
     </div>
-    
+
   </div>
+</main>
 
 <!-- footer section -->
-<div class="footer">
-  <p>
-    &copy; Simon Wang, 2024.
-  </p>
-  
-  <p>
-    <a href="https://getbootstrap.com/" target="_blank">
-      <img src="./images/bootstrap-logo-black.svg" width="35" height="30" alt="">
-    </a>
-    &nbsp;
-    Created with Bootstrap. &nbsp;
-  
-    P.s. thanks to the amazing <a href="https://emilywudesign.myportfolio.com/" target="_blank">Emily Wu</a> for helping with the graphic design!
-  </p>
-</div>
+<site-footer></site-footer>
 
 </body>
 </html>

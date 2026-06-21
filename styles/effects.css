@@ -1,0 +1,54 @@
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  z-index: 9999;
+  border-radius: 50%;
+  background-color: var(--particle-bg);
+  pointer-events: none;
+  animation: particle-animation 2s forwards ease-out;
+}
+
+@keyframes particle-animation {
+  0% {
+      transform: scale(1) translate(0, 0);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(0) translate(var(--dx), var(--dy));
+      opacity: 0;
+  }
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 9999;
+  border: 2px solid var(--ripple-border);
+  background-color: transparent;
+  pointer-events: none;
+  animation: ripple-animation 2s ease-out forwards;
+}
+
+@keyframes ripple-animation {
+  0% {
+      transform: scale(0);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(3); /* Adjust the scale to control how far the ripple spreads */
+      opacity: 0;
+  }
+}
+
+#toggle-container {
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  z-index: 9999;
+  color: var(--toggle-text);
+  font-size: 16px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items:flex-start;
+}

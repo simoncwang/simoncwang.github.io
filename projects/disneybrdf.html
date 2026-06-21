@@ -4,66 +4,28 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script src="../javascript/theme_init.js"></script>
     <link rel = "stylesheet" href = "../style.css">
-    <script src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
-    <script src="../javascript/util.js"></script>
-    <script src="../javascript/site_navbar.js"></script>
-    <script src="../javascript/theme_change.js"></script>
-    <title>Projects</title>
+    <script defer src="https://kit.fontawesome.com/9804079aca.js" crossorigin="anonymous"></script>
+    <script defer src="../javascript/project_data.js"></script>
+    <script defer src="../javascript/project_navigation.js"></script>
+    <script defer src="../javascript/site_navbar.js"></script>
+    <script defer src="../javascript/site_footer.js"></script>
+  <script defer src="../javascript/theme_change.js"></script>
+    <title>Disney BRDF Renderer | Simon Wang</title>
   </head>
 
-  <body>
+  <body class="project-body" data-theme-target>
     <site-navbar></site-navbar>
 
+<main>
+
     <div class="project-page" data-theme-target>
-      <!-- sidebar section -->
-      <div id="mySidenav" class="sidenav" data-theme-target >
-        <div class="collapse">
-            <a href="javascript:void(0)" onclick="closeNav()"> &times;</a>
-        </div>
-    
-        <div class="container-fluid" style="text-align:center">
-            <!-- Sidebar Title -->
-            <hr>
+      <project-navigation></project-navigation>
 
-            <div id="header1" class="section-header" onclick="toggleSection('section1','header1')">
-              <div class="section-button">School Projects</div>
-              <i class="fa-solid fa-angle-up"></i>
-            </div>
-
-            <div id="section1" class="section-content show-section">
-                <a class="nav-item nav-link" href="./mmo.html">MMO - MLLM Benchmarking</a>
-                <a class="nav-item nav-link active" href="./disneybrdf.html">Disney BRDF & Monte Carlo Rendering in PyTorch</a>
-                <a class="nav-item nav-link" href="./magicalpet.html">MagicalPet - A Desktop AI Assistant</a>
-                <a class="nav-item nav-link" href="./videogen.html">Consistent Video Generation</a>
-                <a class="nav-item nav-link" href="./vrclass.html">XR Education</a>
-                <a class="nav-item nav-link" href="./emd.html">Accessibility of Touch Screens for Elderly</a>
-            </div>
-            
-            <div id="header2" class="section-header" onclick="toggleSection('section2','header2')">
-              <button class="section-button">Personal Projects</button>
-              <i class="fa-solid fa-angle-down"></i>
-            </div>
-            
-            <div id="section2" class="section-content show-section">
-              <a class="nav-item nav-link" href="./huggingfaceagents.html">Multi-Agent Systems w/ SmolAgents</a>
-              <a class="nav-item nav-link" href="./wildlifeanalyzer.html">Wildlife Analyzer</a>
-              <a class="nav-item nav-link" href="./personalrag.html">RAG Quiz</a>
-              <a class="nav-item nav-link" href="./artadvisor.html">AI Art Advisor</a>
-            </div>
-            
-        </div>
-      </div>
-    
-      <div id="expandBtn" class="expand">
-        <a href="javascript:void(0)" onclick="openNav()"> &#9776;</a>
-      </div>
-
-      <!-- content section -->
-      <div class="container"> 
+      <!-- main content -->
+      <div class="container">
         <div id = "myContent" class="content">
           <br>
           <h1 style="text-align: center;">Implementation of Monte Carlo Rendering and Disney BRDF in PyTorch</h1>
@@ -72,24 +34,28 @@
           <div class="links">
 
             <div>
-              <i class="fa-brands fa-github-alt"></i> <a href="../documents/disneybrdf.pdf" target="_blank">Technical Report</a>
+              <i class="fa-brands fa-github-alt" aria-hidden="true"></i> <a href="../documents/disneybrdf.pdf" target="_blank" rel="noopener noreferrer">Technical Report</a>
             </div>
-            
+
           </div>
 
           <br>
 
-          <img src="../images/disneythumbnail.png" class="blog-thumbnail mx-auto d-block" alt="emd">
-          <center class="image-caption">(yes I know this is just two balls...but look at the shading!)</center>
+          <picture>
+            <source type="image/avif" srcset="../images/generated/disneythumbnail-480.avif 480w" sizes="(max-width: 768px) 90vw, 60vw">
+            <source type="image/webp" srcset="../images/generated/disneythumbnail-480.webp 480w" sizes="(max-width: 768px) 90vw, 60vw">
+            <img src="../images/disneythumbnail.png" class="blog-thumbnail mx-auto d-block" alt="Two rendered spheres demonstrating Disney BRDF materials" width="596" height="452" decoding="async" loading="eager" fetchpriority="high">
+          </picture>
+          <p class="image-caption centered-caption">(yes I know this is just two balls...but look at the shading!)</p>
 
           <hr>
           <h3>About the project</h3>
           <p>
-            This project was built on top of a <b>Monte-Carlo path tracing renderer built in PyTorch</b> as part of my advanced graphics course at UMD (CMSC740 w/ Prof. Zwicker). A skeleton code-base was provided to us as a way to complete course assignments and implement various advanced computer graphics techniques such as sample warping, multiple-importance sampling, neural radiosity, and more! 
+            This project was built on top of a <b>Monte-Carlo path tracing renderer built in PyTorch</b> as part of my advanced graphics course at UMD (CMSC740 w/ Prof. Zwicker). A skeleton code-base was provided to us as a way to complete course assignments and implement various advanced computer graphics techniques such as sample warping, multiple-importance sampling, neural radiosity, and more!
           </p>
 
           <p>
-            For my final course project, I used this renderer as the base to implement the <a href="https://media.disneyanimation.com/uploads/production/publication_asset/48/asset/s2012_pbs_disney_brdf_notes_v3.pdf" target="_blank">Disney "principled" BRDF.</a> 
+            For my final course project, I used this renderer as the base to implement the <a href="https://media.disneyanimation.com/uploads/production/publication_asset/48/asset/s2012_pbs_disney_brdf_notes_v3.pdf" target="_blank" rel="noopener noreferrer">Disney "principled" BRDF.</a>
           </p>
 
           <p>
@@ -111,7 +77,7 @@
 
           <h3>Implementation</h3>
           <p>
-            To add the functionality of the Disney BRDF, there are several important functions to implement. 
+            To add the functionality of the Disney BRDF, there are several important functions to implement.
           </p>
 
           <p>
@@ -123,7 +89,7 @@
           </p>
 
           <p>
-            After creating a Disney BRDF Python class, I first implement a function that handles <b>sampling distributions depending on the various parameters.</b> To make the parameters in the Disney BRDF work, this involved implementing various sampling functions such as Cosine-Hemisphere sample warping, Fresnel terms, GGX distributions, and more. 
+            After creating a Disney BRDF Python class, I first implement a function that handles <b>sampling distributions depending on the various parameters.</b> To make the parameters in the Disney BRDF work, this involved implementing various sampling functions such as Cosine-Hemisphere sample warping, Fresnel terms, GGX distributions, and more.
           </p>
 
           <p>
@@ -145,9 +111,9 @@
 
           <h3>Results</h3>
           <p>
-            Full details can be found in my <a href="../documents/disneybrdf.pdf" target="_blank">technical report</a> but here are some highlights of pictures I rendered using my implementation! (insert here soon)
+            Full details can be found in my <a href="../documents/disneybrdf.pdf" target="_blank" rel="noopener noreferrer">technical report</a> but here are some highlights of pictures I rendered using my implementation! (insert here soon)
           </p>
-          
+
 
           <h3>Future Work</h3>
           <p>
@@ -159,25 +125,10 @@
         </div>
       </div>
     </div>
-  
+</main>
 
-    
 <!-- footer section -->
-<div class="footer">
-  <p>
-    &copy; Simon Wang, 2024.
-  </p>
-  
-  <p>
-    <a href="https://getbootstrap.com/" target="_blank">
-      <img src="../images/bootstrap-logo-black.svg" width="35" height="30" alt="">
-    </a>
-    &nbsp;
-    Created with Bootstrap. &nbsp;
-  
-    P.s. thanks to the amazing <a href="https://emilywudesign.myportfolio.com/" target="_blank">Emily Wu</a> for helping with the graphic design!
-  </p>
-</div>
+<site-footer></site-footer>
 
 </body>
 </html>
