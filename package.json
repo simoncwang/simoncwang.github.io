@@ -2,6 +2,8 @@
   "name": "simoncwang-github-io",
   "private": true,
   "scripts": {
+    "build": "npm run css:build && npm run images:build",
+    "site:build": "node scripts/build-site.js",
     "css:build": "node scripts/build-css.js",
     "images:build": "node scripts/build-images.js",
     "check:js": "node scripts/check-js.js",
