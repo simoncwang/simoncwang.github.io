@@ -31,6 +31,18 @@ CSS source is organized under `styles/` and compiled into `style.css`:
 npm run css:build
 ```
 
+Build all generated site assets:
+
+```sh
+npm run build
+```
+
+Create the deployable GitHub Pages artifact locally:
+
+```sh
+npm run site:build
+```
+
 Project metadata lives in `javascript/project_data.js` and drives the homepage,
 Projects page, project drawer, and terminal filesystem.
 
@@ -44,3 +56,12 @@ content-authoring workflow.
 - Font Awesome via CDN
 - Sharp for development-time responsive image generation
 - GitHub Pages deployment
+
+## Deployment
+
+Pull requests run validation through GitHub Actions. Pushes to `main` run the
+deployment workflow, which installs dependencies, builds CSS and responsive
+images, validates the site, packages public files into `_site/`, and deploys
+that artifact to GitHub Pages.
+
+In GitHub, the repository Pages source should be set to **GitHub Actions**.
